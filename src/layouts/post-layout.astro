@@ -1,29 +1,29 @@
 ---
-import { DotPattern } from '@/components/pattern/dot-pattern'
-import Seo from '@/components/seo.astro'
-import { Toc } from '@/components/toc'
-import RootLayout from '@/layouts/root-layout.astro'
-import { dateToISO, formatDate } from '@/lib/date'
-import '@/styles/blog-posts.css'
-import type { InferEntrySchema, RenderedContent } from 'astro:content'
-import { render } from 'astro:content'
+import { DotPattern } from '@/components/pattern/dot-pattern';
+import Seo from '@/components/seo.astro';
+import { Toc } from '@/components/toc';
+import RootLayout from '@/layouts/root-layout.astro';
+import { dateToISO, formatDate } from '@/lib/date';
+import '@/styles/blog-posts.css';
+import type { InferEntrySchema, RenderedContent } from 'astro:content';
+import { render } from 'astro:content';
 
 interface Props {
 	post: {
-		id: string
-		body?: string
-		collection: 'blogPosts'
-		data: InferEntrySchema<'blogPosts'>
-		rendered?: RenderedContent
-		filePath?: string
-	}
+		id: string;
+		body?: string;
+		collection: 'blogPosts';
+		data: InferEntrySchema<'blogPosts'>;
+		rendered?: RenderedContent;
+		filePath?: string;
+	};
 }
 
-const { post } = Astro.props
-const { Content, headings } = await render(post)
+const { post } = Astro.props;
+const { Content, headings } = await render(post);
 
-const { title, description, keywords, publishedAt } = post.data
-const publishedTime = dateToISO(publishedAt)
+const { title, description, keywords, publishedAt } = post.data;
+const publishedTime = dateToISO(publishedAt);
 ---
 
 <RootLayout scrollSmooth>

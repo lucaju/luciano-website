@@ -29,4 +29,4 @@ The assumption is that these modalities aim for more objective and efficient way
 
 <iframe loading="lazy" src="https://www.slideshare.net/slideshow/embed_code/key/MrN7B1SePZK3jz?startSlide=1" width="597" height="486" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border: var(--border-1) solid #CCC; border-width:1px; margin-bottom:5px;max-width: 100%;" allowfullscreen></iframe>
 
-**[I/O: Enforcing Idealized News Making Practices Through Algorithms](https://www.slideshare.net/slideshow/io-enforcing-idealized-news-making-practices-through-algorithms/85335821) ** by **[Luciano Frizzera](https://www.slideshare.net/lucianofrizzera)**
+**[I/O: Enforcing Idealized News Making Practices Through Algorithms](https://www.slideshare.net/slideshow/io-enforcing-idealized-news-making-practices-through-algorithms/85335821)** by **[Luciano Frizzera](https://www.slideshare.net/lucianofrizzera)**

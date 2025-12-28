@@ -1,14 +1,14 @@
-import { cn } from '@/lib/utils'
-import { ImageIcon } from 'lucide-react'
-import { useInView } from 'motion/react'
-import { useRef, type ComponentPropsWithoutRef } from 'react'
+import { ImageIcon } from 'lucide-react';
+import { useInView } from 'motion/react';
+import { type ComponentPropsWithoutRef, useRef } from 'react';
+import { cn } from '@/lib/utils';
 
 interface ImageProps extends ComponentPropsWithoutRef<'img'> {
-	containerClassName?: string
+	containerClassName?: string;
 }
 export function Image({ containerClassName, ...props }: ImageProps) {
-	const container = useRef<HTMLDivElement>(null)
-	const isInView = useInView(container, { once: true, margin: '20% 0px' })
+	const container = useRef<HTMLDivElement>(null);
+	const isInView = useInView(container, { once: true, margin: '20% 0px' });
 
 	if (!isInView) {
 		return (
@@ -20,9 +20,9 @@ export function Image({ containerClassName, ...props }: ImageProps) {
 					containerClassName,
 				)}
 			>
-				<ImageIcon className='size-5' />
+				<ImageIcon className="size-5" />
 			</div>
-		)
+		);
 	}
 
 	return (
@@ -32,8 +32,8 @@ export function Image({ containerClassName, ...props }: ImageProps) {
 					{...props}
 					alt={props.alt}
 					className={cn('object-cover rounded-xl h-32 w-full cover-img', props.className)}
-					fetchPriority='high'
-					loading='lazy'
+					fetchPriority="high"
+					loading="lazy"
 				/>
 			) : (
 				<div
@@ -44,9 +44,9 @@ export function Image({ containerClassName, ...props }: ImageProps) {
 						containerClassName,
 					)}
 				>
-					<ImageIcon className='size-5' />
+					<ImageIcon className="size-5" />
 				</div>
 			)}
 		</div>
-	)
+	);
 }

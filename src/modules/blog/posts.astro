@@ -1,19 +1,19 @@
 ---
-import { dateToISO, formatDate } from '@/lib/date'
-import type { InferEntrySchema, RenderedContent } from 'astro:content'
+import type { InferEntrySchema, RenderedContent } from 'astro:content';
+import { dateToISO, formatDate } from '@/lib/date';
 
 interface Props {
 	posts: ReadonlyArray<{
-		id: string
-		body?: string
-		collection: 'blogPosts'
-		data: InferEntrySchema<'blogPosts'>
-		rendered?: RenderedContent
-		filePath?: string
-	}>
+		id: string;
+		body?: string;
+		collection: 'blogPosts';
+		data: InferEntrySchema<'blogPosts'>;
+		rendered?: RenderedContent;
+		filePath?: string;
+	}>;
 }
 
-const { posts } = Astro.props
+const { posts } = Astro.props;
 ---
 
 <section class="container-fluid py-10">

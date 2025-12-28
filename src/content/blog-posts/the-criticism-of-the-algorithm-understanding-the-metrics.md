@@ -85,7 +85,6 @@ For the second phase, we are planning to map and display the entire city: more t
 - There are several other tools to create timelines, such as [Dipity](http://www.dipity.com) and [Simile-Widget](http://www.simile-widgets.org).
 - Finally, I also would like mention 2 initiatives focused on aggregating tools for Digital Humanities. Here you can find many other tools and also contribute to the DH community: [Tapor Portal](http://tapor.ca), and [Bamboo Project](http://dirt.projectbamboo.org).
 
- 
 ## Algorithms
 
 After this extensive, but not exhaustive, list of projects, I would like to highlight the process of production of these digital tools and the algorithm that describes them. Comprehend how to deal with algorithms and learn how they are built is essential for metric analysis. Simple variations in any visualization, such as color, size, quantity, variety, or even a small typing error, are enough to completely change the results. So, how do we know if what is being presented to us on the screen is in fact what we should see?

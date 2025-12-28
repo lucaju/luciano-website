@@ -57,15 +57,15 @@ The interfaces here seek to retain the modularity and flexibility associated wit
 
 ## Earlier Stage
 
-### Target
+### Target I
 
 In the earlier stage of this project, we used a generic workflow from the world of journal editorship. Although, there wasn’t any real content at that time – just placeholders.
 
-### Technology
+### Technology I
 
 We chose to use web standards technologies such as HTML, CSS, and JavaScript. So, we started with D3.js, an open source JavaScript library for creating data visualizations. The goal was to launch the workflow from JiTR, a collection management tool developed for such experiments.
 
-### Design
+### Design I
 
 ![Figure 1: First version of structured surface editorial workflow uses D3.js to build the interface.](../../assets/images/blog/Milena-workflow-surface-v03b-494x310.png "Workflow for Editorial Process - First Sketch") Figure 1: First version of structured surface editorial workflow uses D3.js to build the interface.
 
@@ -73,7 +73,7 @@ The surface for organizing the status of documents is a pipe-and-flow type of wo
 
 The articles are represented by tokens. The token’s position within the workflow indicates where, along with the process, the article is located; the size illustrates the length of the documents in words. A rollover on the token shows detailed information about the article: title, abstract, name and contact information of the reviewer, and the date when the article went to the reviewer.
 
-### Development Results
+### Development Results I
 
 What we found with this experiment was that too much information is contained in the structured surface, with very little in the tokens. In our next iteration, we explored placing more information in the tokens, which allowed us to de-clutter our surface.
 
@@ -81,15 +81,15 @@ In terms of technology, we also identified a limitation. Whereas D3.js is a good
 
 ## Orlando Workflow
 
-### Technology
+### Technology II
 
 For our second version, we are experimenting with Adobe Flash. Some people might argue that Flash is not the best option since it is not supported by smartphones and tablets. Nevertheless, it is possible now to recompile Flash apps in order to create mobile apps for iPhone, iPad, Android and even Blackberry and Playbook. Adobe built-in this feature in Flash Professional and Flash Builder. Although, to create apps for Apple devices and put in the App Store, it necessary to be part of Apple’s developer community. Regardless of the technology used to develop the application, we found that Adobe Flash is a good option to create interactive interface prototypes, which is the main goal of our research, as we are not creating final products, but instead, we are doing experiments.
 
-### Target
+### Target II
 
 We also decided to produce an experiment with more meaningful data, so we partnered with Susan Brown and The Orlando Project. We used some of their editorial jobs, which include the writing of XML-encoded original material for Orlando biocritical entries on women writers. Fifty-four biographical entries were used as a sample for the purposes of this prototype.
 
-### Design
+### Design II
 
 Since we moved from a hypothetical workflow to a workflow predefined by Orlando Project, we had to redesign both the process and the structured surface. The workflow in the Orlando has some particularities. Some stages are non-sequential but required in order to let the document continue in the flow. To illustrate this characteristic we grouped these steps in clusters with a light grey background. Another peculiarity is the existence of optional stages, which can occur independently of the document’s stage. It is represented in the top of the screen, disconnected from the mainstream (figure 2).
 
@@ -103,7 +103,7 @@ The control panel gives three options to the user: 1. Access the History Log, wh
 
 Another functionality is the possibility to drag the token around. In this version, the user can drag the token to any stage in the workflow regardless of the sequence. By doing that, the user automatically changes both the stage and the status of the document. Every modification performed in the workflow is auto-saved and generates a new log entry in the history. The system also prevents tokens to be released outside the stages by automatically moving it back to the former position, otherwise, it could disrupt the workflow and confuses the users.
 
-### Development Results
+### Development Results II
 
 Some issues arose during the process of development of this version. The most important is how to deal with the high density of tokens inside the stage. Whereas it is easy to access one document in a lightly populated stage, in those with a high density the fact that the tokens overlap each other can challenge the user to find or access the information.
 

@@ -80,4 +80,3 @@ At the very end, I had the opportunity to briefly talk with Dr. Martha Ladly and
 ![isea-2015](../../assets/images/blog/a-collaborative-mobile-cultural-mapping-workshop-exhibition-at-isea-2015-img-20.jpg)
 
 ![isea-2015](../../assets/images/blog/a-collaborative-mobile-cultural-mapping-workshop-exhibition-at-isea-2015-img-21.jpg)
-

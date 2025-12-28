@@ -1,27 +1,27 @@
 ---
-import { SEO, type SEOProps } from 'astro-seo'
-import { match, P } from 'ts-pattern'
-import { pipe, S, F, A } from '@mobily/ts-belt'
+import { A, F, pipe, S } from '@mobily/ts-belt';
+import { SEO, type SEOProps } from 'astro-seo';
+import { match, P } from 'ts-pattern';
 
 interface Props {
-	title?: string
-	description: string
-	article?: Partial<NonNullable<SEOProps['openGraph']>['article']>
-	image?: Required<NonNullable<SEOProps['openGraph']>['image']>
-	keywords?: string[]
+	title?: string;
+	description: string;
+	article?: Partial<NonNullable<SEOProps['openGraph']>['article']>;
+	image?: Required<NonNullable<SEOProps['openGraph']>['image']>;
+	keywords?: string[];
 }
 
-const defaultKeywords = ['luciano frizzera', 'luciano dos reis frizzera', 'lucaju']
+const defaultKeywords = ['luciano frizzera', 'luciano dos reis frizzera', 'lucaju'];
 
-const { title: _title, description, article, ...props } = Astro.props
+const { title: _title, description, article, ...props } = Astro.props;
 
-const type = article ? 'article' : 'website'
+const type = article ? 'article' : 'website';
 const keywords = match(props.keywords)
 	.with(P.array(), (kw) => pipe(kw, A.join(',')))
-	.otherwise(() => A.join(defaultKeywords, ','))
+	.otherwise(() => A.join(defaultKeywords, ','));
 const title = match(_title)
 	.with(P.string, S.append(' | Luciano Frizzera, PhD'))
-	.otherwise(() => 'Luciano Frizzera, PhD')
+	.otherwise(() => 'Luciano Frizzera, PhD');
 
 const image = match(props.image)
 	.with(P.not(P.nullish), F.identity)
@@ -35,7 +35,7 @@ const image = match(props.image)
 				secureUrl: '/profile_pictures.png',
 				alt: 'Luciano Frizzera, PhD',
 			}) satisfies Props['image'],
-	)
+	);
 ---
 
 <SEO

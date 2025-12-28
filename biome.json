@@ -7,12 +7,12 @@
 	},
 	"files": {
 		"ignoreUnknown": false,
-		"includes": ["**"]
+		"includes": ["**/*", "!node_modules/**/*", "!dist/**/*", "!public/**/*", "!.astro/**/*"]
 	},
 	"formatter": {
 		"enabled": true,
 		"indentStyle": "tab",
-		"lineWidth": 100
+		"lineWidth": 120
 	},
 	"assist": { "actions": { "source": { "organizeImports": "on" } } },
 	"linter": {
@@ -38,8 +38,7 @@
 	"javascript": {
 		"formatter": {
 			"quoteStyle": "single",
-			"semicolons": "asNeeded",
-			"jsxQuoteStyle": "single"
+			"jsxQuoteStyle": "double"
 		}
 	},
 	"css": {
@@ -50,11 +49,15 @@
 	"overrides": [
 		{
 			"includes": ["**/*.astro"],
-			"assist": { "actions": { "source": { "organizeImports": "on" } } },
 			"linter": {
 				"rules": {
 					"style": {
-						"useConst": "off"
+						"useConst": "off",
+						"useImportType": "off"
+					},
+					"correctness": {
+						"noUnusedVariables": "off",
+						"noUnusedImports": "off"
 					}
 				}
 			}

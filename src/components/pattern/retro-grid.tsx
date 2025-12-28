@@ -1,35 +1,35 @@
-import { cn } from '@/lib/utils'
+import { cn } from '@/lib/utils';
 
 interface RetroGridProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Additional CSS classes to apply to the grid container
 	 */
-	className?: string
+	className?: string;
 	/**
 	 * Rotation angle of the grid in degrees
 	 * @default 65
 	 */
-	angle?: number
+	angle?: number;
 	/**
 	 * Grid cell size in pixels
 	 * @default 60
 	 */
-	cellSize?: number
+	cellSize?: number;
 	/**
 	 * Grid opacity value between 0 and 1
 	 * @default 0.5
 	 */
-	opacity?: number
+	opacity?: number;
 	/**
 	 * Grid line color in light mode
 	 * @default "gray"
 	 */
-	lightLineColor?: string
+	lightLineColor?: string;
 	/**
 	 * Grid line color in dark mode
 	 * @default "gray"
 	 */
-	darkLineColor?: string
+	darkLineColor?: string;
 }
 
 export function RetroGrid({
@@ -47,7 +47,7 @@ export function RetroGrid({
 		'--opacity': opacity,
 		'--light-line': lightLineColor,
 		'--dark-line': darkLineColor,
-	} as React.CSSProperties
+	} as React.CSSProperties;
 
 	return (
 		<div
@@ -59,12 +59,12 @@ export function RetroGrid({
 			style={gridStyles}
 			{...props}
 		>
-			<div className='absolute inset-0 transform-[rotateX(var(--grid-angle))]'>
-				<div className='animate-grid will-change-transform bg-[linear-gradient(to_right,var(--light-line)_1px,transparent_0),linear-gradient(to_bottom,var(--light-line)_1px,transparent_0)] bg-repeat bg-size-[var(--cell-size)_var(--cell-size)] h-[300vh] inset-[0%_0px] ml-[-200%] origin-[100%_0_0] w-[600vw] dark:bg-[linear-gradient(to_right,var(--dark-line)_1px,transparent_0),linear-gradient(to_bottom,var(--dark-line)_1px,transparent_0)]' />
+			<div className="absolute inset-0 transform-[rotateX(var(--grid-angle))]">
+				<div className="animate-grid will-change-transform bg-[linear-gradient(to_right,var(--light-line)_1px,transparent_0),linear-gradient(to_bottom,var(--light-line)_1px,transparent_0)] bg-repeat bg-size-[var(--cell-size)_var(--cell-size)] h-[300vh] inset-[0%_0px] ml-[-200%] origin-[100%_0_0] w-[600vw] dark:bg-[linear-gradient(to_right,var(--dark-line)_1px,transparent_0),linear-gradient(to_bottom,var(--dark-line)_1px,transparent_0)]" />
 			</div>
 
-			<div className='absolute inset-0 bg-linear-to-t from-background to-transparent to-90%' />
-			<div className='absolute inset-x-0 top-1/3 h-56 bg-linear-to-b from-background to-transparent to-90%' />
+			<div className="absolute inset-0 bg-linear-to-t from-background to-transparent to-90%" />
+			<div className="absolute inset-x-0 top-1/3 h-56 bg-linear-to-b from-background to-transparent to-90%" />
 		</div>
-	)
+	);
 }

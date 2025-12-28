@@ -1,13 +1,13 @@
 ---
-import { RetroGrid } from '@/components/pattern/retro-grid'
-import { cn } from '@/lib/utils'
+import { RetroGrid } from '@/components/pattern/retro-grid';
+import { cn } from '@/lib/utils';
 
 interface Props {
-	description: string
-	className?: string
+	description: string;
+	className?: string;
 }
 
-const { description, className } = Astro.props
+const { description, className } = Astro.props;
 ---
 
 <header class={cn('relative h-[calc(66vh-6rem)] pt-32 sm:pt-40 lg:pt-32', className)}>

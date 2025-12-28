@@ -5,24 +5,26 @@ export function formatDate(date: string | Date | number) {
 			weekday: 'short',
 			month: 'long',
 			year: 'numeric',
-		})
+		});
 
-		return fmt.format(new Date(date))
+		return fmt.format(new Date(date));
+		// biome-ignore lint/correctness/noUnusedVariables: in case error is needed
 	} catch (error) {
 		if (import.meta.env.DEV) {
-			console.info('Invalid date value, or Intl.Config value')
+			console.info('Invalid date value, or Intl.Config value');
 		}
-		return '-'
+		return '-';
 	}
 }
 
 export function dateToISO(date: string | Date | number) {
 	try {
-		return new Date(date).toISOString()
+		return new Date(date).toISOString();
+		// biome-ignore lint/correctness/noUnusedVariables: in case error is needed
 	} catch (error) {
 		if (import.meta.env.DEV) {
-			console.info('Invalid date value')
+			console.info('Invalid date value');
 		}
-		return '-'
+		return '-';
 	}
 }

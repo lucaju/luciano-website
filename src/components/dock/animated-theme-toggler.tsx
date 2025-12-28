@@ -1,61 +1,53 @@
-import { useIsClient } from '@/hooks/use-is-client'
-import { cn } from '@/lib/utils'
-import { Loader, Moon, Sun } from 'lucide-react'
-import { useCallback, useEffect, useRef, useState } from 'react'
-import { flushSync } from 'react-dom'
-import { Button } from '../ui/button'
+import { Loader, Moon, Sun } from 'lucide-react';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { flushSync } from 'react-dom';
+import { useIsClient } from '@/hooks/use-is-client';
+import { cn } from '@/lib/utils';
+import { Button } from '../ui/button';
 
 interface AnimatedThemeTogglerProps extends React.ComponentPropsWithoutRef<'button'> {
-	duration?: number
-	showLabel?: boolean
+	duration?: number;
+	showLabel?: boolean;
 }
 
-export const AnimatedThemeToggler = ({
-	className,
-	duration = 400,
-	showLabel,
-	...props
-}: AnimatedThemeTogglerProps) => {
-	const isClient = useIsClient()
+export const AnimatedThemeToggler = ({ className, duration = 400, showLabel, ...props }: AnimatedThemeTogglerProps) => {
+	const isClient = useIsClient();
 
-	const [isDark, setIsDark] = useState(false)
-	const buttonRef = useRef<HTMLButtonElement>(null)
+	const [isDark, setIsDark] = useState(false);
+	const buttonRef = useRef<HTMLButtonElement>(null);
 
 	useEffect(() => {
 		const updateTheme = () => {
-			setIsDark(document.documentElement.classList.contains('dark'))
-		}
+			setIsDark(document.documentElement.classList.contains('dark'));
+		};
 
-		updateTheme()
+		updateTheme();
 
-		const observer = new MutationObserver(updateTheme)
+		const observer = new MutationObserver(updateTheme);
 		observer.observe(document.documentElement, {
 			attributes: true,
 			attributeFilter: ['class'],
-		})
+		});
 
-		return () => observer.disconnect()
-	}, [])
+		return () => observer.disconnect();
+	}, []);
 
 	const toggleTheme = useCallback(async () => {
-		if (!buttonRef.current) return
+		if (!buttonRef.current) return;
 
 		await document.startViewTransition(() => {
 			flushSync(() => {
-				const newTheme = !isDark
-				setIsDark(newTheme)
-				document.documentElement.classList.toggle('dark')
-				localStorage.setItem('theme', newTheme ? 'dark' : 'light')
-			})
-		}).ready
+				const newTheme = !isDark;
+				setIsDark(newTheme);
+				document.documentElement.classList.toggle('dark');
+				localStorage.setItem('theme', newTheme ? 'dark' : 'light');
+			});
+		}).ready;
 
-		const { top, left, width, height } = buttonRef.current.getBoundingClientRect()
-		const x = left + width / 2
-		const y = top + height / 2
-		const maxRadius = Math.hypot(
-			Math.max(left, window.innerWidth - left),
-			Math.max(top, window.innerHeight - top),
-		)
+		const { top, left, width, height } = buttonRef.current.getBoundingClientRect();
+		const x = left + width / 2;
+		const y = top + height / 2;
+		const maxRadius = Math.hypot(Math.max(left, window.innerWidth - left), Math.max(top, window.innerHeight - top));
 
 		document.documentElement.animate(
 			{
@@ -66,27 +58,20 @@ export const AnimatedThemeToggler = ({
 				easing: 'ease-in-out',
 				pseudoElement: '::view-transition-new(root)',
 			},
-		)
-	}, [isDark, duration])
+		);
+	}, [isDark, duration]);
 
 	return (
-		<Button
-			ref={buttonRef}
-			className={cn(className)}
-			onClick={toggleTheme}
-			size='sm'
-			variant='ghost'
-			{...props}
-		>
+		<Button ref={buttonRef} className={cn(className)} onClick={toggleTheme} size="sm" variant="ghost" {...props}>
 			{!isClient ? (
-				<Loader className='animate-spin size-4' />
+				<Loader className="animate-spin size-4" />
 			) : (
 				<>
-					{isDark ? <Sun className='size-4' /> : <Moon className='size-4' />}
+					{isDark ? <Sun className="size-4" /> : <Moon className="size-4" />}
 					{showLabel && (isDark ? 'Light' : 'Dark')}
 				</>
 			)}
-			<span className='sr-only'>Toggle theme</span>
+			<span className="sr-only">Toggle theme</span>
 		</Button>
-	)
-}
+	);
+};

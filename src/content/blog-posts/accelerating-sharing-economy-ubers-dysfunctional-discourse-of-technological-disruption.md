@@ -225,8 +225,4 @@ Alex Williams and Nick Srnicek, 2013, “#ACCELERATE MANIFESTO for an Accelerati
 
 * * *
 
-```
-A short version of this paper was presented at Canadian Communication Association (CCA) Conference @ Calgary, Canada, June 2016.
-```
-
-[](#_ednref1)
+_A short version of this paper was presented at Canadian Communication Association (CCA) Conference @ Calgary, Canada, June 2016._

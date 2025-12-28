@@ -1,6 +1,6 @@
-import { defineCollection, reference, z } from 'astro:content'
+import { defineCollection, reference, z } from 'astro:content';
 
-import { glob } from 'astro/loaders'
+import { glob } from 'astro/loaders';
 
 const blogPostSchema = z.object({
 	title: z.string(),
@@ -10,12 +10,12 @@ const blogPostSchema = z.object({
 	status: z.enum(['published', 'draft']),
 	featured: z.boolean(),
 	author: reference('authors'),
-})
+});
 
 const blogPosts = defineCollection({
 	schema: blogPostSchema,
 	loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/blog-posts' }),
-})
+});
 
 const cv = defineCollection({
 	schema: z.object({
@@ -23,10 +23,10 @@ const cv = defineCollection({
 		publishedAt: z.string(),
 	}),
 	loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/cv' }),
-})
+});
 
-export type TBlogPostSchema = z.infer<typeof blogPostSchema>
+export type TBlogPostSchema = z.infer<typeof blogPostSchema>;
 export const collections = {
 	blogPosts,
 	cv,
-}
+};

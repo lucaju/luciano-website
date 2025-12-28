@@ -22,15 +22,15 @@ Let’s consider this new practice called A/B testing, which many editorial comp
 
 In Ivor Tossell’s **frivolous** example, he demonstrated how to test a title for a post about dogs:
 
-#### A: Thank god for puppies
+**A: Thank god for puppies**
 
-#### B: 17 Puppies Out-Puppying Themselves
+**B: 17 Puppies Out-Puppying Themselves**
 
 If you are exposed to one of them, which one do would you pick? And does it matter?
 
 Let’s say that \[Samia\] loves dogs. she probably would click on this post regardless of the title. \[Luciano\], on the other hand, does not really pay attention to dogs; so, neither title one would work. However, \[Samia\] and \[Luciano\] cases really do not matter because A/B test only works with large sample sizes.
 
-The assumption of this test is that the **best** title is the one chosen by the majority of the audience. But in this case, there is no control version. That is, there is nothing to compare. We see one or the other variation of the title. If the audience does not see both, how can they judge if one is better than the other? Well, this is not the case. The question is not a qualitative one; it is quantitative. The best is the one that receives more clicks. It is **not the most interesting, but the most effective one.** 
+The assumption of this test is that the **best** title is the one chosen by the majority of the audience. But in this case, there is no control version. That is, there is nothing to compare. We see one or the other variation of the title. If the audience does not see both, how can they judge if one is better than the other? Well, this is not the case. The question is not a qualitative one; it is quantitative. The best is the one that receives more clicks. It is **not the most interesting, but the most effective one.**
 
 News organizations can use the test to understand how readers are engaging with their websites, but this is more of in the design and layout level. From an editorial perspective, increasing reader engagement could correlate to growing an informed audience, which is often a news organization’s mission. But it can also manipulate the audience to generate more revenue: one can say that Buzzfeed uses A/B testing as a “click baits” strategy, for instance.
 

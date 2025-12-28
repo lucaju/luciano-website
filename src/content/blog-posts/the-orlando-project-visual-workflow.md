@@ -44,7 +44,7 @@ In the earlier stage of this project, we used a generic workflow from the world 
 
 At first, we choose to use web standards technologies such as HTML, CSS, and Javascript. So, we start this experiment with D3.js, an open source javascript library for creating data visualizations. The goal was to launch the workflow from JiTR, a collection management tool developed for such experiments.
 
-### Design
+### Design I
 
 ![Figure 1: First version of structured surface editorial workflow uses D3.js to build the interface.](../../assets/images/blog/Milena-workflow-surface-v03b-494x310.png) Figure 1: First version of structured surface editorial workflow uses D3.js to build the interface.
 
@@ -52,7 +52,7 @@ We have used a pipe-and-flow type of workflow as the surface for organizing the 
 
 The articles are represented by tokens. The position indicates the stage of the article in the workflow; the size illustrates the length of the documents in words. A rollover of the token shows a list of information containing: the title of the article, an abstract, name and contact information of the reviewer, and the date when the article went to the reviewer.
 
-### Development results
+### Development results I
 
 What we found with this experiment was that the majority of the information is contained in the structured surface, with very little in the tokens. We wondered for our next iteration if it might be useful to explore placing more of the information in the tokens, which would allow us to use surfaces that were less prone to becoming cluttered.
 
@@ -62,12 +62,11 @@ In terms of technology, we also identified a limitation. SVG does not support au
 
 For our second prototype, we decide to move the experiment to Adobe Flash to see if this tool would give us more flexibility. We also decided to produce an experiment with more meaningful data, so we partnered with Susan Brown and The Orlando Project. We use some of their editorial jobs, which include the writing of XML-encoded original material for Orlando biocritical entries on women writers.
 
-### Design
+### Design II
 
 As we are now working with a predefined workflow, the flowchart had to be redesigned. The stages are still represented by rectangles, but now they are primarily placeholders for documents.
 
 ![Figure 2: Orlando Workflow is the second version of a structured surface workflow.](../../assets/images/blog/workflow_orlando_v4-494x279.jpg) Figure 2: Orlando Workflow is the second version of a structured surface workflow.
-
 
 The workflow loads the collection of documents and retrieves the metadata. Based on this information, the documents, represented by tokens, are positioned in the workflow. The tokens are color coded in order to show status information: Start (White); Work in progress (Blue); Incomplete (Red); Completed (Green). A counter box shows the number of documents held at each stage (Figure 2).
 
@@ -77,7 +76,7 @@ The control panel gives access to a History Log, which shows the document's prog
 
 It is also possible to drag the token to any other stage. By doing that, the user automatically changes the stage and also the status of the document. Every modification performed in the workflow is auto-saved and generates a new log entry in the history.
 
-### Development results
+### Development results II
 
 Some issues arose during the process of development of this version. The most important was the high density of tokens inside a stage, where the overlap can make it challenging to find and access information.
 

@@ -1,16 +1,16 @@
 ---
-import NotesLayout from '@/layouts/post-layout.astro'
-import { getCollection } from 'astro:content'
+import { getCollection } from 'astro:content';
+import NotesLayout from '@/layouts/post-layout.astro';
 
 export async function getStaticPaths() {
-	const posts = await getCollection('blogPosts')
+	const posts = await getCollection('blogPosts');
 	return posts.map((post) => ({
 		params: { slug: post.id },
 		props: { post, headings: post.rendered },
-	}))
+	}));
 }
 
-const { post } = Astro.props
+const { post } = Astro.props;
 ---
 
 <NotesLayout post={post} />

@@ -1,28 +1,28 @@
-import { useCallback, useState } from 'react'
-import { Fragment } from 'react/jsx-runtime'
-import { Carousel, CarouselContent, CarouselItem } from './carousel'
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from './dialog'
+import { useCallback, useState } from 'react';
+import { Fragment } from 'react/jsx-runtime';
+import { Carousel, CarouselContent, CarouselItem } from './carousel';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from './dialog';
 
 type LigthboxProps = {
-	images: Array<{ src: string; alt: string; title?: string }>
-	children: (onOpenLightbox: (index: number) => void) => React.ReactNode
-}
+	images: Array<{ src: string; alt: string; title?: string }>;
+	children: (onOpenLightbox: (index: number) => void) => React.ReactNode;
+};
 
 export function Lightbox(props: LigthboxProps) {
-	const [open, setOpen] = useState(false)
-	const [index, setIndex] = useState(0)
+	const [open, setOpen] = useState(false);
+	const [index, setIndex] = useState(0);
 
 	const onOpenLightbox = useCallback((index: number) => {
-		setIndex(index)
+		setIndex(index);
 		setTimeout(() => {
-			setOpen(true)
-		}, 250)
-	}, [])
+			setOpen(true);
+		}, 250);
+	}, []);
 
 	return (
 		<Fragment>
 			<Dialog open={open} onOpenChange={setOpen}>
-				<DialogContent className='sm:max-w-2xl'>
+				<DialogContent className="sm:max-w-2xl">
 					<DialogHeader>
 						<DialogTitle>Photo Details</DialogTitle>
 						<DialogDescription>Swipe to scroll through the images</DialogDescription>
@@ -31,11 +31,11 @@ export function Lightbox(props: LigthboxProps) {
 					<Carousel key={index} opts={{ startIndex: index, active: true }}>
 						<CarouselContent>
 							{props.images.map((image) => (
-								<CarouselItem key={image.src} className=''>
+								<CarouselItem key={image.src} className="">
 									<img
 										alt={image.alt}
-										className=' h-8- lg:h-144 lg:w-full object-center lg:object-scale-down object-contain'
-										fetchPriority='low'
+										className=" h-8- lg:h-144 lg:w-full object-center lg:object-scale-down object-contain"
+										fetchPriority="low"
 										src={image.src}
 									/>
 								</CarouselItem>
@@ -47,5 +47,5 @@ export function Lightbox(props: LigthboxProps) {
 
 			{props.children(onOpenLightbox)}
 		</Fragment>
-	)
+	);
 }

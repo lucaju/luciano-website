@@ -1,20 +1,17 @@
-import { defineConfig, envField } from 'astro/config'
-
-import mdx from '@astrojs/mdx'
-import react from '@astrojs/react'
-import sitemap from '@astrojs/sitemap'
-import tailwindcss from '@tailwindcss/vite'
-import rehypeAutolinkHeadings from 'rehype-autolink-headings'
-import rehypeSlug from 'rehype-slug'
-
-import partytown from '@astrojs/partytown'
+import mdx from '@astrojs/mdx';
+import partytown from '@astrojs/partytown';
+import react from '@astrojs/react';
+import sitemap from '@astrojs/sitemap';
+import tailwindcss from '@tailwindcss/vite';
+import { defineConfig, envField } from 'astro/config';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypeSlug from 'rehype-slug';
 
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://lucianofrizzera.com',
 	env: {
 		schema: {
-			// PUBLIC_CF_TURNSTILE_SITE_KEY: envField.string({ context: 'client', access: 'public' }),
 			PUBLIC_GA_MEASUREMENT_ID: envField.string({ context: 'client', access: 'public' }),
 		},
 	},
@@ -32,4 +29,4 @@ export default defineConfig({
 		react(),
 		partytown({ config: { forward: ['dataLayer.push'] } }),
 	],
-})
+});

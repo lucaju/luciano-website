@@ -33,7 +33,7 @@ For the second version of our experiment, we built a tangible interface. We use 
 
 Nonetheless, the most requested feature on our interactive workflow tool was not available yet: the possibility to create workflows. As always, a prototype born with an “ideal” pre-set in mind, and now we wanted to let users mess around with our toy and see what sort of new ideas they would come up.
 
-Now, let me introduce the new features we have implemented in the third version of our workflow interface, now named Wrkflux. ![wrkflux_logo_h](../../assets/images/blog/wrkflux_logo_h2.png) 
+Now, let me introduce the new features we have implemented in the third version of our workflow interface, now named Wrkflux. ![wrkflux_logo_h](../../assets/images/blog/wrkflux_logo_h2.png)
 
 In order to let users create their own workflows; we had to develop a profile and authentication system. However, we made all projects public, that is, anyone can see someone else’s workflow, but cannot edit. As a result, we are building a public collection of different ideas on how people use workflows.
 
@@ -67,7 +67,7 @@ The Wrkflux is a public prototype. The code is here: [https://github.com/lucaju
 
 ## References
 
-Butler, C. (2012). Interaction. playing with data. A theory of amateur information design. \[Melbourne, Vic.\]: Common Ground Publishing. Print, 66(3), 32-33. 
+Butler, C. (2012). Interaction. playing with data. A theory of amateur information design. \[Melbourne, Vic.\]: Common Ground Publishing. Print, 66(3), 32-33.
 
 Frizzera, L., Radzikowska, M., Roeder, G., Pena, E., Dobson, T., Ruecker, S., … The INKE Research Group. (2013). Visual workflow interfaces for editorial processes. Literary and Linguistic Computing, 28(3), 615–628. doi:10.1093/llc/fqt053
 

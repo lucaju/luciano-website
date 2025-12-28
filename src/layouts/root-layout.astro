@@ -1,21 +1,21 @@
 ---
-import { DockNavigation } from '@/components/dock/navigation'
-import Footer from '@/components/footer/footer.astro'
-import GoogleAnalytics from '@/components/google-analytics.astro'
-import SkipButton from '@/components/skip-button.astro'
-import ThemeWatcher from '@/components/theme-watcher.astro'
-import { cn } from '@/lib/utils'
-import '@/styles/global.css'
-import rubikFont from '@fontsource-variable/rubik/files/rubik-latin-ext-wght-normal.woff2?url'
-import '@fontsource-variable/rubik/wght.css'
+import { DockNavigation } from '@/components/dock/navigation';
+import Footer from '@/components/footer/footer.astro';
+import GoogleAnalytics from '@/components/google-analytics.astro';
+import SkipButton from '@/components/skip-button.astro';
+import ThemeWatcher from '@/components/theme-watcher.astro';
+import { cn } from '@/lib/utils';
+import '@/styles/global.css';
+import rubikFont from '@fontsource-variable/rubik/files/rubik-latin-ext-wght-normal.woff2?url';
+import '@fontsource-variable/rubik/wght.css';
 
-import { PUBLIC_GA_MEASUREMENT_ID } from 'astro:env/client'
+import { PUBLIC_GA_MEASUREMENT_ID } from 'astro:env/client';
 
 interface Props {
-	scrollSmooth?: boolean
+	scrollSmooth?: boolean;
 }
 
-const { scrollSmooth = false } = Astro.props
+const { scrollSmooth = false } = Astro.props;
 ---
 
 <html class={cn(scrollSmooth ? 'scroll-smooth' : undefined)} lang="en">

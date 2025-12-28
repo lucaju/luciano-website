@@ -1,15 +1,15 @@
 ---
-import { FlickeringGrid } from '@/components/pattern/flickering-grid'
-import Seo from '@/components/seo.astro'
-import { Toc } from '@/components/toc'
-import RootLayout from '@/layouts/root-layout.astro'
-import { getCollection, render } from 'astro:content'
+import { getCollection, render } from 'astro:content';
+import { FlickeringGrid } from '@/components/pattern/flickering-grid';
+import Seo from '@/components/seo.astro';
+import { Toc } from '@/components/toc';
+import RootLayout from '@/layouts/root-layout.astro';
 
-const cv = (await getCollection('cv'))[0]
-const { Content, headings } = await render(cv)
+const cv = (await getCollection('cv'))[0];
+const { Content, headings } = await render(cv);
 
-const title = 'CV'
-const description = ''
+const title = 'CV';
+const description = '';
 ---
 
 <RootLayout scrollSmooth>

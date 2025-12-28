@@ -52,7 +52,7 @@ Yet, visualizations clearly imprints ideologies. By select data, making queries 
 
 Therefore, whoever produces visualization are clearly focusing on the support of their own ideologies. Russell _at al._ (2008) put a question about the media: how the public will get information it need to participate as citizens, if the new-media environment will serve less to weave society together than to break it apart (67). I extend the same question to public institutions, such as governments and organization.
 
-## Free tools for everybody.
+## Free tools for everybody
 
 As state by Sorapure, with the development of free visualization tools, the field of information visualization is being opened to diverse users and uses, and particularly to novice users who want to visualize personally relevant information (59).
 

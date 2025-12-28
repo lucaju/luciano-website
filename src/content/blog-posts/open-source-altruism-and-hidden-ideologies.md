@@ -28,6 +28,6 @@ How is that a movement calls itself “apolitical” if it has, at its core, age
 
 Finally, we cannot assume any practice disconnected from its mode of production. The discourse that science and technology are built by altruistic souls and essentially political neutral agents is a clear message that something is hidden deep in its practices.
 
-### References
+## References
 
 Benkler, Y. (2006). The wealth of networks: how social production transforms markets and freedom. New Haven \[Conn.\]: Yale University Press.

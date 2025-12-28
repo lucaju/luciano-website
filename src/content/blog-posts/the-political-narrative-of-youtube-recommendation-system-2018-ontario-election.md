@@ -27,7 +27,7 @@ Social media is both an important tool for politicians to disseminate their plat
 
 There is, however, a lack of data about political discoverability in Canada. This paper contributes to a first look through an important case of YouTube recommendations about party leaders during the 2018 Ontario election. YouTube is a top social media platform in Canada, used by 22% of Canadians for news according to the Reuters Institute Digital News Report. Most parties upload speeches, advertisements and exclusive content to YouTube. Finally,  YouTube's recommendations drive 71% of viewing time on the platform (Covington, Adams, & Sargin, 2016; Solsman, 2018).
 
-## Our presentation makes three contributions:
+## Our presentation makes three contributions
 
 1. We prototype new methods to analyze YouTube by tracking the recommendations per party leader.
 2. We find that recommendations do not typically promote extremist content but recommendations more frequently promoting negative videos for Liberal leader Kathleen Wynne and positive videos for PC leader Doug Ford.

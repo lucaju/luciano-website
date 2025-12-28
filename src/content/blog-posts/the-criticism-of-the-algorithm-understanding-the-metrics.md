@@ -42,7 +42,7 @@ Studies of variations in the text are essential in Literature, Theology, Philoso
 
 The MtV project focus on creating a new interface for studying variorums using large multitouch displays, where at least two users can interact with the information in a social way at the same time, and at the same place. For this project, we are using a 52-inch high-resolution screen (4k x 2k pixels), which give us enough space to open many windows, or editions, at the same time. The big challenge is to understand how these new forms of interaction, especially using tangible interface, can help or improve learning and research development. You can check more information in a [paper that I presented at DH 2013](/blog/designing-interactive-reading-environments-for-the-online-scholarly-edition "Designing for Multi-Touch Surfaces as Social Reading Environments").
 
-<iframe title="vimeo-player" src="https://player.vimeo.com/video/70527973?h=36e12598a6" width="640" height="360" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
+<iframe loading="lazy" title="vimeo-player" src="https://player.vimeo.com/video/70527973?h=36e12598a6" width="640" height="360" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
 
 ## Tools
 

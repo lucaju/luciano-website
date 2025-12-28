@@ -15,7 +15,7 @@ export const MobileMenu = () => {
 	const [dropdownOpen, setDropdownOpen] = React.useState(false)
 	return (
 		<DropdownMenu open={dropdownOpen} onOpenChange={setDropdownOpen}>
-			<DropdownMenuTrigger asChild onClick={() => setDropdownOpen((val) => !val)}>
+			<DropdownMenuTrigger asChild aria-label='menu' onClick={() => setDropdownOpen((val) => !val)}>
 				<Button variant='ghost' size='icon'>
 					<Menu className='h-4 w-4' />
 				</Button>

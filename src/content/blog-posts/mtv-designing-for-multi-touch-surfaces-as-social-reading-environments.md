@@ -20,6 +20,7 @@ keywords:
   src="https://player.vimeo.com/video/70527973?h=36e12598a6"
   width="468"
   height="267"
+  loading="lazy"
   referrerPolicy="strict-origin-when-cross-origin"
   allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
   allowFullScreen

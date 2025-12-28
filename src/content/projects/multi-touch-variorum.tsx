@@ -152,6 +152,7 @@ export const multiTouchVariorum: TimelineEntry = {
 				allowFullScreen
 				className='rounded-lg w-full'
 				height='267'
+				loading='lazy'
 				referrerPolicy='strict-origin-when-cross-origin'
 				src='https://player.vimeo.com/video/70527973?h=36e12598a6'
 				title='Vimeo video player'

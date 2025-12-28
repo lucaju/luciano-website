@@ -61,6 +61,7 @@ export const dhExperience: TimelineEntry = {
 				allowFullScreen
 				className='rounded-lg w-full'
 				height='267'
+				loading='lazy'
 				referrerPolicy='strict-origin-when-cross-origin'
 				src='https://player.vimeo.com/video/90163548?h=7659a9b6d5'
 				title='Vimeo video player'

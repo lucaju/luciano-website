@@ -14,31 +14,39 @@ import { FooterLink } from './footer-link'
 		<div>
 			<p class="font-semibold pb-2">Website</p>
 			<nav class="flex flex-col">
-				{
-					NAVIGATIONS.filter((item) => item.pathname !== '/').map((item) => (
-						<a
-							class="text-sm py-1 font-medium text-muted-foreground"
-							href={item.pathname}
-							title={item.label}
-						>
-							{item.label}
-						</a>
-					))
-				}
+				<ul>
+					{
+						NAVIGATIONS.filter((item) => item.pathname !== '/').map((item) => (
+							<li class="list-none">
+								<a
+									class="text-sm py-1 font-medium text-muted-foreground"
+									href={item.pathname}
+									title={item.label}
+								>
+									{item.label}
+								</a>
+							</li>
+						))
+					}
+				</ul>
 			</nav>
 		</div>
 
 		<div>
 			<p class="font-semibold pb-2">Networks</p>
 			<nav class="flex flex-col">
-				{SOCIALS.map((item) => <FooterLink label={item.label} url={item.pathname} />)}
+				<ul>
+					{SOCIALS.map((item) => <FooterLink label={item.label} url={item.pathname} />)}
+				</ul>
 			</nav>
 		</div>
 
 		<div>
 			<p class="font-semibold pb-2">Repos</p>
 			<nav class="flex flex-col">
-				{REPOS.map((item) => <FooterLink label={item.label} url={item.pathname} />)}
+				<ul>
+					{REPOS.map((item) => <FooterLink label={item.label} url={item.pathname} />)}
+				</ul>
 			</nav>
 		</div>
 	</div>

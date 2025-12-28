@@ -71,6 +71,7 @@ export const citeLens: TimelineEntry = {
 				allowFullScreen
 				className='rounded-lg w-full'
 				height='267'
+				loading='lazy'
 				referrerPolicy='strict-origin-when-cross-origin'
 				src='https://player.vimeo.com/video/87746427?h=afc635822f'
 				title='Vimeo video player'

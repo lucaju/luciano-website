@@ -19,7 +19,7 @@ keywords:
 
 ---
 
-<iframe title="vimeo-player" src="https://player.vimeo.com/video/100567400?h=1c78150135" width="640" height="360" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
+<iframe loading="lazy"title="vimeo-player" src="https://player.vimeo.com/video/100567400?h=1c78150135" width="640" height="360" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
 
 The process of modeling workflows for any purposes might be seen as a laborious and tedious experience. Even fun projects, like the development of mobile applications or video games, depending on tools with very formal structural representation, usually not user-friendly, and somewhat complex to use. So, how can we improve user experience in the process of modeling workflows, and perhaps make it more insightful and enjoyable? How can we mutate a workflow tool in order to make workflows more attractive, flexible, and useful for scholars?
 
@@ -57,7 +57,7 @@ So, what sort of things a board game could bring in to help scholars in the proc
 
 So, we decided to incorporate the ludic affordances of board games in the Wrkflux. We just needed a game. But which game? The whole idea is to let the users create games based on their workflows process. And we, as DH graduate students, decided to model the academic research workflow in the context of DH projects and practices around the world into a game. The game models the experience of researching and publishing in a multi-disciplinary academic environment. Players collaborate to collect data, perform research and publish their work in order to succeed, competing against the system inherent to the game.
 
-<iframe title="vimeo-player" src="https://player.vimeo.com/video/90163548?h=7659a9b6d5" width="640" height="360" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
+<iframe loading="lazy" title="vimeo-player" src="https://player.vimeo.com/video/90163548?h=7659a9b6d5" width="640" height="360" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
 
 We firstly developed and tested a paper-based version of the game with all the rules, roles, and flavours. We are now using Wrkflux to code the game’s mechanic in order to develop the digital version of this game. If you are interested and want to know more about this game, please come talk with us after the panel. We will also be at CGSA next Thursday running a demonstration. You are all invited to watch and play.
 

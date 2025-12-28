@@ -16,7 +16,7 @@ Try now: [gamepictio.com](https://gamepictio.com)
 
 ![Demo](../../assets/images/blog/Screen-Shot-2019-06-25-at-9.36.33-PM.png)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ffwH93X_pKg?si=mCHF2rCzMnsZF6bR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/ffwH93X_pKg?si=mCHF2rCzMnsZF6bR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 PICT.IO is a hybrid digital and board game inspired by _Pictionary_ that makes human and machines work together. The game is played by two teams, Yellow and Red. Each team is composed of two humans and one machine. The machine players are composed of one drawing robotic arm (Line-us robots), connected to a speaker and a tablet.
 

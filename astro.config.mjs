@@ -1,13 +1,13 @@
-import { defineConfig, envField } from 'astro/config';
+import { defineConfig, envField } from 'astro/config'
 
-import mdx from '@astrojs/mdx';
-import react from '@astrojs/react';
-import sitemap from '@astrojs/sitemap';
-import tailwindcss from '@tailwindcss/vite';
-import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-import rehypeSlug from 'rehype-slug';
+import mdx from '@astrojs/mdx'
+import react from '@astrojs/react'
+import sitemap from '@astrojs/sitemap'
+import tailwindcss from '@tailwindcss/vite'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypeSlug from 'rehype-slug'
 
-import partytown from '@astrojs/partytown';
+import partytown from '@astrojs/partytown'
 
 // https://astro.build/config
 export default defineConfig({
@@ -32,4 +32,4 @@ export default defineConfig({
 		react(),
 		partytown({ config: { forward: ['dataLayer.push'] } }),
 	],
-});
+})

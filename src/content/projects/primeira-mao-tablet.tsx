@@ -135,6 +135,7 @@ export const primeiraMaoTablet: TimelineEntry = {
 				allowFullScreen
 				className='rounded-lg w-full'
 				height='267'
+				loading='lazy'
 				referrerPolicy='strict-origin-when-cross-origin'
 				src='https://www.youtube.com/embed/_PDoCUqSaO0?si=raU83109vsH5lkxh'
 				title='YouTube video player'

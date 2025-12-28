@@ -27,7 +27,7 @@ My approach was to work with just typographic animation without any other kind o
 
 **Type of animation:** Typographic
 
-<iframe src="http://player.vimeo.com/video/40433944" width="500" height="281" frameborder="0"></iframe>
+<iframe loading="lazy" src="http://player.vimeo.com/video/40433944" width="500" height="281" frameborder="0"></iframe>
 
 —————
 

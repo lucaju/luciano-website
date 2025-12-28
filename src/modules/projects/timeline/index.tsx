@@ -78,9 +78,9 @@ const Entry = ({ item }: { item: TimelineEntry }) => {
 					<div className='h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2' />
 				</div>
 				<div className='hidden md:flex flex-col md:pl-16 -mt-0.5 gap-2'>
-					<h3 className='text-xl md:text-4xl font-bold text-neutral-700 dark:text-neutral-300 '>
+					<h2 className='text-xl md:text-4xl font-bold text-neutral-700 dark:text-neutral-300 '>
 						{item.title}
-					</h3>
+					</h2>
 					<ItemMetadata key={item.title} item={item} />
 				</div>
 			</div>
@@ -100,9 +100,9 @@ const Entry = ({ item }: { item: TimelineEntry }) => {
 const MobileComponent = ({ children, title }: React.PropsWithChildren & { title: string }) => {
 	return (
 		<div className='md:hidden block mb-4'>
-			<h3 className='text-2xl text-left font-bold text-neutral-700 dark:text-neutral-300'>
+			<h2 className='text-2xl text-left font-bold text-neutral-700 dark:text-neutral-300'>
 				{title}
-			</h3>
+			</h2>
 			{children}
 		</div>
 	)
@@ -117,9 +117,9 @@ const ItemMetadata = ({ item }: { item: TimelineEntry }) => {
 	return (
 		<>
 			{item.subTitle && (
-				<h4 className='text-xl font-bold text-neutral-500 dark:text-neutral-500 text-balance'>
+				<h3 className='text-xl font-bold text-neutral-500 dark:text-neutral-500 text-balance'>
 					{item.subTitle}
-				</h4>
+				</h3>
 			)}
 
 			<p className='text-sm md:text-md text-neutral-500 dark:text-neutral-500 '>

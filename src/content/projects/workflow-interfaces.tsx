@@ -81,6 +81,7 @@ export const WorkflowInterfacesForEditorialProcesses: TimelineEntry = {
 				allowFullScreen
 				className='rounded-lg w-full'
 				height='267'
+				loading='lazy'
 				referrerPolicy='strict-origin-when-cross-origin'
 				src='https://player.vimeo.com/video/70748726?h=85f2698381'
 				title='Vimeo video player'
@@ -99,6 +100,7 @@ export const WorkflowInterfacesForEditorialProcesses: TimelineEntry = {
 				allowFullScreen
 				className='rounded-lg w-full'
 				height='267'
+				loading='lazy'
 				referrerPolicy='strict-origin-when-cross-origin'
 				src='https://player.vimeo.com/video/100567400?h=1c78150135'
 				title='Vimeo video player'

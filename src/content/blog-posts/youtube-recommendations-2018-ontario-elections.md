@@ -44,7 +44,7 @@ The three interactive graphics allow you to explore YouTube’s recommendations 
 2. Top channels, or video producers, for all candidates
 3. Top recommendations per day. This visualization is a little complex. Each line represents a video as it changes position in the top 10 day by day, but helps you understand the stability of video recommendations over time.
 
-<iframe src="https://rankflow-ontario-elections-2018.lucianofrizzera.com/" width="100%" height="1800"></iframe>
+<iframe loading="lazy" src="https://rankflow-ontario-elections-2018.lucianofrizzera.com/" width="100%" height="1800"></iframe>
 
 ## Limitations
 

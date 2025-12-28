@@ -25,7 +25,7 @@ The complete, tested paper prototype uses a fixed number of real-world inspired 
 
 Good morning everyone. At the risk of dampening my own looming presentation thunder, I have a very short video a colleague and I produced a little earlier in the year that I’d like to play for you as a brief introduction to the work about which I’ll be speaking.
 
-<iframe title="vimeo-player" src="https://player.vimeo.com/video/90163548?h=7659a9b6d5" width="640" height="360" referrerPolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" allowFullScreen></iframe>
+<iframe loading="lazy" title="vimeo-player" src="https://player.vimeo.com/video/90163548?h=7659a9b6d5" width="640" height="360" referrerPolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" allowFullScreen></iframe>
 
 Digital Humanities is relatively new and relatively unknown outside the field, and what exactly it encompasses is even less well understood. In her 2012 paper “This is Why We Fight”, Lisa Spiro explains how members of the DH community are continually debating “what counts as digital humanities and what does not, who is in and who is out, and whether DH is about making or theorizing, computation or communication, practice or politics”.
 

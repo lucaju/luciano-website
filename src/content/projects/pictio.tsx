@@ -78,6 +78,7 @@ export const pictio: TimelineEntry = {
 				allowFullScreen
 				className='rounded-lg w-full'
 				height='267'
+				loading='lazy'
 				referrerPolicy='strict-origin-when-cross-origin'
 				src='https://www.youtube.com/embed/ffwH93X_pKg?si=mCHF2rCzMnsZF6bR'
 				title='Vimeo video player'

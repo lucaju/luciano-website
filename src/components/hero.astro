@@ -1,0 +1,34 @@
+---
+import { RetroGrid } from '@/components/pattern/retro-grid'
+import { cn } from '@/lib/utils'
+
+interface Props {
+	description: string
+	className?: string
+}
+
+const { description, className } = Astro.props
+---
+
+<header class={cn('relative h-[calc(66vh-6rem)] pt-32 sm:pt-40 lg:pt-32', className)}>
+	<RetroGrid client:load />
+
+	<div class="container-fluid relative z-1">
+		<div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+			<div class="flex-1">
+				<h1 class="text-3xl leading-none sm:text-4xl lg:text-6xl font-bold text-balance">
+					<slot name="name" />
+				</h1>
+				<h2 class="text-2xl leading-none sm:text-3xl lg:text-4xl font-bold text-balance">
+					<slot name="title" />
+				</h2>
+				<p class="lg:text-lg max-w-4xl py-4 lg:py-6">
+					{description}
+				</p>
+			</div>
+			<div class="shrink-0">
+				<slot name="picture" />
+			</div>
+		</div>
+	</div>
+</header>

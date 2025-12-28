@@ -1,0 +1,42 @@
+---
+import { DotPattern } from '@/components/pattern/dot-pattern'
+import Seo from '@/components/seo.astro'
+import RootLayout from '@/layouts/root-layout.astro'
+import PostsCards from '@/modules/blog/posts.astro'
+import { A, pipe } from '@mobily/ts-belt'
+import { getCollection } from 'astro:content'
+
+const title = 'Blog'
+const description = ''
+
+const posts = await getCollection('blogPosts')
+
+const postsList = pipe(
+	posts,
+	A.filter((post) => {
+		if (import.meta.env.PROD) return post.data.status === 'published'
+		return true
+	}),
+	A.sort((a, b) => (new Date(b.data.publishedAt) > new Date(a.data.publishedAt) ? 1 : 0)),
+)
+---
+
+<RootLayout>
+	<Seo slot="metadata" {title} {description} />
+	<div class="relative">
+		<header class="container-fluid pt-32 md:pt-22 lg:pt-24 pb-6 lg:pb-12">
+			<h1
+				class="text-4xl leading-none sm:text-5xl lg:text-7xl tracking-tight font-bold text-balance pb-8 lg:pb-16"
+			>
+				{title}
+			</h1>
+			<DotPattern
+				glow
+				client:load
+				className="fixed h-[300px] w-full top-0 mask-[radial-gradient(600px_circle_at_center,var(--background),transparent)]"
+			/>
+		</header>
+	</div>
+
+	<PostsCards posts={postsList} />
+</RootLayout>

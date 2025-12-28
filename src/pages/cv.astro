@@ -1,0 +1,47 @@
+---
+import { FlickeringGrid } from '@/components/pattern/flickering-grid'
+import Seo from '@/components/seo.astro'
+import { Toc } from '@/components/toc'
+import RootLayout from '@/layouts/root-layout.astro'
+import { getCollection, render } from 'astro:content'
+
+const cv = (await getCollection('cv'))[0]
+const { Content, headings } = await render(cv)
+
+const title = 'CV'
+const description = ''
+---
+
+<RootLayout scrollSmooth>
+	<Seo slot="metadata" {title} {description} />
+
+	<div class="relative">
+		<header class="container-fluid pt-32 md:pt-22 lg:pt-24 pb-6 lg:pb-12">
+			<h1
+				class="text-4xl leading-none sm:text-5xl lg:text-7xl tracking-tight font-bold text-balance pb-8 lg:pb-16"
+			>
+				{title}
+			</h1>
+
+			<FlickeringGrid
+				className="fixed inset-0 -mt-40 mask-[radial-gradient(500px_circle_at_center,white,transparent)] pointer-events-none"
+				squareSize={4}
+				gridGap={6}
+				color="#6B7280"
+				maxOpacity={0.2}
+				flickerChance={0.1}
+				client:load
+			/>
+		</header>
+	</div>
+
+	<section class="container-fluid sm:flex sm:flex-row-reverse sm:justify-between py-10">
+		<Toc client:load headings={headings} />
+
+		<article
+			class="prose dark:prose-invert [&_:is(h2,h3,h4,h5,h6)]:scroll-mt-10 flex-1 prose-stone max-w-[80ch] prose-sm"
+		>
+			<Content />
+		</article>
+	</section>
+</RootLayout>

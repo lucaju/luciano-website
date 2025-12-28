@@ -1,0 +1,69 @@
+---
+import { DotPattern } from '@/components/pattern/dot-pattern'
+import Seo from '@/components/seo.astro'
+import { Toc } from '@/components/toc'
+import RootLayout from '@/layouts/root-layout.astro'
+import { dateToISO, formatDate } from '@/lib/date'
+import '@/styles/blog-posts.css'
+import type { InferEntrySchema, RenderedContent } from 'astro:content'
+import { render } from 'astro:content'
+
+interface Props {
+	post: {
+		id: string
+		body?: string
+		collection: 'blogPosts'
+		data: InferEntrySchema<'blogPosts'>
+		rendered?: RenderedContent
+		filePath?: string
+	}
+}
+
+const { post } = Astro.props
+const { Content, headings } = await render(post)
+
+const { title, description, keywords, publishedAt } = post.data
+const publishedTime = dateToISO(publishedAt)
+---
+
+<RootLayout scrollSmooth>
+	<Seo
+		{title}
+		slot="metadata"
+		{description}
+		keywords={keywords}
+		article={{ tags: keywords, publishedTime, authors: [] }}
+	/>
+	<div class="relative">
+		<header class="container-fluid pt-32 md:pt-22 lg:pt-24 pb-6 lg:pb-12">
+			<h1
+				class="text-4xl leading-none sm:text-5xl lg:text-7xl tracking-tight font-bold text-balance pb-8 lg:pb-16"
+			>
+				{title}
+			</h1>
+
+			<div class="flex gap-2 text-muted-foreground items-center">
+				<div class="inline-flex items-center gap-x-2 text-sm font-medium">
+					<span class="max-md:sr-only">Published on</span>
+					<time datetime={dateToISO(publishedAt)}>{formatDate(publishedAt)}</time>
+				</div>
+			</div>
+		</header>
+
+		<DotPattern
+			glow
+			client:load
+			className="mask-[radial-gradient(600px_circle_at_center,var(--background),transparent)]"
+		/>
+	</div>
+
+	<section class="container-fluid sm:flex sm:flex-row-reverse sm:justify-between py-10">
+		<Toc client:load headings={headings} />
+
+		<article class="prose dark:prose-invert [&_:is(h2,h3,h4,h5,h6)]:scroll-mt-10 flex-1 prose-stone">
+			<Content />
+		</article>
+	</section>
+
+	<slot />
+</RootLayout>

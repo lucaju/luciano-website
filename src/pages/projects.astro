@@ -1,0 +1,29 @@
+---
+import { StripedPattern } from '@/components/pattern/striped-pattern'
+import Seo from '@/components/seo.astro'
+import RootLayout from '@/layouts/root-layout.astro'
+import { ShowcaseProjects } from '@/modules/projects/showcase-projects'
+
+const title = 'Projects'
+const description = ''
+---
+
+<RootLayout scrollSmooth>
+	<Seo slot="metadata" {title} {description} />
+
+	<div class="relative">
+		<header class="container-fluid pt-32 md:pt-22 lg:pt-24 pb-6 lg:pb-12">
+			<h1
+				class="text-4xl leading-none sm:text-5xl lg:text-7xl tracking-tight font-bold text-balance pb-8 lg:pb-16"
+			>
+				Projects
+			</h1>
+			<StripedPattern
+				className="fixed h-[300px] w-full top-0 mask-[radial-gradient(300px_circle_at_top,white,transparent)] stroke-[0.3] [stroke-dasharray:8,4]"
+			/>
+		</header>
+	</div>
+	<section class="container-fluid">
+		<ShowcaseProjects client:visible />
+	</section>
+</RootLayout>

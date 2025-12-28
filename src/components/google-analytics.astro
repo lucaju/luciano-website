@@ -1,0 +1,26 @@
+---
+type Props = { measurementId: string };
+const props = Astro.props as Props;
+const measurementId = props.measurementId;
+---
+
+<script is:inline type="text/partytown" src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}></script>
+<script is:inline data-ga-measurement-id={measurementId} id="ga-init">
+	const measurementId = document.getElementById('ga-init').getAttribute('data-ga-measurement-id');
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+
+	// Implement default denied consents and ONLY collect anonymous data
+	// This should ALWAYS be set before the gtag("config", "G-XXXXXXXXXX"); line
+	gtag('consent', 'default', {
+		ad_storage: 'denied',
+		ad_user_data: 'denied',
+		ad_personalization: 'denied',
+		analytics_storage: 'denied',
+	});
+
+	gtag('config', measurementId);
+</script>

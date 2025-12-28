@@ -1,0 +1,61 @@
+---
+import me from '@/assets/profile_pictures.jpg'
+import { Delightful } from '@/components/delightful'
+import { RetroGrid } from '@/components/pattern/retro-grid'
+import Seo from '@/components/seo.astro'
+import RootLayout from '@/layouts/root-layout.astro'
+import { cn } from '@/lib/utils'
+import { Image } from 'astro:assets'
+
+const description =
+	'I am an early scholar in Communication Studies and Digital Humanities (DH), with a focus on the intersection of Critical AI, Platform Studies, and Science and Technology Studies (STS). '
+---
+
+<RootLayout>
+	<Seo slot="metadata" {description} />
+
+	<header class={cn('relative pt-32 sm:pt-40 lg:pt-32')}>
+		<RetroGrid client:load />
+
+		<div class="container-fluid relative z-1">
+			<div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+				<div class="flex-1">
+					<h1 class="text-3xl leading-none sm:text-4xl lg:text-6xl font-bold text-balance mb-6">
+						Luciano Frizzera, PhD
+					</h1>
+					<h2 class="text-xl leading-none sm:text-3xl lg:text-4xl font-bold text-balance">
+						Critical <Delightful text="AI" /> & <Delightful text="Platform" /> Studies Scholar <br />
+						<Delightful text="Web" /> Developer + <Delightful text="UX" /> Designer
+					</h2>
+				</div>
+				<div class="shrink-0">
+					<Image src={me} alt="me" class="w-32 h-32 md:w-48 md:h-48 rounded-full object-cover" />
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid relative z-1">
+			<div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+				<div class="flex-1">
+					<p class="lg:text-lg max-w-2xl py-4 lg:py-6">
+						I am an early scholar in Communication Studies and Digital Humanities (DH), with a focus on the
+						intersection of Critical AI, Platform Studies, and Science and Technology Studies (STS). My
+						research combines traditional methodologies with innovative approaches, such as digital methods
+						and critical code studies, to examine how digital platforms and AI can be understood as part of
+						a discourse connected to broader power structures.
+					</p>
+					<p class="lg:text-lg max-w-4xl py-4 lg:py-6">
+						My primary research discusses the political economy of subjectivation driven by AI and digital
+						platforms. I am interested in the political and social implications of AI, datafication, and
+						hyper-nudges to understand how algorithmic mediation produces subjects and reorganizes life.
+					</p>
+					<p class="lg:text-lg py-4 lg:py-6">
+						I am also an experienced web developer and an UI/UX designer. I have produced several scripts
+						for data collection and transformation as well as interactive interfaces for data visualization,
+						semantic text editors, games, and websites.
+					</p>
+				</div>
+			</div>
+		</div>
+	</header>
+</RootLayout>

@@ -1,0 +1,27 @@
+<Fragment></Fragment>
+
+<script is:inline>
+	function loadScript() {
+		function getThemePreference() {
+			const localTheme = localStorage.getItem('app.theme');
+			const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+			if (!localTheme) return { theme: systemTheme, source: 'system' };
+
+			return { theme: localTheme, source: 'storage' };
+		}
+		const themePreference = getThemePreference();
+		const isDarkMode = themePreference.theme === 'dark';
+		document.documentElement.classList.toggle('dark', isDarkMode);
+
+		const obs = new MutationObserver(() => {
+			const isDark = document.documentElement.classList.contains('dark');
+			localStorage.setItem('app.theme', isDark ? 'dark' : 'light');
+		});
+		obs.observe(document.documentElement, {
+			attributes: true,
+			attributeFilter: ['class'],
+		});
+	}
+
+	loadScript();
+</script>

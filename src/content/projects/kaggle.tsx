@@ -17,7 +17,7 @@ export const kaggle: TimelineEntry = {
 	tags: ['AI', 'Algorithmic Mediation', 'Political Economy', 'Subjectivation', 'Kaggle'],
 	extra: [
 		<Collection key="publications" label="Publications">
-			<Item key="chapter1" type="Book Chapter" pending>
+			<Item type="Journal Article" pending>
 				<span>
 					Frizzera, L. [Manuscript in production].{' '}
 					<strong>

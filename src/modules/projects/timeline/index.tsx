@@ -1,10 +1,14 @@
 'use client';
 
+import { Link2 } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'motion/react';
 import type React from 'react';
 import { useEffect, useRef, useState } from 'react';
 import slug from 'slug';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Highlighter } from '@/components/ui/highlighter';
+import { cn, supportsNavigatorClipboard } from '@/lib/utils';
 
 interface Date {
 	start: number;
@@ -46,7 +50,9 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 		<div className="w-full" ref={containerRef}>
 			<div ref={ref} className="relative pb-20">
 				{data
-					.toSorted((a, b) => (b.date.end ?? Number.POSITIVE_INFINITY) - (a.date.end ?? Number.POSITIVE_INFINITY))
+					.toSorted(
+						(a, b) => (b.date.end ?? Number.POSITIVE_INFINITY) - (a.date.end ?? Number.POSITIVE_INFINITY)
+					)
 					.map((item) => (
 						<Entry key={item.title} item={item} />
 					))}
@@ -68,14 +74,56 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 };
 
 const Entry = ({ item }: { item: TimelineEntry }) => {
+	const [hover, setHover] = useState(false);
+	const [copied, setCopied] = useState(false);
 	return (
-		<div id={slug(item.title)} className="flex justify-start pt-10 md:pb-40 md:gap-10">
+		// biome-ignore lint/a11y/noStaticElementInteractions: false positive
+		<div
+			id={slug(item.title)}
+			onMouseEnter={() => setHover(true)}
+			onMouseLeave={() => setHover(false)}
+			className="flex justify-start pt-10 md:pb-40 md:gap-10"
+		>
 			<div className="sticky flex flex-col md:flex-row z-40 top-40 self-start md:w-full">
 				<div className="hidden md:flex h-10 absolute left-3 md:left-3 w-10 rounded-full bg-background items-center justify-center">
-					<div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
+					<Button
+						className={cn(
+							'w-7 h-7 rounded-full border border-neutral-300 dark:border-neutral-700',
+							(hover || copied) && 'rounded-md'
+						)}
+						onClick={() => {
+							navigator.clipboard.writeText(`${window.location.origin}/projects#${slug(item.title)}`);
+							setCopied(true);
+							setTimeout(() => {
+								setCopied(false);
+							}, 2500);
+						}}
+						size="icon"
+						title="Copy link to this project"
+						variant="secondary"
+					>
+						<Link2
+							className={cn(
+								'opacity-0 transition duration-200',
+								(hover || copied) && 'opacity-100',
+								copied && 'opacity-50 -rotate-5'
+							)}
+						/>
+					</Button>
+					{copied && (
+						<div className="relative">
+							<div className="absolute w-max text-sm -rotate-5 -translate-x-12 -translate-y-12">
+								<Highlighter action="underline" color="#FF9800" padding={-8}>
+									Link copied!
+								</Highlighter>
+							</div>
+						</div>
+					)}
 				</div>
 				<div className="hidden md:flex flex-col md:pl-16 -mt-0.5 gap-2">
-					<h2 className="text-xl md:text-4xl font-bold text-neutral-700 dark:text-neutral-300 ">{item.title}</h2>
+					<h2 className="text-xl md:text-4xl font-bold text-neutral-700 dark:text-neutral-300 ">
+						{item.title}
+					</h2>
 					<ItemMetadata key={item.title} item={item} />
 				</div>
 			</div>
@@ -93,9 +141,47 @@ const Entry = ({ item }: { item: TimelineEntry }) => {
 };
 
 const MobileComponent = ({ children, title }: React.PropsWithChildren & { title: string }) => {
+	const [copied, setCopied] = useState(false);
+
+	// useEffect(() => {
+	// 	if (copied) {
+	// 		setTimeout(() => {
+	// 			setCopied(false);
+	// 		}, 2000);
+	// 	}
+	// }, [copied]);
+
 	return (
 		<div className="md:hidden block mb-4">
-			<h2 className="text-2xl text-left font-bold text-neutral-700 dark:text-neutral-300">{title}</h2>
+			{supportsNavigatorClipboard() ? 'yes' : 'no'}
+			<div className="flex items-start justify-start">
+				<h2 className="text-2xl text-left font-bold text-neutral-700 dark:text-neutral-300">{title}</h2>
+				{supportsNavigatorClipboard() && (
+					<Button
+						className="w-8 h-8 mt-0.25 ml-1"
+						onClick={async () => {
+							await navigator.clipboard.writeText(`${window.location.origin}/projects#${slug(title)}`);
+							setCopied(true);
+							setTimeout(() => {
+								setCopied(false);
+							}, 2000);
+						}}
+						title="Copy link to this project"
+						variant={copied ? 'headless' : 'ghost'}
+					>
+						{copied && (
+							<div className="w-6 h-4">
+								<div className="absolute text-sx -rotate-5 -translate-x-12 -translate-y-8">
+									<Highlighter action="underline" color="#FF9800" padding={-8}>
+										Link copied!
+									</Highlighter>
+								</div>
+							</div>
+						)}
+						<Link2 className={cn(copied && '-translate-x-1')} />
+					</Button>
+				)}
+			</div>
 			{children}
 		</div>
 	);
@@ -110,7 +196,9 @@ const ItemMetadata = ({ item }: { item: TimelineEntry }) => {
 	return (
 		<>
 			{item.subTitle && (
-				<h3 className="text-xl font-bold text-neutral-500 dark:text-neutral-500 text-balance">{item.subTitle}</h3>
+				<h3 className="text-xl font-bold text-neutral-500 dark:text-neutral-500 text-balance">
+					{item.subTitle}
+				</h3>
 			)}
 
 			<p className="text-sm md:text-md text-neutral-500 dark:text-neutral-500 ">

@@ -38,6 +38,7 @@
 		"astro-seo": "^0.8.4",
 		"class-variance-authority": "^0.7.1",
 		"clsx": "^2.1.1",
+		"date-fns": "^4.1.0",
 		"embla-carousel-react": "^8.6.0",
 		"lucide-react": "^0.562.0",
 		"motion": "^12.23.26",
@@ -50,7 +51,8 @@
 		"slug": "^11.0.1",
 		"tailwind-merge": "^3.4.0",
 		"ts-pattern": "^5.9.0",
-		"typescript": "^5.9.3"
+		"typescript": "^5.9.3",
+		"zod": "^4.2.1"
 	},
 	"devDependencies": {
 		"@astrojs/check": "^0.9.6",

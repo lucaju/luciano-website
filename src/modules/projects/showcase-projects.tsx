@@ -29,7 +29,7 @@ import { tvm } from '@/content/projects/twiter-vs-mode';
 import { WorkflowInterfacesForEditorialProcesses } from '@/content/projects/workflow-interfaces';
 import { ymx } from '@/content/projects/ymx-migration';
 import { youtubeRecommendationRankflow } from '@/content/projects/youtube-recommendation-rankflow';
-import { Timeline, type TimelineEntry } from '@/modules/projects/timeline';
+import { type ProjectSchema, Timeline } from '@/modules/projects/timeline';
 
 const SHOWCASE_PROJECTS = [
 	comparative_ai_policy_and_regulation,
@@ -41,8 +41,8 @@ const SHOWCASE_PROJECTS = [
 	fluxoArt,
 	ghostRiver,
 	guiaVix,
-	junoChatbot,
 	humanSpatialMovement,
+	junoChatbot,
 	kaggle,
 	leafWriter,
 	mappingCampusAntiracismProtest,
@@ -58,12 +58,12 @@ const SHOWCASE_PROJECTS = [
 	shapingTheCity,
 	synestheticAwareness,
 	theConsultationMachine,
-	tvm,
 	tweetosphereNetworkExplorer,
+	tvm,
 	WorkflowInterfacesForEditorialProcesses,
 	ymx,
 	youtubeRecommendationRankflow,
-] satisfies Array<TimelineEntry>;
+] satisfies Array<ProjectSchema>;
 export function ShowcaseProjects() {
 	return <Timeline data={SHOWCASE_PROJECTS} />;
 }

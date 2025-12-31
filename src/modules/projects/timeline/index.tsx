@@ -1,33 +1,32 @@
 'use client';
 
+import { compareAsc, compareDesc, format, isAfter, isBefore, isSameMonth, parseISO } from 'date-fns';
 import { Link2 } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'motion/react';
 import type React from 'react';
 import { useEffect, useRef, useState } from 'react';
 import slug from 'slug';
+import { z } from 'zod';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Highlighter } from '@/components/ui/highlighter';
 import { cn } from '@/lib/utils';
 
-interface Date {
-	start: number;
-	end?: number;
-}
-
-export interface TimelineEntry {
-	title: string;
-	subTitle?: string;
-	place?: string;
-	date: Date;
-	tags?: string[];
-	extra?: React.ReactNode[];
-	content: React.ReactNode;
-}
+const projectSchema = z.object({
+	title: z.string(),
+	subTitle: z.string().optional(),
+	place: z.string().optional(),
+	date: z.object({
+		start: z.iso.date(),
+		end: z.iso.date().optional(),
+	}),
+	tags: z.array(z.string()).optional(),
+});
+export type ProjectSchema = z.infer<typeof projectSchema> & { extra?: React.ReactNode[]; content?: React.ReactNode };
 
 const CopyClipboardMessageDelay = 2500;
 
-export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
+export const Timeline = ({ data }: { data: ProjectSchema[] }) => {
 	const ref = useRef<HTMLDivElement>(null);
 	const containerRef = useRef<HTMLDivElement>(null);
 	const [height, setHeight] = useState(0);
@@ -52,9 +51,15 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 		<div className="w-full" ref={containerRef}>
 			<div ref={ref} className="relative pb-20">
 				{data
-					.toSorted(
-						(a, b) => (b.date.end ?? Number.POSITIVE_INFINITY) - (a.date.end ?? Number.POSITIVE_INFINITY)
-					)
+					.toSorted((a, b) => {
+						const resultEndDate = compareAsc(
+							b.date.end ?? new Date('2999-12-31'),
+							a.date.end ?? new Date('2999-12-31')
+						);
+						if (resultEndDate !== 0) return resultEndDate;
+						const resultStartDate = compareAsc(b.date.start, a.date.start);
+						return resultStartDate;
+					})
 					.map((item) => (
 						<Entry key={item.title} item={item} />
 					))}
@@ -75,7 +80,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 	);
 };
 
-const Entry = ({ item }: { item: TimelineEntry }) => {
+const Entry = ({ item }: { item: ProjectSchema }) => {
 	const [hover, setHover] = useState(false);
 	const [supportsClipboard, setSupportsClipboard] = useState(false);
 
@@ -208,10 +213,14 @@ const CopyClipboardMobile = ({ title }: { title: string }) => {
 	);
 };
 
-const ItemMetadata = ({ item }: { item: TimelineEntry }) => {
+const ItemMetadata = ({ item }: { item: ProjectSchema }) => {
+	const startDate = parseISO(item.date.start);
+
 	const dateInfo = () => {
-		if (item.date.start === item.date.end) return item.date.start;
-		return `${item.date.start} - ${item.date.end ?? 'Present'}`;
+		if (!item.date.end) return `${format(startDate, 'MM/yyyy')} +`;
+		const endDate = parseISO(item.date.end);
+		if (isSameMonth(startDate, endDate)) return format(startDate, 'MM/yyyy');
+		return `${format(startDate, 'MM/yyyy')} - ${format(endDate, 'MM/yyyy')}`;
 	};
 
 	return (

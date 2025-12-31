@@ -17,7 +17,7 @@ export function Image({ containerClassName, ...props }: ImageProps) {
 				className={cn(
 					'bg-muted text-muted-foreground grid place-items-center h-32 rounded-xl',
 					props.className,
-					containerClassName,
+					containerClassName
 				)}
 			>
 				<ImageIcon className="size-5" />
@@ -31,7 +31,7 @@ export function Image({ containerClassName, ...props }: ImageProps) {
 				<img
 					{...props}
 					alt={props.alt}
-					className={cn('object-cover rounded-xl h-32 w-full cover-img', props.className)}
+					className={cn('object-cover rounded-xl h-32 md:h-64 w-full cover-img', props.className)}
 					fetchPriority="high"
 					loading="lazy"
 				/>
@@ -41,7 +41,7 @@ export function Image({ containerClassName, ...props }: ImageProps) {
 					className={cn(
 						'bg-muted text-muted-foreground grid place-items-center h-32 rounded-xl',
 						props.className,
-						containerClassName,
+						containerClassName
 					)}
 				>
 					<ImageIcon className="size-5" />

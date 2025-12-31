@@ -1,6 +1,6 @@
 'use client';
 
-import { compareAsc, compareDesc, format, isAfter, isBefore, isSameMonth, parseISO } from 'date-fns';
+import { compareAsc, compareDesc, format, isAfter, isBefore, isSameMonth, isSameYear, parseISO } from 'date-fns';
 import { Link2 } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'motion/react';
 import type React from 'react';
@@ -217,10 +217,10 @@ const ItemMetadata = ({ item }: { item: ProjectSchema }) => {
 	const startDate = parseISO(item.date.start);
 
 	const dateInfo = () => {
-		if (!item.date.end) return `${format(startDate, 'MM/yyyy')} +`;
+		if (!item.date.end) return `${format(startDate, 'yyyy')} +`;
 		const endDate = parseISO(item.date.end);
-		if (isSameMonth(startDate, endDate)) return format(startDate, 'MM/yyyy');
-		return `${format(startDate, 'MM/yyyy')} - ${format(endDate, 'MM/yyyy')}`;
+		if (isSameYear(startDate, endDate)) return format(startDate, 'yyyy');
+		return `${format(startDate, 'yyyy')} - ${format(endDate, 'yyyy')}`;
 	};
 
 	return (

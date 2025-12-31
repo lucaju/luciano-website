@@ -4,6 +4,7 @@ import type { InferEntrySchema, RenderedContent } from 'astro:content';
 import { StripedPattern } from '@/components/pattern/striped-pattern';
 import { BentoGrid, BentoGridItem } from '@/components/ui/bento-grid';
 import { formatDate } from '@/lib/date';
+import { cn } from '@/lib/utils';
 
 interface Props {
 	posts: ReadonlyArray<{
@@ -25,25 +26,25 @@ const { posts } = Astro.props;
 			posts.map((post, index) => (
 				<BentoGridItem
 					id={post.id}
-					className={
-						post.data.title.length > 75
+					className={cn(
+						index % 47 === 0
 							? 'md:col-span-3'
-							: post.data.title.length > 45
+							: index % 7 === 0 || index % 10 === 0
 								? 'md:col-span-2'
 								: 'md:col-span-1'
-					}
+					)}
 					publishedAt={formatDate(post.data.publishedAt)}
 					title={post.data.title}
 				>
 					{post.data.coverImage ? (
 						<Image
 							alt={post.data.coverAlt ?? ''}
-							class="w-full h-40 object-cover rounded-lg hover:scale-102 hover:rotate-2 hover:z-10 transition duration-200"
+							class="w-full min-h-42 object-cover rounded-lg group-hover/bento:scale-105 group-hover/bento:z-10 transition duration-200"
 							src={post.data.coverImage}
 						/>
 					) : (
 						<StripedPattern
-							className="relative h-40 w-full stroke-[0.3] [stroke-dasharray:8,4] rounded-lg dark:opacity-50 dark:[stroke-dasharray:4,2] dark:stroke-white/10"
+							className="relative w-full min-h-42 stroke-[0.3] [stroke-dasharray:8,4] rounded-lg dark:opacity-50 dark:[stroke-dasharray:4,2] dark:stroke-white/10"
 							direction={index % 2 === 0 ? 'left' : 'right'}
 						/>
 					)}
@@ -52,3 +53,11 @@ const { posts } = Astro.props;
 		}
 	</BentoGrid>
 </section>
+
+<!-- className={cn(
+						post.data.title.length > 90
+							? 'md:col-span-3'
+							: post.data.title.length < 30
+								? 'md:col-span-1'
+								: 'md:col-span-2'
+					)} -->

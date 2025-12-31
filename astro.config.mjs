@@ -6,6 +6,7 @@ import tailwindcss from '@tailwindcss/vite';
 import { defineConfig, envField } from 'astro/config';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
+import { remarkModifiedTime } from './remark-modified-time.mjs';
 
 // https://astro.build/config
 export default defineConfig({
@@ -21,6 +22,7 @@ export default defineConfig({
 	markdown: {
 		syntaxHighlight: 'shiki',
 		shikiConfig: { theme: 'vitesse-dark', wrap: true },
+		remarkPlugins: [remarkModifiedTime],
 		rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
 	},
 	integrations: [

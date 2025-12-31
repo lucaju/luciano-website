@@ -17,15 +17,6 @@ const blogCollection = defineCollection({
 		}),
 });
 
-const cv = defineCollection({
-	loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/cv' }),
-	schema: z.object({
-		title: z.string(),
-		publishedAt: z.coerce.date(),
-	}),
-});
-
 export const collections = {
 	blogCollection,
-	cv,
 };

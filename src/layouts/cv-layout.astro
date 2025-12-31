@@ -1,26 +1,37 @@
 ---
-import { getCollection, render } from 'astro:content';
+import type { MarkdownLayoutProps } from 'astro';
+import { format } from 'date-fns';
 import { FlickeringGrid } from '@/components/pattern/flickering-grid';
 import Seo from '@/components/seo.astro';
 import { Toc } from '@/components/toc';
 import RootLayout from '@/layouts/root-layout.astro';
 
-const cv = (await getCollection('cv'))[0];
-const { Content, headings } = await render(cv);
+type Props = MarkdownLayoutProps<{
+	// Define frontmatter props here
+	title: string;
+	author: string;
+	date: string;
+	headings: { depth: number; slug: string; text: string }[];
+	description: string;
+	// lastModified: string;
+}>;
 
-const title = 'CV';
-const description = '';
+const { frontmatter, headings } = Astro.props;
+
+console.log(Astro.props);
+
+// const lastUpdated = format(Astro.props.frontmatter.lastModified, 'HH:mm:ss DD MMMM YYYY UTC');
 ---
 
 <RootLayout scrollSmooth>
-	<Seo slot="metadata" {title} {description} />
+	<Seo slot="metadata" title={frontmatter.title} description={frontmatter.description} />
 
 	<div class="relative">
 		<header class="container-fluid pt-32 md:pt-22 lg:pt-24 pb-6 lg:pb-12">
 			<h1
 				class="text-4xl leading-none sm:text-5xl lg:text-7xl tracking-tight font-bold text-balance pb-8 lg:pb-16"
 			>
-				{title}
+				{frontmatter.title}
 			</h1>
 
 			<FlickeringGrid
@@ -36,12 +47,15 @@ const description = '';
 	</div>
 
 	<section class="container-fluid sm:flex sm:flex-row-reverse sm:justify-between py-10">
+		<!-- <div>
+			<p>Updated: {lastUpdated}</p>
+		</div> -->
 		<Toc client:load headings={headings} />
 
 		<article
 			class="prose dark:prose-invert [&_:is(h2,h3,h4,h5,h6)]:scroll-mt-10 flex-1 prose-stone max-w-[80ch] prose-sm"
 		>
-			<Content />
+			<slot />
 		</article>
 	</section>
 </RootLayout>

@@ -1,13 +1,16 @@
 ---
+import { Image } from 'astro:assets';
 import type { InferEntrySchema, RenderedContent } from 'astro:content';
-import { dateToISO, formatDate } from '@/lib/date';
+import { StripedPattern } from '@/components/pattern/striped-pattern';
+import { BentoGrid, BentoGridItem } from '@/components/ui/bento-grid';
+import { formatDate } from '@/lib/date';
 
 interface Props {
 	posts: ReadonlyArray<{
 		id: string;
 		body?: string;
-		collection: 'blogPosts';
-		data: InferEntrySchema<'blogPosts'>;
+		collection: 'blogCollection';
+		data: InferEntrySchema<'blogCollection'>;
 		rendered?: RenderedContent;
 		filePath?: string;
 	}>;
@@ -17,23 +20,35 @@ const { posts } = Astro.props;
 ---
 
 <section class="container-fluid py-10">
-	<div class="border-l-2 border-muted">
+	<BentoGrid client:load className="max-w-4xl mx-auto">
 		{
-			posts.map((post) => (
-				<div class="pl-10 not-last-of-type:pb-10 max-w-xl relative group">
-					<p class="text-muted-foreground text-xs sm:text-sm font-light">
-						<time datetime={dateToISO(post.data.publishedAt)}>{formatDate(post.data.publishedAt)}</time>
-					</p>
-
-					<h2 class="text-lg sm:text-xl text-balance lg:text-2xl font-semibold pb-4">{post.data.title}</h2>
-
-					<div class="size-3 rounded-full absolute -left-1.75 top-px bg-linear-to-r from-orange-500 to-yellow-500 group-hover:scale-150 group-hover:rotate-180 transition duration-300" />
-
-					<a title={post.data.title} href={`/blog/${post.id}`} class="absolute inset-0">
-						<span class="sr-only">{post.data.title}</span>
-					</a>
-				</div>
+			posts.map((post, index) => (
+				<BentoGridItem
+					id={post.id}
+					className={
+						post.data.title.length > 75
+							? 'md:col-span-3'
+							: post.data.title.length > 45
+								? 'md:col-span-2'
+								: 'md:col-span-1'
+					}
+					publishedAt={formatDate(post.data.publishedAt)}
+					title={post.data.title}
+				>
+					{post.data.coverImage ? (
+						<Image
+							alt={post.data.coverAlt ?? ''}
+							class="w-full h-40 object-cover rounded-lg hover:scale-102 hover:rotate-2 hover:z-10 transition duration-200"
+							src={post.data.coverImage}
+						/>
+					) : (
+						<StripedPattern
+							className="relative h-40 w-full stroke-[0.3] [stroke-dasharray:8,4] rounded-lg dark:opacity-50 dark:[stroke-dasharray:4,2] dark:stroke-white/10"
+							direction={index % 2 === 0 ? 'left' : 'right'}
+						/>
+					)}
+				</BentoGridItem>
 			))
 		}
-	</div>
+	</BentoGrid>
 </section>

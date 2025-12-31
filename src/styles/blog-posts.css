@@ -11,3 +11,7 @@
 .prose :is(h2, h3, h4, h5, h6):hover span.icon-link::before {
 	@apply opacity-100;
 }
+
+img {
+	@apply rounded-lg;
+}

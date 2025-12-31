@@ -1,5 +1,5 @@
 import { Fragment } from 'react/jsx-runtime';
-import image from '@/assets/images/blog/Dancing-with-fitbit-image.jpg';
+import image from '@/assets/images/projects/Dancing-with-fitbit-image.jpg';
 import { Lightbox } from '@/components/ui/lightbox';
 import type { TimelineEntry } from '@/modules/projects/timeline';
 import { Collection, Item } from '@/modules/projects/timeline/extra';
@@ -56,23 +56,25 @@ export const dancingWithFitbit: TimelineEntry = {
 				)}
 			</Lightbox>
 			<Text>
-				Florence, a choreographer and dance professor in her late fifties, has tracked herself with a Fitbit Charge HR
-				watch at all times for one week. Throughout this period, she took notes on her experience and the thoughts that
-				emerged from it in a journal. After the week of tracking, she created and performed a choreography inspired by
-				this lived experience. The data collected by the self-tracking device were then used in the creation of a
-				soundtrack, and the production of visual effects. These two “re-workings” of the Fitbit data were integrated
-				into an edited video, and used to create this web-based interactive platform. This research and creation project
-				aimed to explore how the data and the lived self-tracking experience could be used to generate subversive forms
-				of data materialization through choreography, sound, and visuals. We aimed to critique injunctions related to
-				aging bodies and “successful aging” normativity.
+				Florence, a choreographer and dance professor in her late fifties, has tracked herself with a Fitbit
+				Charge HR watch at all times for one week. Throughout this period, she took notes on her experience and
+				the thoughts that emerged from it in a journal. After the week of tracking, she created and performed a
+				choreography inspired by this lived experience. The data collected by the self-tracking device were then
+				used in the creation of a soundtrack, and the production of visual effects. These two “re-workings” of
+				the Fitbit data were integrated into an edited video, and used to create this web-based interactive
+				platform. This research and creation project aimed to explore how the data and the lived self-tracking
+				experience could be used to generate subversive forms of data materialization through choreography,
+				sound, and visuals. We aimed to critique injunctions related to aging bodies and “successful aging”
+				normativity.
 			</Text>
 			<Text>
-				The creative process also became the hub for technical and theoretical explorations on the bodies produced
-				through the Fitbit device and related activities (mediatized bodies, regulated bodies, standardized bodies,
-				lived bodies, etc.) as well as on what constitutes “data.” We conceive the data as being culturally mediated.
-				The mediation processes that participate in data production inform the ways in which it is produced, treated,
-				and rendered effective. Our critical approach aimed to “re-work” the “bio” metric bodies produced by Fitbit, to
-				deconstruct the narratives and temporalities that are embedded and generated in their production.
+				The creative process also became the hub for technical and theoretical explorations on the bodies
+				produced through the Fitbit device and related activities (mediatized bodies, regulated bodies,
+				standardized bodies, lived bodies, etc.) as well as on what constitutes “data.” We conceive the data as
+				being culturally mediated. The mediation processes that participate in data production inform the ways
+				in which it is produced, treated, and rendered effective. Our critical approach aimed to “re-work” the
+				“bio” metric bodies produced by Fitbit, to deconstruct the narratives and temporalities that are
+				embedded and generated in their production.
 			</Text>
 		</div>
 	),

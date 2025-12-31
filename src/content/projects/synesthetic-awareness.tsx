@@ -1,5 +1,5 @@
 import { Fragment } from 'react/jsx-runtime';
-import image from '@/assets/images/blog/Screen-Shot-2017-12-29-at-7.44.44-PM.png';
+import image from '@/assets/images/projects/Screen-Shot-2017-12-29-at-7.44.44-PM.png';
 import { Lightbox } from '@/components/ui/lightbox';
 import type { TimelineEntry } from '@/modules/projects/timeline';
 import { Collection, Item } from '@/modules/projects/timeline/extra';
@@ -16,7 +16,10 @@ export const synestheticAwareness: TimelineEntry = {
 	tags: ['Internet of Things', 'Sonification', 'design', 'climate change'],
 	extra: [
 		<Collection key="blog" label="Blog Posts">
-			<Item type="Blog Post" url="notes/synesthetic-awareness-perceiving-air-quality-through-visual-and-audio-inputs">
+			<Item
+				type="Blog Post"
+				url="notes/synesthetic-awareness-perceiving-air-quality-through-visual-and-audio-inputs"
+			>
 				Synesthetic Awareness
 			</Item>
 		</Collection>,
@@ -44,9 +47,9 @@ export const synestheticAwareness: TimelineEntry = {
 				)}
 			</Lightbox>
 			<Text>
-				This project proposes a synesthetic experiment in which data collected by the city will be translated to a human
-				sensorial input. It uses a mobile application to retrieve information about air quality in Montreal to produce
-				data-driven audio and visual feedback.
+				This project proposes a synesthetic experiment in which data collected by the city will be translated to
+				a human sensorial input. It uses a mobile application to retrieve information about air quality in
+				Montreal to produce data-driven audio and visual feedback.
 			</Text>
 		</div>
 	),

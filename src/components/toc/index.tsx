@@ -9,19 +9,19 @@ interface NestedHeading extends MarkdownHeading {
 	subheadings: Array<NestedHeading>;
 }
 
-interface TocProps {
+interface TocProps extends React.HTMLAttributes<HTMLDivElement> {
 	headings: Array<MarkdownHeading>;
 }
 
 const parentHeadings = new Map<number, MarkdownHeading & { subheadings: Array<MarkdownHeading> }>();
 
-export function Toc(props: TocProps) {
+export function Toc({ children, ...props }: TocProps) {
 	const inView = useToc(
 		pipe(
 			props.headings,
 			A.map((h) => h.slug),
-			F.toMutable,
-		),
+			F.toMutable
+		)
 	);
 
 	const headings = useMemo(() => {
@@ -38,12 +38,13 @@ export function Toc(props: TocProps) {
 				}
 
 				return acc;
-			}),
+			})
 		);
 	}, [props.headings]);
 
 	return (
 		<aside className="max-sm:hidden pl-14 max-w-max">
+			{children}
 			{headings.length > 0 && (
 				<div className="sticky top-20 right-0">
 					<h3 className="text-lg font-semibold pb-4">On this page</h3>

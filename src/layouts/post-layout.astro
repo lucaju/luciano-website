@@ -3,8 +3,10 @@ import { DotPattern } from '@/components/pattern/dot-pattern';
 import Seo from '@/components/seo.astro';
 import { Toc } from '@/components/toc';
 import RootLayout from '@/layouts/root-layout.astro';
-import { dateToISO, formatDate } from '@/lib/date';
+import { dateToISO } from '@/lib/date';
+import { Meta } from '@/modules/blog/meta';
 import '@/styles/blog-posts.css';
+import { Image } from 'astro:assets';
 import type { InferEntrySchema, RenderedContent } from 'astro:content';
 import { render } from 'astro:content';
 
@@ -12,8 +14,8 @@ interface Props {
 	post: {
 		id: string;
 		body?: string;
-		collection: 'blogPosts';
-		data: InferEntrySchema<'blogPosts'>;
+		collection: 'blogCollection';
+		data: InferEntrySchema<'blogCollection'>;
 		rendered?: RenderedContent;
 		filePath?: string;
 	};
@@ -42,12 +44,16 @@ const publishedTime = dateToISO(publishedAt);
 				{title}
 			</h1>
 
-			<div class="flex gap-2 text-muted-foreground items-center">
-				<div class="inline-flex items-center gap-x-2 text-sm font-medium">
-					<span class="max-md:sr-only">Published on</span>
-					<time datetime={dateToISO(publishedAt)}>{formatDate(publishedAt)}</time>
-				</div>
-			</div>
+			{
+				post.data.coverImage && (
+					<Image
+						alt={post.data.coverAlt ?? ''}
+						class="w-full h-64 md:h-128 object-cover rounded-lg"
+						src={post.data.coverImage}
+					/>
+				)
+			}
+			<Meta client:load className="md:hidden pt-6" keywords={keywords} publishedAt={publishedAt} />
 		</header>
 
 		<DotPattern
@@ -58,7 +64,9 @@ const publishedTime = dateToISO(publishedAt);
 	</div>
 
 	<section class="container-fluid sm:flex sm:flex-row-reverse sm:justify-between py-10">
-		<Toc client:load headings={headings} />
+		<Toc client:load headings={headings}>
+			<Meta client:load className="hidden md:flex" keywords={keywords} publishedAt={publishedAt} />
+		</Toc>
 
 		<article class="prose dark:prose-invert [&_:is(h2,h3,h4,h5,h6)]:scroll-mt-10 flex-1 prose-stone">
 			<Content />

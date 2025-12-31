@@ -1,5 +1,5 @@
 import { Fragment } from 'react/jsx-runtime';
-import dhGame1 from '@/assets/images/blog/DH-Game-Design-for-the-digital-version.png';
+import dhGame1 from '@/assets/images/projects/DH-Game-Design-for-the-digital-version.png';
 import { Lightbox } from '@/components/ui/lightbox';
 import type { TimelineEntry } from '@/modules/projects/timeline';
 import { Collection, Item } from '@/modules/projects/timeline/extra';
@@ -49,9 +49,10 @@ export const dhExperience: TimelineEntry = {
 			</Lightbox>
 			<Text>
 				We have developed a prototype for a cooperative game based on the work of DH practitioners, modeling the
-				experience of researching and publishing in a multi-disciplinary academic environment. In The DH Experience,
-				players collaborate to collect data from around the world, perform research and appropriately complete their
-				projects in order to succeed, competing against time and the system inherent to the game.
+				experience of researching and publishing in a multi-disciplinary academic environment. In The DH
+				Experience, players collaborate to collect data from around the world, perform research and
+				appropriately complete their projects in order to succeed, competing against time and the system
+				inherent to the game.
 			</Text>
 			<iframe
 				allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"

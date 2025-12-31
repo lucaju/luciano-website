@@ -1,19 +1,28 @@
 ---
-import Hero from '@/components/hero.astro';
+import { RetroGrid } from '@/components/pattern/retro-grid';
 import Seo from '@/components/seo.astro';
+import { Empty, EmptyDescription, EmptyHeader, EmptyTitle } from '@/components/ui/empty';
 import RootLayout from '@/layouts/root-layout.astro';
+import { cn } from '@/lib/utils';
 
-const title = '404 Not Found, Unable to Find the Requested Resource';
-const description =
-	'You might entered a wrong url, or the page you were looking for simply does not exist. If you think this is a mistake and want me to fix it, please send me an email with the attachment, I will gladly fix the issue.';
+const title = '404 Not Found';
+const description = "The page you are looking for does't exist.";
 ---
 
 <RootLayout>
 	<Seo slot="metadata" title={title} description={description} />
 
-	<Hero {description}>
-		<Fragment slot="title">
-			{title}
-		</Fragment>
-	</Hero>
+	<header class={cn('relative pt-20 sm:pt-40 lg:pt-32')}>
+		<RetroGrid client:load />
+
+		<div class="container-fluid relative z-1 h-[370px] md:h-[550px]">
+			<Empty>
+				<EmptyHeader>
+					<EmptyTitle>{title}</EmptyTitle>
+					<EmptyDescription>{description}</EmptyDescription>
+				</EmptyHeader>
+			</Empty>
+		</div>
+		å
+	</header>
 </RootLayout>

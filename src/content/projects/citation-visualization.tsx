@@ -1,4 +1,4 @@
-import image from '@/assets/images/blog/citation_visualization.png';
+import image from '@/assets/images/projects/citation_visualization.png';
 import { Lightbox } from '@/components/ui/lightbox';
 import type { TimelineEntry } from '@/modules/projects/timeline';
 import { Collection, Item } from '@/modules/projects/timeline/extra';
@@ -41,10 +41,10 @@ export const citationVisualization: TimelineEntry = {
 				)}
 			</Lightbox>
 			<Text>
-				During the Summer I was hired by the Deparmetnof Communication studies at Concordia University to produce
-				visualization on the collection of readings used in the undergraduate program between 2014-2016. The department
-				is updating the undergraduate curriculum, thus understanding what the faculty is using for lectures is one of
-				the guidelines for the future of this program at Concordia.
+				During the Summer I was hired by the Deparmetnof Communication studies at Concordia University to
+				produce visualization on the collection of readings used in the undergraduate program between 2014-2016.
+				The department is updating the undergraduate curriculum, thus understanding what the faculty is using
+				for lectures is one of the guidelines for the future of this program at Concordia.
 			</Text>
 		</div>
 	),

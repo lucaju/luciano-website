@@ -1,4 +1,4 @@
-import image from '@/assets/images/blog/Vancouver_Transit_Debate.png';
+import image from '@/assets/images/projects/Vancouver_Transit_Debate.png';
 import { Lightbox } from '@/components/ui/lightbox';
 import type { TimelineEntry } from '@/modules/projects/timeline';
 import { Collection, Item } from '@/modules/projects/timeline/extra';
@@ -22,7 +22,8 @@ export const tweetosphereNetworkExplorer: TimelineEntry = {
 		<Collection key="conferences" label="Conferences">
 			<Item type="Conference Paper">
 				Frizzera, L., & Bartram, L. (2015).{' '}
-				<strong>Interactive Social Media Cartography: #TransitReferendum in Vancouver</strong>. I-Society. London, UK.
+				<strong>Interactive Social Media Cartography: #TransitReferendum in Vancouver</strong>. I-Society.
+				London, UK.
 			</Item>
 		</Collection>,
 		<Collection key="blog-posts" label="Blog Posts">
@@ -53,26 +54,27 @@ export const tweetosphereNetworkExplorer: TimelineEntry = {
 			</Lightbox>
 			<Text>
 				Conventionally, civic engagement takes the form of deliberative and decision-making processes, such as
-				elections, referendums, and public consultations. Yet, it should not be reduced to the single act of voting,
-				recognized as the “democratic duty.” Instead, debates about collective issues and public affairs occur daily on
-				the streets, in the workplace, at home, and, more recently, through digital social media.
+				elections, referendums, and public consultations. Yet, it should not be reduced to the single act of
+				voting, recognized as the “democratic duty.” Instead, debates about collective issues and public affairs
+				occur daily on the streets, in the workplace, at home, and, more recently, through digital social media.
 			</Text>
 			<Text>
-				Drawing on computational methods used in large-scale controversy analysis, this project explored the dynamics of
-				social media networks and their impacts on society, which becomes crucial to understanding civic engagement in
-				contemporary social and political movements. Through a visual network and semantic analysis, we propose mapping
-				and investigating how digital social media platforms, particularly Twitter, have been utilized not only to
-				disseminate information about the Vancouver Transit Referendum but also to encourage civic engagement on
-				mobility and public transportation in a highly contentious and controversial environment.
+				Drawing on computational methods used in large-scale controversy analysis, this project explored the
+				dynamics of social media networks and their impacts on society, which becomes crucial to understanding
+				civic engagement in contemporary social and political movements. Through a visual network and semantic
+				analysis, we propose mapping and investigating how digital social media platforms, particularly Twitter,
+				have been utilized not only to disseminate information about the Vancouver Transit Referendum but also
+				to encourage civic engagement on mobility and public transportation in a highly contentious and
+				controversial environment.
 			</Text>
 			<Text>
-				Between January and may 2015 Metro Vancouver was immersed in a debate about public investments in transit for
-				the next 30 years. The topic became controversial when Mayor’s Council proposed to increase the sales taxes to
-				fund the project, and a referendum was called to decide about the adoption of this new revenue sources for Metro
-				Vancouver transportation. From Feb 11 to March 11, we captured this conversation on Twitter to investigate how
-				digital social media platforms have been used to broadcast information of public interest, as well as promote
-				civic engagement. This project maps, visualizes, and explores public opinion and interactions among people using
-				social media.
+				Between January and may 2015 Metro Vancouver was immersed in a debate about public investments in
+				transit for the next 30 years. The topic became controversial when Mayor’s Council proposed to increase
+				the sales taxes to fund the project, and a referendum was called to decide about the adoption of this
+				new revenue sources for Metro Vancouver transportation. From Feb 11 to March 11, we captured this
+				conversation on Twitter to investigate how digital social media platforms have been used to broadcast
+				information of public interest, as well as promote civic engagement. This project maps, visualizes, and
+				explores public opinion and interactions among people using social media.
 			</Text>
 		</div>
 	),

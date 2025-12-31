@@ -1,10 +1,14 @@
 export function formatDate(date: string | Date | number) {
 	try {
+		// const fmt = new Intl.DateTimeFormat('en-CA', {
+		// 	day: 'numeric',
+		// 	weekday: 'long',
+		// 	month: 'long',
+		// 	year: 'numeric',
+		// });
+
 		const fmt = new Intl.DateTimeFormat('en-CA', {
-			day: 'numeric',
-			weekday: 'short',
-			month: 'long',
-			year: 'numeric',
+			dateStyle: 'medium',
 		});
 
 		return fmt.format(new Date(date));

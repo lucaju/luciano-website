@@ -1,9 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
-import NotesLayout from '@/layouts/post-layout.astro';
+import PostLayout from '@/layouts/post-layout.astro';
 
 export async function getStaticPaths() {
-	const posts = await getCollection('blogPosts');
+	const posts = await getCollection('blogCollection');
 	return posts.map((post) => ({
 		params: { slug: post.id },
 		props: { post, headings: post.rendered },
@@ -13,5 +13,4 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 ---
 
-<NotesLayout post={post} />
-∏
+<PostLayout post={post} />

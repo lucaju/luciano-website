@@ -1,6 +1,6 @@
 'use client';
 
-import { compareAsc, compareDesc, format, isAfter, isBefore, isSameMonth, isSameYear, parseISO } from 'date-fns';
+import { compareAsc, format, isSameYear, parseISO } from 'date-fns';
 import { Link2 } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'motion/react';
 import type React from 'react';

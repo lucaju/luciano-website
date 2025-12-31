@@ -1,60 +1,45 @@
 ---
-import type { MarkdownLayoutProps } from 'astro';
 import { format } from 'date-fns';
 import { FlickeringGrid } from '@/components/pattern/flickering-grid';
 import Seo from '@/components/seo.astro';
 import { Toc } from '@/components/toc';
 import RootLayout from '@/layouts/root-layout.astro';
 
-type Props = MarkdownLayoutProps<{
-	// Define frontmatter props here
-	title: string;
-	author: string;
-	date: string;
-	headings: { depth: number; slug: string; text: string }[];
-	description: string;
-	// lastModified: string;
-}>;
+const { headings, frontmatter } = Astro.props;
 
-const { frontmatter, headings } = Astro.props;
-
-console.log(Astro.props);
-
-// const lastUpdated = format(Astro.props.frontmatter.lastModified, 'HH:mm:ss DD MMMM YYYY UTC');
+const lastUpdated = format(frontmatter.lastModified, 'MMMM yyyy');
 ---
 
 <RootLayout scrollSmooth>
-	<Seo slot="metadata" title={frontmatter.title} description={frontmatter.description} />
+	<Seo slot="metadata" title="CV" description="Luciano Frizzera - CV" />
 
 	<div class="relative">
 		<header class="container-fluid pt-32 md:pt-22 lg:pt-24 pb-6 lg:pb-12">
 			<h1
 				class="text-4xl leading-none sm:text-5xl lg:text-7xl tracking-tight font-bold text-balance pb-8 lg:pb-16"
 			>
-				{frontmatter.title}
+				CV
 			</h1>
 
 			<FlickeringGrid
+				client:load
 				className="fixed inset-0 -mt-40 mask-[radial-gradient(500px_circle_at_center,white,transparent)] pointer-events-none"
 				squareSize={4}
 				gridGap={6}
 				color="#6B7280"
 				maxOpacity={0.2}
 				flickerChance={0.1}
-				client:load
 			/>
 		</header>
 	</div>
 
 	<section class="container-fluid sm:flex sm:flex-row-reverse sm:justify-between py-10">
-		<!-- <div>
-			<p>Updated: {lastUpdated}</p>
-		</div> -->
 		<Toc client:load headings={headings} />
 
 		<article
 			class="prose dark:prose-invert [&_:is(h2,h3,h4,h5,h6)]:scroll-mt-10 flex-1 prose-stone max-w-[80ch] prose-sm"
 		>
+			<p class="text-sm muted italic">Last updated {lastUpdated}</p>
 			<slot />
 		</article>
 	</section>

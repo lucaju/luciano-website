@@ -22,9 +22,7 @@ interface Props {
 }
 
 const { post } = Astro.props;
-const { Content, headings, remarkPluginFrontmatter } = await render(post);
-
-console.log(remarkPluginFrontmatter);
+const { Content, headings } = await render(post);
 
 const { title, description, keywords, publishedAt } = post.data;
 const publishedTime = dateToISO(publishedAt);

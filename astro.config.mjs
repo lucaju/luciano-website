@@ -6,7 +6,7 @@ import tailwindcss from '@tailwindcss/vite';
 import { defineConfig, envField } from 'astro/config';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
-import { remarkModifiedTime } from './remark-modified-time.mjs';
+import { remarkModifiedTime } from './src/lib/remark-modified-time.mjs';
 
 // https://astro.build/config
 export default defineConfig({

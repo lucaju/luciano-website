@@ -59,7 +59,7 @@ export const nerve: ProjectSchema = {
 							height={nerveImage.height}
 							alt="Nerve"
 							title="Nerve"
-							className="h-32 lg:h-60 object-top cursor-pointer"
+							className="h-32 md:h-48 lg:h-60 object-top cursor-pointer"
 							onClick={() => onOpenLightbox(0)}
 						/>
 					</Fragment>

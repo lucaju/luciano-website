@@ -96,7 +96,7 @@ export const junoChatbot: ProjectSchema = {
 					<Fragment>
 						<Image
 							alt={onChanceImageAlt}
-							className="h-32 lg:h-60 object-top cursor-pointer"
+							className="h-32 md:h-48 lg:h-60 object-top cursor-pointer"
 							height={onChanceImage.height}
 							onClick={() => onOpenLightbox(0)}
 							src={onChanceImage.src}

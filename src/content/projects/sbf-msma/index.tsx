@@ -48,7 +48,7 @@ export const sbfMsma: ProjectSchema = {
 				{(onOpenLightbox) => (
 					<Image
 						alt={imageAlt}
-						className="h-32 lg:h-110 object-top cursor-pointer"
+						className="h-32 md:h-82 lg:h-110 object-top cursor-pointer"
 						height={image.height}
 						onClick={() => onOpenLightbox(1)}
 						src={image.src}

@@ -1,16 +1,27 @@
-import { Fragment } from 'react/jsx-runtime';
 import { Lightbox } from '@/components/ui/lightbox';
 import type { ProjectSchema } from '@/modules/projects/timeline';
 import { Collection, Item } from '@/modules/projects/timeline/extra';
 import { Image } from '@/modules/projects/timeline/image';
 import { Text } from '@/modules/projects/timeline/text';
-import mtv1 from './mtv1.jpg';
-import mtv2 from './mtv2.jpg';
-import mtv3 from './mtv3.jpg';
-import mtv4 from './mtv4.jpg';
-import mtv5 from './mtv5.jpg';
-import mtv6 from './mtv6.jpg';
-import mtv7 from './mtv7.jpg';
+import mtv_1 from './mtv-1.jpg';
+import mtv_2 from './mtv-2.jpg';
+import mtv_3 from './mtv-3.jpg';
+import mtv_4 from './mtv-4.jpg';
+import mtv_5 from './mtv-5.jpg';
+import mtv_6 from './mtv-6.jpg';
+import mtv_7 from './mtv-7.jpg';
+
+const mtvAlt = 'Multi-Touch Variorum';
+
+const images = [
+	{ src: mtv_1.src, alt: `${mtvAlt} 1`, title: `${mtvAlt} 1` },
+	{ src: mtv_2.src, alt: `${mtvAlt} 2`, title: `${mtvAlt} 2` },
+	{ src: mtv_3.src, alt: `${mtvAlt} 3`, title: `${mtvAlt} 3` },
+	{ src: mtv_4.src, alt: `${mtvAlt} 4`, title: `${mtvAlt} 4` },
+	{ src: mtv_5.src, alt: `${mtvAlt} 5`, title: `${mtvAlt} 5` },
+	{ src: mtv_6.src, alt: `${mtvAlt} 6`, title: `${mtvAlt} 6` },
+	{ src: mtv_7.src, alt: `${mtvAlt} 7`, title: `${mtvAlt} 7` },
+];
 
 export const multiTouchVariorum: ProjectSchema = {
 	title: 'Multi-Touch Variorum',
@@ -50,85 +61,31 @@ export const multiTouchVariorum: ProjectSchema = {
 				followed desktop conventions with fixed orientations and static panels. Early tests revealed the need
 				for a fundamental redesign to support collaborative interaction from different sides of the device.
 			</Text>
-			<Lightbox
-				images={[
-					{ src: mtv1.src, alt: 'Multi-Touch Variorum', title: 'Multi-Touch Variorum' },
-					{ src: mtv2.src, alt: 'Multi-Touch Variorum', title: 'Multi-Touch Variorum' },
-					{ src: mtv3.src, alt: 'Multi-Touch Variorum', title: 'Multi-Touch Variorum' },
-					{ src: mtv4.src, alt: 'Multi-Touch Variorum', title: 'Multi-Touch Variorum' },
-					{ src: mtv5.src, alt: 'Multi-Touch Variorum', title: 'Multi-Touch Variorum' },
-					{ src: mtv6.src, alt: 'Multi-Touch Variorum', title: 'Multi-Touch Variorum' },
-					{ src: mtv7.src, alt: 'Multi-Touch Variorum', title: 'Multi-Touch Variorum' },
-				]}
-			>
+			<Lightbox images={images}>
 				{(onOpenLightbox) => (
-					<Fragment>
+					<>
 						<Image
-							alt="Multi-Touch Variorum"
+							alt={`${mtvAlt} 1`}
 							className="h-32 lg:h-90 object-top cursor-pointer"
-							height={mtv1.height}
 							onClick={() => onOpenLightbox(0)}
-							src={mtv1.src}
-							title="Multi-Touch Variorum"
-							width={mtv1.width}
+							src={mtv_1.src}
+							title={`${mtvAlt} 1`}
 						/>
 						<div className="grid gap-1 grid-cols-3">
-							<Image
-								alt="Multi-Touch Variorum"
-								className="h-32 lg:h-60 object-top cursor-pointer"
-								height={mtv2.height}
-								onClick={() => onOpenLightbox(1)}
-								src={mtv2.src}
-								title="Multi-Touch Variorum"
-								width={mtv2.width}
-							/>
-							<Image
-								alt="Multi-Touch Variorum"
-								className="h-32 lg:h-60 object-top cursor-pointer"
-								height={mtv3.height}
-								onClick={() => onOpenLightbox(2)}
-								src={mtv3.src}
-								title="Multi-Touch Variorum"
-								width={mtv3.width}
-							/>
-							<Image
-								alt="Multi-Touch Variorum"
-								className="h-32 lg:h-60 object-top cursor-pointer"
-								height={mtv4.height}
-								onClick={() => onOpenLightbox(3)}
-								src={mtv4.src}
-								title="Multi-Touch Variorum"
-								width={mtv4.width}
-							/>
-							<Image
-								alt="Multi-Touch Variorum"
-								className="h-32 lg:h-60 object-top cursor-pointer"
-								height={mtv5.height}
-								onClick={() => onOpenLightbox(4)}
-								src={mtv5.src}
-								title="Multi-Touch Variorum"
-								width={mtv5.width}
-							/>
-							<Image
-								alt="Multi-Touch Variorum"
-								className="h-32 lg:h-60 object-top cursor-pointer"
-								onClick={() => onOpenLightbox(5)}
-								height={mtv6.height}
-								src={mtv6.src}
-								title="Multi-Touch Variorum"
-								width={mtv6.width}
-							/>
-							<Image
-								alt="Multi-Touch Variorum"
-								className="h-32 lg:h-60 object-top cursor-pointer"
-								height={mtv7.height}
-								onClick={() => onOpenLightbox(6)}
-								src={mtv7.src}
-								title="Multi-Touch Variorum"
-								width={mtv7.width}
-							/>
+							{images
+								.filter((_, index) => index > 0)
+								.map((image, index) => (
+									<Image
+										key={image.alt}
+										alt={image.alt}
+										className="h-32 lg:h-60 object-top cursor-pointer"
+										onClick={() => onOpenLightbox(index + 1)}
+										src={image.src}
+										title={image.title}
+									/>
+								))}
 						</div>
-					</Fragment>
+					</>
 				)}
 			</Lightbox>
 			<Text>

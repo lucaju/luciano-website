@@ -22,7 +22,7 @@ export const theConsultationMachine: ProjectSchema = {
 		</Collection>,
 		<Collection key="publications" label="Publications">
 			<Item type="Journal Article" pending>
-				McKelvey, F., Jones, M., Marinov, R., Frizzera, L., & Wester, M. [In Review].{' '}
+				McKelvey, F., Jones, M., Marinov, R., Frizzera, L., & Wester, M. [In Print].{' '}
 				<strong>
 					The Consultation Machine: Experiments in AI Futures, Literacies and Public Participation
 				</strong>

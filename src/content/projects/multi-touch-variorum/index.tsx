@@ -3,7 +3,7 @@ import type { ProjectSchema } from '@/modules/projects/timeline';
 import { Collection, Item } from '@/modules/projects/timeline/extra';
 import { Image } from '@/modules/projects/timeline/image';
 import { Text } from '@/modules/projects/timeline/text';
-import pm2 from '../primeira-mao-tablet/pm2.jpg';
+import pm2 from '../primeira-mao-tablet/pm2.png';
 import mtv_1 from './mtv-1.jpg';
 import mtv_2 from './mtv-2.jpg';
 import mtv_3 from './mtv-3.jpg';

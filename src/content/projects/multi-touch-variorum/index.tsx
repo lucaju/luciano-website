@@ -3,13 +3,13 @@ import type { ProjectSchema } from '@/modules/projects/timeline';
 import { Collection, Item } from '@/modules/projects/timeline/extra';
 import { Image } from '@/modules/projects/timeline/image';
 import { Text } from '@/modules/projects/timeline/text';
+import mtv_7 from './IMG_3404.jpg';
 import mtv_1 from './mtv-1.jpg';
 import mtv_2 from './mtv-2.jpg';
 import mtv_3 from './mtv-3.jpg';
 import mtv_4 from './mtv-4.jpg';
 import mtv_5 from './mtv-5.jpg';
 import mtv_6 from './mtv-6.jpg';
-import mtv_7 from './mtv-7.jpg';
 
 const mtvAlt = 'Multi-Touch Variorum';
 

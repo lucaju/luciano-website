@@ -3,7 +3,7 @@ import type { ProjectSchema } from '@/modules/projects/timeline';
 import { Collection, Item } from '@/modules/projects/timeline/extra';
 import { Image } from '@/modules/projects/timeline/image';
 import { Text } from '@/modules/projects/timeline/text';
-import mtv_7 from './IMG_3404.jpg';
+import pm2 from '../primeira-mao-tablet/pm2.jpg';
 import mtv_1 from './mtv-1.jpg';
 import mtv_2 from './mtv-2.jpg';
 import mtv_3 from './mtv-3.jpg';
@@ -11,16 +11,18 @@ import mtv_4 from './mtv-4.jpg';
 import mtv_5 from './mtv-5.jpg';
 import mtv_6 from './mtv-6.jpg';
 
+// import mtv_7 from './mtv-7.jpg';
+
 const mtvAlt = 'Multi-Touch Variorum';
 
 const images = [
-	{ src: mtv_1.src, alt: `${mtvAlt} 1`, title: `${mtvAlt} 1` },
-	{ src: mtv_2.src, alt: `${mtvAlt} 2`, title: `${mtvAlt} 2` },
-	{ src: mtv_3.src, alt: `${mtvAlt} 3`, title: `${mtvAlt} 3` },
-	{ src: mtv_4.src, alt: `${mtvAlt} 4`, title: `${mtvAlt} 4` },
-	{ src: mtv_5.src, alt: `${mtvAlt} 5`, title: `${mtvAlt} 5` },
-	{ src: mtv_6.src, alt: `${mtvAlt} 6`, title: `${mtvAlt} 6` },
-	{ src: mtv_7.src, alt: `${mtvAlt} 7`, title: `${mtvAlt} 7` },
+	{ src: mtv_1.src, alt: `${mtvAlt} 1` },
+	{ src: mtv_2.src, alt: `${mtvAlt} 2` },
+	{ src: mtv_3.src, alt: `${mtvAlt} 3` },
+	{ src: mtv_4.src, alt: `${mtvAlt} 4` },
+	{ src: mtv_5.src, alt: `${mtvAlt} 5` },
+	{ src: mtv_6.src, alt: `${mtvAlt} 6` },
+	{ src: pm2.src, alt: 'pm2' },
 ];
 
 export const multiTouchVariorum: ProjectSchema = {
@@ -65,11 +67,11 @@ export const multiTouchVariorum: ProjectSchema = {
 				{(onOpenLightbox) => (
 					<>
 						<Image
-							alt={`${mtvAlt} 1`}
+							alt={images[0].alt}
 							className="h-32 lg:h-90 object-top cursor-pointer"
 							onClick={() => onOpenLightbox(0)}
 							src={mtv_1.src}
-							title={`${mtvAlt} 1`}
+							title={images[0].alt}
 						/>
 						<div className="grid gap-1 grid-cols-3">
 							{images
@@ -81,7 +83,7 @@ export const multiTouchVariorum: ProjectSchema = {
 										className="h-32 lg:h-60 object-top cursor-pointer"
 										onClick={() => onOpenLightbox(index + 1)}
 										src={image.src}
-										title={image.title}
+										title={image.alt}
 									/>
 								))}
 						</div>

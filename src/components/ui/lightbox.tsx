@@ -1,5 +1,4 @@
 import { useCallback, useState } from 'react';
-import { Fragment } from 'react/jsx-runtime';
 import { Carousel, CarouselContent, CarouselItem } from './carousel';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from './dialog';
 
@@ -20,7 +19,7 @@ export function Lightbox(props: LigthboxProps) {
 	}, []);
 
 	return (
-		<Fragment>
+		<>
 			<Dialog open={open} onOpenChange={setOpen}>
 				<DialogContent className="sm:max-w-2xl">
 					<DialogHeader>
@@ -46,6 +45,6 @@ export function Lightbox(props: LigthboxProps) {
 			</Dialog>
 
 			{props.children(onOpenLightbox)}
-		</Fragment>
+		</>
 	);
 }

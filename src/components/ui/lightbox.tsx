@@ -24,7 +24,9 @@ export function Lightbox(props: LigthboxProps) {
 				<DialogContent className="sm:max-w-2xl">
 					<DialogHeader>
 						<DialogTitle>Photo Details</DialogTitle>
-						<DialogDescription>Swipe to scroll through the images</DialogDescription>
+						{props.images.length > 1 && (
+							<DialogDescription>Swipe to scroll through the images</DialogDescription>
+						)}
 					</DialogHeader>
 
 					<Carousel key={index} opts={{ startIndex: index, active: true }}>

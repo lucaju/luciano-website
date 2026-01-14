@@ -16,8 +16,8 @@ export const theConsultationMachine: ProjectSchema = {
 	tags: ['Critical AI', 'AI', 'Policy', 'HCI'],
 	extra: [
 		<Collection key="links" label="Links">
-			<Item type="Link" url="https://consultationmachine.shapingai.org/">
-				consultationmachine.shapingai.org
+			<Item type="Link" url="https://consultation-machine.vercel.app">
+				consultation-machine.vercel.app
 			</Item>
 		</Collection>,
 		<Collection key="publications" label="Publications">

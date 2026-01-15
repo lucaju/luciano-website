@@ -22,7 +22,7 @@ export const nerve: ProjectSchema = {
 		<Collection key="symposia" label="Symposia">
 			<Item type="Conference Paper" pending>
 				Frizzera, L. (2026). <strong>NERVE-racking Challenges on XML text editors</strong>. Canada-Brazil
-				AI-in-scholcomm symposium. January 21, 2026, University of Victoria, Victoria, BC, Canada..
+				AI-in-scholcomm symposium. January 21, 2026, University of Victoria, Victoria, BC, Canada.
 			</Item>
 			<Item type="Conference Paper">
 				Frizzera, L. (2023).{' '}
@@ -67,7 +67,7 @@ export const nerve: ProjectSchema = {
 			</Lightbox>
 			<Text>
 				NERVE is an application that performs Named Entity Recognition (NER), allowing users new to Linked Open
-				Data (LOD) to find and match entities entities in a document. NERVE suggests relevant Uniform Resource
+				Data (LOD) to find and match entities in a document. NERVE suggests relevant Uniform Resource
 				Identifiers (URIs) for entities, so users can match entities to an authority in order to turn it into
 				LOD.
 			</Text>

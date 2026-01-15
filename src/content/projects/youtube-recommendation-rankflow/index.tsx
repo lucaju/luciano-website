@@ -59,10 +59,10 @@ export const youtubeRecommendationRankflow: ProjectSchema = {
 		</Collection>,
 		<Collection key="code" label="Code">
 			<Item type="Code" url="https://github.com/lucaju/rankflow">
-				Youtube Recommendation Rankflow
+				YouTube Recommendation Rankflow
 			</Item>
 			<Item type="Code" url="https://github.com/lucaju/youtube-recom">
-				Youtube Recommendation Analysis Tools
+				YouTube Recommendation Analysis Tools
 			</Item>
 		</Collection>,
 	],
@@ -84,18 +84,14 @@ export const youtubeRecommendationRankflow: ProjectSchema = {
 				)}
 			</Lightbox>
 			<Text>
-				What videos does YouTube recommend when serching for party leaders during elections party? an analytical
-				tool that examines YouTube’s recommendation systems, influencer culture, and the creative economy
-			</Text>
-			<Text>
-				The study sought to investigate how the YouTube platform operates, focusing on algorithmic activity and
-				the strategies employed by both human and automated (robot) actors within federal and regional
-				elections. The aim was to understand the impact of this system of mediation on society and to demystify
-				preconceptions about ideologically neutral technologies in highly disputed political events. The
-				research focuses on three case studies: 1) the 2018 Ontario (Canada) election, 2) the 2018 Quebec
-				(Canada) election, and 3) the 2018 Brazilian Federal Election. The data collection was carried out
-				during the 2018 campaign periods in Ontario (May and June), Quebec (Auguest and September) and in Brazil
-				(August and October).
+				What videos does YouTube recommend when searching for party leaders during elections? This study sought
+				to investigate how the YouTube platform operates, focusing on algorithmic activity and the strategies
+				employed by both human and automated (robot) actors within federal and regional elections. The aim was
+				to understand the impact of this system of mediation on society and to demystify preconceptions about
+				ideologically neutral technologies in highly disputed political events. The research focuses on three
+				case studies: 1) the 2018 Ontario (Canada) election, 2) the 2018 Quebec (Canada) election, and 3) the
+				2018 Brazilian Federal Election. The data collection was carried out during the 2018 campaign periods in
+				Ontario (May and June), Quebec (August and September), and Brazil (August and October).
 			</Text>
 			<Text>
 				The data collection was carried out using a Python script thatautomates YouTube search operations based
@@ -106,16 +102,16 @@ export const youtubeRecommendationRankflow: ProjectSchema = {
 				algorithmic suggestions.
 			</Text>
 			<Text>
-				The rankflow allows the analysis of the evolution of each video in the rank, find trends, and observe
-				what has been recommended. This might give us some insights about how YouTube rank system works, what
-				are the most prominent videos on specific topics, and what narrative this rank bring to the political
-				debate in Canada.
+				The rankflow allows analysis of the evolution of each video in the rank, identifying trends and
+				observing what has been recommended. This might give us some insights into how the YouTube ranking
+				system works, which videos are most prominent on specific topics, and what narrative this ranking brings
+				to the political debate in Canada.
 			</Text>
-			<SubHeading>Youtube Recommendation Scraper</SubHeading>
+			<SubHeading>YouTube Recommendation Scraper</SubHeading>
 			<Text>
-				As a way to make the data collection process easier and more efficient, we designed a web application
-				with a ease-to-use UI to allow others researchers to collect data from YouTube's recommendation system.
-				Due to funding restriction the project was paused, but the code is available on GitHub.
+				To make the data collection process easier and more efficient, we designed a web application with a
+				user-friendly UI that allows other researchers to collect data from YouTube's recommendation system. Due
+				to funding restrictions, the project was paused, but the code is available on GitHub.
 			</Text>
 		</div>
 	),

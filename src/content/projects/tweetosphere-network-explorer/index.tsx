@@ -68,13 +68,13 @@ export const tweetosphereNetworkExplorer: ProjectSchema = {
 				controversial environment.
 			</Text>
 			<Text>
-				Between January and may 2015 Metro Vancouver was immersed in a debate about public investments in
-				transit for the next 30 years. The topic became controversial when Mayor’s Council proposed to increase
-				the sales taxes to fund the project, and a referendum was called to decide about the adoption of this
+				Between January and May 2015, the Metro Vancouver area was immersed in a debate about public investments
+				in transit for the next 30 years. The topic became controversial when the Mayor’s Council proposed
+				increasing sales taxes to fund the project, and a referendum was called to decide whether to adopt these
 				new revenue sources for Metro Vancouver transportation. From Feb 11 to March 11, we captured this
 				conversation on Twitter to investigate how digital social media platforms have been used to broadcast
-				information of public interest, as well as promote civic engagement. This project maps, visualizes, and
-				explores public opinion and interactions among people using social media.
+				information of public interest and promote civic engagement. This project maps, visualizes, and explores
+				public opinion and social media interactions among people.
 			</Text>
 		</div>
 	),

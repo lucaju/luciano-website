@@ -80,11 +80,11 @@ export const pictio: ProjectSchema = {
 				title="Vimeo video player"
 			/>
 			<Text>
-				The field of Artificial Intelligence regularly establishes a relationship of competition between humans
-				and machines, which leads to the avoidance of mistakes. This research considers the creation of a
+				The field of Artificial Intelligence regularly establishes a competitive relationship between humans and
+				machines, which leads to the avoidance of mistakes. This research considers the creation of a
 				collaborative and “mistake-friendly” drawing game for humans and machines. The game PICT.IO is inspired
-				by the popular game <i>Pictionary</i>, a widely played drawing game in which one person receives a
-				written message and must convey it to their team using drawings.
+				by the popular game Pictionary, a widely played drawing game in which one person receives a written
+				message and must convey it to their team using drawings.
 			</Text>
 			<Text>
 				Using Digital Methods and hacking techniques, we draw on and build upon Google’s{' '}
@@ -106,7 +106,7 @@ export const pictio: ProjectSchema = {
 				The research indicates that allowing for more space for AI mistakes is a crucial condition for the
 				emergence of human-machine collaboration and an engaging, trustworthy, and enjoyable gameplay
 				experience. The game is played by two teams. Each team is composed of two humans and one machine. The
-				goal of the game is making the team's pawn be the first to go all the way through the board’s path.
+				goal of the game is to make the team's pawn be the first to go all the way through the board’s path.
 			</Text>
 		</div>
 	),

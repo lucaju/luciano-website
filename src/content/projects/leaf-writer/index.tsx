@@ -121,7 +121,7 @@ export const leafWriter: ProjectSchema = {
 			</Text>
 			<SubHeading>CWRC-Writer</SubHeading>
 			<Text>
-				LEAF-Writer was build upon a previous iteration of CWRC-Writer, the XML & RDF online editor of the
+				LEAF-Writer was built upon a previous iteration of CWRC-Writer, the XML & RDF online editor of the
 				Canadian Women Research Collaboratory (
 				<a
 					className="hover:underline"

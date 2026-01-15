@@ -48,11 +48,10 @@ export const dhExperience: ProjectSchema = {
 				)}
 			</Lightbox>
 			<Text>
-				We have developed a prototype for a cooperative game based on the work of DH practitioners, modeling the
-				experience of researching and publishing in a multi-disciplinary academic environment. In The DH
-				Experience, players collaborate to collect data from around the world, perform research and
-				appropriately complete their projects in order to succeed, competing against time and the system
-				inherent to the game.
+				We have developed a prototype for a cooperative game based on the work of DH practitioners, modelling
+				the experience of researching and publishing in a multi-disciplinary academic environment. In The DH
+				Experience, players collaborate to collect data from around the world, conduct research, and complete
+				their projects appropriately to succeed, competing against time and the system inherent to the game.
 			</Text>
 			<iframe
 				allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"

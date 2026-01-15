@@ -27,22 +27,18 @@ export const edmontonHistoricalPlaces: ProjectSchema = {
 				)}
 			</Lightbox>
 			<Text>
-				A proposal of an iPhone app with the main object to explore historical places and events in Edmonton.
-				With this app people can walk in the urban environment using old maps, discovering and learning the
-				history of the city.
+				A proposal for an iPhone app with the primary objective of exploring historical places and events in
+				Edmonton. With this app, people can walk through the urban environment using old maps, discovering and
+				learning the city’s history.
 			</Text>
 			<Text>
-				The historical maps available in the user location will be overlaid the current map. The point of
-				interests will be shown on the screen based on the map chosen by the user, revealing the past of that
-				location. A slider control lets the users switch back to the present, give them a grasp what is nearby
-				in this days. By choosing a location, the app will show facts and pictures, where available. Using
-				social networking, the user can see which of his friends visited that place in the past. The app also
-				let users share their location and the historical information using Facebook and Twitter, make comments
-				and take pictures using built-in tools. Discover the past to make a better future.
-			</Text>
-			<Text>
-				Audience: Edmontonians and potential tourists. Content: Historical Maps and facts. Prototype Platform:
-				Adobe Flash.
+				The historical maps available in the user location will be overlaid on the current map. The points of
+				interest will be shown on the screen based on the user-selected map, revealing the location's past. A
+				slider control lets the users switch back to the present, giving them a grasp of what is nearby these
+				days. By choosing a location, the app will show facts and pictures, where available. Using social
+				networking, the user can see which of their friends visited that place in the past. The app also lets
+				users share their location and historical information via Facebook and Twitter, comment, and take
+				pictures using built-in tools. Discover the past to make a better future.
 			</Text>
 		</div>
 	),

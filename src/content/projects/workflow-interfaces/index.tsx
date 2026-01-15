@@ -61,14 +61,14 @@ export const WorkflowInterfacesForEditorialProcesses: ProjectSchema = {
 		<div className="space-y-1.5">
 			<SubHeading>Visual Workflow</SubHeading>
 			<Text>
-				Prototype tool to study different ways to manage and visualize documents in an editorial workflow.
+				A prototype tool to study different ways to manage and visualize documents in an editorial workflow.
 				Developed in collaboration with INKE, where I worked as an interface designer and programmer.
 			</Text>
 			<SubHeading>Tangible Interface</SubHeading>
 			<Text>
 				At CSDH (Canadian Society for Digital Humanities) 2013 in Victoria, Canada, Tianyi Li presented the
-				second version of your prototype on Workflows. This time we move toward touchscreens, one of the future
-				directions defined in the project last year. The intention was mapping mouse clicks to touches and
+				second version of your prototype on Workflows. This time, we move toward touchscreens, one of the future
+				directions defined in the project last year. The intention was to map mouse clicks to touches and
 				gestures. Watch this video and check how it works:
 			</Text>
 			<iframe
@@ -82,12 +82,12 @@ export const WorkflowInterfacesForEditorialProcesses: ProjectSchema = {
 			/>
 			<SubHeading>Wrkflux: Generalized Workflow</SubHeading>
 			<Text>
-				Following our work on visual interactive workflow, our current phase of the project focused on the
-				creation and customization of workflows. While in the previous version we used a pre-defined workflow
+				Following our work on the visual interactive workflow, our current phase of the project focused on
+				creating and customizing workflows. While in the previous version we used a pre-defined workflow
 				structure, the new version, which we called Wrkflux, allows users to create and design their own
-				workflows. By adding this functionality, we are looking for other forms that workflows can be used, such
-				as management processes, editorial processes, personal organization, mind mapping, and even for board
-				game prototypes.
+				workflows. By adding this functionality, we are looking for other ways workflows can be used, such as
+				management processes, editorial processes, personal organization, mind mapping, and even board game
+				prototypes.
 			</Text>
 			<iframe
 				allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"

@@ -38,11 +38,11 @@ export const mappingCampusAntiracismProtest: ProjectSchema = {
 				)}
 			</Lightbox>
 			<Text>
-				I developed a prototype for interactive interface visualization on Campus Antiracism Protest. The data
-				was collected by Alex Hanna and Ellen Berrey (University of Toronto) using a machine learning algorithm
-				developed for this task. The source of data is a collection of student association lead and university
-				focused newspapers. The prototype visualization has a subset of the dataset with about 200 records of
-				protests in the USA and Canada between 2012 and 2016.
+				I developed a prototype for an interactive interface visualization of on-campus antiracism protests. The
+				data was collected by Alex Hanna and Ellen Berrey (University of Toronto) using a machine learning
+				algorithm developed for this task. The data source is a collection of student association-led and
+				university-focused newspapers. The prototype visualization has a subset of the dataset with about 200
+				records of protests in the USA and Canada between 2012 and 2016.
 			</Text>
 		</div>
 	),

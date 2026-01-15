@@ -49,22 +49,22 @@ export const memoriaEmRede: ProjectSchema = {
 			</Lightbox>
 			<Text>
 				Vivemos num mundo interconectado, em que as informações fluem cada vez mais rapidamente. Com o
-				surgimento da Internet, abriu-se um leque de possibilidades que antes não podiam sequer ser imaginadas.
-				As interações que acontecem no ciberespaço não dependem de tempo nem de distâncias. As mais diferentes
+				surgimento da Internet, abriu-se um leque de possibilidades que antes sequer podiam ser imaginadas. As
+				interações que ocorrem no ciberespaço não dependem do tempo nem das distâncias. As mais diferentes
 				culturas integram-se como nunca. É possível comunicar-se com pessoas em várias partes do mundo, colher
-				informações sobre qualquer assunto, trocar experiências e relacionar-se com outras pessoas de diferentes
+				informações sobre qualquer assunto, trocar experiências e relacionar-se com pessoas de diferentes
 				culturas. A construção das identidades, a memória e as relações de poder se estendem ao ciberespaço, que
 				constitui um novo lugar de memória e também de inteligência coletiva, uma vez que há múltiplas
 				possibilidades de acesso, percepção, reconstrução e emissão de mensagens e conteúdos. Devido a essas
-				características, o ciberespaço se mostra como o lugar ideal para receber o núcleo da Rede de Memória da
+				características, o ciberespaço se mostra o lugar ideal para receber o núcleo da Rede de Memória da
 				Imprensa Capixaba (Rede MIC), tão importante para a constituição da identidade local, uma vez que o
-				jornalismo influenciou, e conintinua influenciando a construção das identidades. Como há certo
-				esquecimento em relação à memória local, faz-se necessário resgatá-la e mostrar a importância da
-				imprensa na constituição da sociedade espírito-santense.
+				jornalismo influenciou e continua influenciando a construção das identidades. Como há certo esquecimento
+				em relação à memória local, faz-se necessário resgatá-la e evidenciar a importância da imprensa na
+				constituição da sociedade espírito-santense.
 			</Text>
 			<Text>
 				Trabalho de conclusão de curso realizado no curso de Jornalismo da Universidade Federal do Espírito
-				Santo (UFES) em 2005 em parceria com Andressa Zanandrea.
+				Santo (UFES), em 2005, em parceria com Andressa Zanandrea.
 			</Text>
 			<Text className="italic">
 				<strong>English translation:</strong>

@@ -37,13 +37,13 @@ export const ymx: ProjectSchema = {
 				disaster, or economic adversity.
 			</Text>
 			<Text>
-				I had the opportunity to work with Matt Soar and Cheryl Sim on this project helping them to visualize
+				I had the opportunity to work with Matt Soar and Cheryl Sim on this project, helping them to visualize
 				the immigration data provided by the Canadian Government. Some of the visualizations were present in the
 				exhibition.
 			</Text>
 			<Text>
-				The exhibition took place at the Galerie POPOP (Belgo Building), Montreal, between March 29 and April
-				13, 2017.
+				The exhibition took place at the Galerie POPOP (Belgo Building) in Montreal from March 29 to April 13,
+				2017.
 			</Text>
 		</div>
 	),

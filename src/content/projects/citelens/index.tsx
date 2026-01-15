@@ -55,13 +55,13 @@ export const citeLens: ProjectSchema = {
 				)}
 			</Lightbox>
 			<Text>
-				From 2012 to 2014 I collaborate with Mihaela Ilovan and Jenniffer Windsor, under the supervision of
-				Geoffrey Rockwell and Stan Ruecker, to develop a prototype tool to visualize citation in the Humanities:
-				CiteLens. The tool is a proof-of-concept that points to the complexity of citation in the Humanities.
-				Different from the hard sciences, where academic research is most often doing small increments upon
-				previous research, in the Humanities and part of Social Sciences the use of sources can vary in degree,
-				mode, and depth. CiteLens attempts to expose this complexity and provide insights on how humanist
-				scholars use the citation in their work.
+				From 2012 to 2014, I collaborated with Mihaela Ilovan and Jenniffer Windsor, under the supervision of
+				Geoffrey Rockwell and Stan Ruecker, to develop a prototype tool to visualize citations in the
+				Humanities: CiteLens. The tool is a proof-of-concept that points to the complexity of citation in the
+				Humanities. Unlike the hard sciences, where academic research most often builds on previous research in
+				small increments, in the Humanities and parts of the Social Sciences, the use of sources can vary in
+				degree, mode, and depth. CiteLens attempts to expose this complexity and provide insights into how
+				humanist scholars use citations in their work.
 			</Text>
 			<iframe
 				allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"

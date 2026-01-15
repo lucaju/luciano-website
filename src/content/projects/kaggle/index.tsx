@@ -179,9 +179,9 @@ export const kaggle: ProjectSchema = {
 			</Text>
 			<Text>
 				This dissertation argues that these modes of subjectivation are designed to control the “production of
-				possibilities” and reinforce specific types of socioeconomic relations, which in turn reproduce current
-				conditions of existence. Furthermore, this research argues that the data science community has a notable
-				compulsion toward cost reduction, indifference toward human life, an obsession with controlling
+				possibilities” and to reinforce specific types of socioeconomic relations, which, in turn, reproduce
+				current conditions of existence. Furthermore, this research argues that the data science community has a
+				notable compulsion toward cost reduction, indifference toward human life, an obsession with controlling
 				populations and individual bodies, and a desire to produce a predictable future for economic gain.
 				Ultimately, this research identifies algorithmic media based on AI Technology as a core asset in the
 				attention economy and as a source of power that can be used as an interface to prescribe individual

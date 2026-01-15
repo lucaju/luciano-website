@@ -44,13 +44,13 @@ export const ghostRiver: ProjectSchema = {
 				practices, representations, and symbolic nature of the river.
 			</Text>
 			<Text>
-				Using historical-geographical materialism methodologies, an ethnographic inquiry into human, non-human
-				and infrastructure actors, and counter mapping we seek to develop a recursive (re)shaping of the water
+				Using historical-geographical materialist methodologies, an ethnographic inquiry into human, non-human,
+				and infrastructure actors, and counter-mapping, we seek to develop a recursive (re)shaping of the water
 				infrastructure that has absorbed and exhausted the Saint-Pierre River. Such methodologies allowed us to
 				identify how infrastructure was used to colonize and lay claim to the area, as well as illustrate
 				alternatives to the incremental destruction of sustaining habitats. Through the creation of a counter
-				map and ethnography of the river and water infrastructure, we will contest the homogenization of the
-				space as it represented in zoning regulations, land-use maps, and property regimes to offer new means of
+				map and an ethnography of the river and water infrastructure, we will contest the homogenization of the
+				space as represented in zoning regulations, land-use maps, and property regimes, offering new means of
 				expressing hydro-social relationships in place.
 			</Text>
 		</div>

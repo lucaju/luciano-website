@@ -31,11 +31,11 @@ export const shapingTheCity: ProjectSchema = {
 	content: (
 		<div className="space-y-1.5">
 			<Text>
-				We are looking for ways to visualize and interpret the shape of the city’s map in a different
-				perspective. Shaping the City deconstruct the map of the city, detaching the blocks from their original
-				geo-location and reorganize them according to whatever other information they carry on: size, community,
-				period, population density, income, number of trees, venues, type of terrain, tweets and so on. It is a
-				form of counter-mapping, in which other relevant data takes priority over geographical locations.
+				This project visualize and interpret the shape of the city’s map from a different perspective. Shaping
+				the City deconstructs the city map, detaching the blocks from their original geo-location and
+				reorganizing them according to whatever other information they carry: size, community, period,
+				population density, income, number of trees, venues, terrain type, tweets, and so on. It is a form of
+				counter-mapping in which other relevant data takes priority over geographical locations.
 			</Text>
 			<Lightbox
 				images={[
@@ -79,17 +79,11 @@ export const shapingTheCity: ProjectSchema = {
 				)}
 			</Lightbox>
 			<Text>
-				Shaping the City is a prototype tool for researchers interested in history, geography and urban
-				planning, which the goal is to enable comparison between different datasets using the shapes of the city
-				as the main structure. It is also a playful curiosity-driven interactive visualization, in which the
-				user is invited to explore, discover and learn more about how the city was planned and contrasting to
-				how it has been evolving.
-			</Text>
-			<Text>
-				In the current version, we have mapped the core area of Edmonton, which includes 114 neighbourhoods and
-				more than 4.000 shapes. The shapes are grouped by neighbourhoods and by the year when they were
-				established. Although a small portion of them lack the period data, the overall experience is not
-				affected. In the next phase, currently in progress, 95% of Edmonton area will be covered
+				Shaping the City is a prototype tool for researchers interested in history, geography, and urban
+				planning, designed to enable comparison across different datasets using the shapes of the city as the
+				main structure. It is also a playful, curiosity-driven interactive visualization in which the user is
+				invited to explore, discover, and learn more about how the city was planned and how it has been
+				evolving.
 			</Text>
 		</div>
 	),

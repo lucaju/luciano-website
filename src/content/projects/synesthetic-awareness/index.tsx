@@ -47,9 +47,9 @@ export const synestheticAwareness: ProjectSchema = {
 				)}
 			</Lightbox>
 			<Text>
-				This project proposes a synesthetic experiment in which data collected by the city will be translated to
-				a human sensorial input. It uses a mobile application to retrieve information about air quality in
-				Montreal to produce data-driven audio and visual feedback.
+				This project proposes a synesthetic experiment in which data collected by the city will be translated
+				into human sensory input. It uses a mobile application to retrieve air-quality data in Montreal and
+				produce data-driven audio and visual feedback.
 			</Text>
 		</div>
 	),

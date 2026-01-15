@@ -13,7 +13,7 @@ const junoChatbotImageAlt = 'Juno Chatbot';
 
 export const junoChatbot: ProjectSchema = {
 	title: 'Juno Chatbot & Storytelling',
-	place: 'Université de Montreal',
+	place: 'Université de Montréal',
 	date: { start: '2018-03-01', end: '2022-06-30' },
 	tags: ['Critical AI', 'Chatbots', 'Documentary', 'Education'],
 	extra: [
@@ -107,19 +107,18 @@ export const junoChatbot: ProjectSchema = {
 				)}
 			</Lightbox>
 			<Text>
-				Juno chatbot is a spinoff of the On Chance project by Jullia Salles. Julia explores how randomness
-				changes your life? From the uncertainty about the weather to the choices we make at the supermarket,
-				chance is constantly affecting our lives. But if we could have more data and develop more precise models
-				and algorithms, could we predict and control future events? On Chance is a documentary chatbot exploring
-				the philosophy and science of randomness. Have a chat about how randomness affects our lives and explore
-				the notion of chance through conversations, movie scenes, archive material and original interviews.
+				Juno chatbot is a spinoff of the On Chance project by Julia Salles. Julia explores how randomness
+				changes your life. From the uncertainty about the weather to the choices we make at the supermarket,
+				chance is constantly affecting our lives. But if we had more data and developed more precise models and
+				algorithms, could we predict and control future events? On Chance is a documentary chatbot exploring the
+				philosophy and science of randomness. Have a chat about how randomness affects our lives and explore the
+				notion of chance through conversations, movie scenes, archive material and original interviews.
 			</Text>
 			<Text>
-				On Chance is part of a research-creation thesis in communication studies aiming to explore how chatbots
-				can be used as interactive tools for conversational documentary storytelling. A chatbot is a
-				human-computer interaction interface that uses artificial intelligence (AI), especially in natural
-				language processing. In On Chance, the chatbot is an interactive tool to explore the archive material
-				and original content.
+				On Chance is part of a research-creation thesis in communication studies, exploring how chatbots can be
+				used as interactive tools for conversational documentary storytelling. A chatbot is a human-computer
+				interaction interface that uses artificial intelligence (AI), especially in natural language processing.
+				In On Chance, the chatbot is an interactive tool to explore the archive material and original content.
 			</Text>
 		</div>
 	),

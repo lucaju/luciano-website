@@ -78,7 +78,7 @@ export const comparative_ai_policy_and_regulation: ProjectSchema = {
 			</Text>
 
 			<Text>
-				This research is made in partnership with{' '}
+				This research is conducted in partnership with{' '}
 				<a
 					className="hover:underline"
 					href="https://machineagencies.milieux.ca/"
@@ -89,7 +89,7 @@ export const comparative_ai_policy_and_regulation: ProjectSchema = {
 					Machine Agencies
 					<SquareArrowOutUpRight className="inline size-3 ml-1 mb-0.5" />
 				</a>
-				and{' '}
+				{' and '}
 				<a
 					className="hover:underline"
 					href="https://techlobby.ca/"

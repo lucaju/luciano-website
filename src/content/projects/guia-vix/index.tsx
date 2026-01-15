@@ -18,9 +18,13 @@ export const guiaVix: ProjectSchema = {
 	content: (
 		<div className="space-y-1.5">
 			<Text>
-				In my last trip abroad I was amazed by how digital mobile city guide can be useful for exploring urban
-				environments. At the same time, I realize that my own city does not have such piece of technology. So, I
-				decided to create my first iPhone app as a city guide.
+				A digital mobile city guide can help explore urban environments. Guia Vix is an iPhone app for Vitória
+				(Brazil). The idea was to bridge the gap between the old print version and the new tourist behaviour.
+				The app has information about the city, types of transportation, and a geolocation database of more than
+				200 venues (bars, restaurants, nightclubs) and points of interest (beaches, arts, museums). A detail
+				page provides the main information for each venue, including phone numbers, addresses, map location, and
+				website URL. The user can explore the surroundings using the “Nearby” feature, which geo-locates the
+				user and shows points of interest within 1 km.
 			</Text>
 			<Lightbox
 				images={[
@@ -75,17 +79,9 @@ export const guiaVix: ProjectSchema = {
 			</Lightbox>
 
 			<Text>
-				Guia Vix is a Vitória’s (Brazil) city guide iPhone App. The idea was to bridge the gap between the old
-				print version and the new tourist behaviour. The app has information about the city, types of
-				transportation and a geolocation database of more than 200 venues (bars, restaurants, nightclubs) and
-				point of interests (beaches, arts, museum). A detail page provides the main information for each venus,
-				including phone numbers, full address, map location and web site url. The user can explorer the arounds
-				using the feature “Nearby” that geo-locate the user and show the points of interest in 1 km distance.
-			</Text>
-			<Text>
 				This project was built with the help of Samia Pedraça, Marina Machado, and Daigo Matsuoka. The app was
-				available for one year as an experimental project. However, my choice to pursue a Master degree abroad
-				made difficult to maintain a very locally-driven project up and running. We shut down the app at the end
+				available for one year as an experimental project. However, my choice to pursue a Master's degree abroad
+				made it difficult to keep a very locally driven project up and running. We shut down the app at the end
 				of 2012.
 			</Text>
 		</div>

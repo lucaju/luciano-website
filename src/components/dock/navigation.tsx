@@ -58,7 +58,7 @@ export function DockNavigation({
 
 	return (
 		<div className="fixed inset-x-0 top z-100 mx-auto flex flex-col h-full max-h-12">
-			<div className="fixed top-0 inset-x-0 h-16 bg-background to-transparent backdrop-blur-lg [-webkit-mask-image:linear-gradient(to_bottom,black,transparent)] dark:bg-background" />
+			{/* <div className="fixed top-0 inset-x-0 h-16 bg-background to-transparent backdrop-blur-lg [-webkit-mask-image:linear-gradient(to_bottom,black,transparent)] dark:bg-background" /> */}
 
 			<Dock
 				className={cn(

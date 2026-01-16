@@ -21,7 +21,7 @@ export const sbfMsma: ProjectSchema = {
 		</Collection>,
 		<Collection key="publications" label="Publications">
 			<Item type="Journal Article" pending>
-				Frizzera, L. & Brown, S. [Manuscript in production].{' '}
+				Frizzera, L. & Brown, S. [In review].{' '}
 				<strong>
 					Beyond Platform Capitalism: Designing a Community-Driven Archive for Post-secondary Theatre
 					Education

@@ -20,7 +20,7 @@ export const nerve: ProjectSchema = {
 			</Item>
 		</Collection>,
 		<Collection key="symposia" label="Symposia">
-			<Item type="Conference Paper" pending>
+			<Item type="Conference Paper">
 				Frizzera, L. (2026). <strong>NERVE-racking Challenges on XML text editors</strong>. Canada-Brazil
 				AI-in-scholcomm symposium. January 21, 2026, University of Victoria, Victoria, BC, Canada.
 			</Item>

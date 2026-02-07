@@ -1,7 +1,5 @@
-import { Lightbox } from '@/components/ui/lightbox';
 import type { ProjectSchema } from '@/modules/projects/timeline';
 import { Collection, Item } from '@/modules/projects/timeline/extra';
-import { Image } from '@/modules/projects/timeline/image';
 import { Text } from '@/modules/projects/timeline/text';
 
 export const multiTouchVariorum: ProjectSchema = {

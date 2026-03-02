@@ -29,6 +29,11 @@ export const leafWriter: ProjectSchema = {
 			</Item>
 		</Collection>,
 		<Collection key="conferences" label="Conferences">
+			<Item type="Conference Paper" pending>
+				Cummings, J., Jakacki, D., Brown, S., Ilovan, M., & _Frizzera, L._ (Accepted).
+				<strong>LEAF-Writer Commons: An introduction to a lightweight web-based tags-off TEI+RDF</strong>Digital
+				Humanities 2026. Daejeon, South Korea. Jul 27-31, 2026.
+			</Item>
 			<Item type="Exhibition" pending>
 				Cummings, J., Jakacki, D., Brown, S., Ilovan, M., Frizzera, L., Rubin-Detlev, K. (Submitted).
 				<strong>

@@ -31,11 +31,11 @@ export const leafWriter: ProjectSchema = {
 		<Collection key="conferences" label="Conferences">
 			<Item type="Conference Paper" pending>
 				Cummings, J., Jakacki, D., Brown, S., Ilovan, M., & _Frizzera, L._ (Accepted).
-				<strong>LEAF-Writer Commons: An introduction to a lightweight web-based tags-off TEI+RDF</strong>Digital
-				Humanities 2026. Daejeon, South Korea. Jul 27-31, 2026.
+				<strong>LEAF-Writer Commons: An introduction to a lightweight web-based tags-off TEI+RDF</strong>.
+				Digital Humanities 2026. Daejeon, South Korea. Jul 27-31, 2026.
 			</Item>
 			<Item type="Exhibition" pending>
-				Cummings, J., Jakacki, D., Brown, S., Ilovan, M., Frizzera, L., Rubin-Detlev, K. (Submitted).
+				Cummings, J., Jakacki, D., Brown, S., Ilovan, M., Frizzera, L., Rubin-Detlev, K. (Accepted).
 				<strong>
 					Implementing TEI Authority File Lookups in LEAF-Writer: Researcher-centric software development in
 					precarious funding contexts

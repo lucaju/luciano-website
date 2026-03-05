@@ -30,12 +30,12 @@ export const leafWriter: ProjectSchema = {
 		</Collection>,
 		<Collection key="conferences" label="Conferences">
 			<Item type="Conference Paper" pending>
-				Cummings, J., Jakacki, D., Brown, S., Ilovan, M., & _Frizzera, L._ (Accepted).
+				Cummings, J., Jakacki, D., Brown, S., Ilovan, M., & _Frizzera, L._ (Accepted).{' '}
 				<strong>LEAF-Writer Commons: An introduction to a lightweight web-based tags-off TEI+RDF</strong>.
 				Digital Humanities 2026. Daejeon, South Korea. Jul 27-31, 2026.
 			</Item>
 			<Item type="Exhibition" pending>
-				Cummings, J., Jakacki, D., Brown, S., Ilovan, M., Frizzera, L., Rubin-Detlev, K. (Accepted).
+				Cummings, J., Jakacki, D., Brown, S., Ilovan, M., Frizzera, L., & Rubin-Detlev, K. (Accepted).{' '}
 				<strong>
 					Implementing TEI Authority File Lookups in LEAF-Writer: Researcher-centric software development in
 					precarious funding contexts
@@ -43,19 +43,19 @@ export const leafWriter: ProjectSchema = {
 				. Digital Humanities. Daejeon, South Korea. Jul 27-31, 2026.
 			</Item>
 			<Item type="Conference Paper">
-				Cummings, J.; Frizzera, L.; Jakacki, D.; Brown, S.; Ilovan, M.; Rubin-Detlev, K. (2025).{' '}
+				Cummings, J., Frizzera, L., Jakacki, D., Brown, S., Ilovan, M., & Rubin-Detlev, K. (2025).{' '}
 				<strong>
 					Linking Your *-ographies: Developing project-specific TEI Authority File Lookups for LEAF-Writer
 				</strong>
 				. TEI Conference. September 15 - 20, 2025, Kraków, Poland.
 			</Item>
 			<Item type="Conference Paper">
-				Jakacki. D., Brown, S., Frizzera, L. (2024).{' '}
+				Jakacki. D., Brown, S., & Frizzera, L. (2024).{' '}
 				<strong>The Linked Editing Academic Framework (LEAF) in the multimodal annotation ecosystem</strong>.
 				Reimagining Annotation for Multimodal Cultural Heritage. Rennes, France.
 			</Item>
 			<Item type="Conference Paper">
-				Jakacki, D., Brown, S., Cummings. J., Ilovan, M., Frizzera, L. (2024).{' '}
+				Jakacki, D., Brown, S., Cummings. J., Ilovan, M., & Frizzera, L. (2024).{' '}
 				<strong>TEI Semantic Encoding with LEAF-Writer</strong>. Canadian Society for Digital Humanities (CSDH)
 				@ Congress 2024. McGill University. Montreal, Canada.
 			</Item>

@@ -27,7 +27,10 @@ export const youtubeRecommendationRankflow: ProjectSchema = {
 			</Item>
 		</Collection>,
 		<Collection key="publications" label="Publications">
-			<Item type="Journal Article" url="https://doi.org/10.21878/compolitica.2020.10.1.333">
+			<Item
+				type="Journal Article"
+				url="https://revista.compolitica.org.br/index.php/revista/article/view/333/259"
+			>
 				Reis, R., Zanetti, D., & Frizzera, L. (2020).{' '}
 				<strong>
 					A conveniência dos algoritmos: O papel do YouTube nas eleições brasileiras de 2018 [The convenience

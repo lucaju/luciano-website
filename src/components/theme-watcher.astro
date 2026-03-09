@@ -2,22 +2,50 @@
 
 <script is:inline>
 	function loadScript() {
+		const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+		let removeMediaListener = null;
+
 		function getThemePreference() {
 			const localTheme = localStorage.getItem('app.theme');
-			const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+			const systemTheme = mediaQuery.matches ? 'dark' : 'light';
 			if (!localTheme) return { theme: systemTheme, source: 'system' };
 
 			return { theme: localTheme, source: 'storage' };
 		}
+
+		function startSystemThemeWatcher() {
+			const handleChange = event => {
+				// If the user has chosen an explicit theme, stop following the system.
+				if (localStorage.getItem('app.theme')) {
+					mediaQuery.removeEventListener('change', handleChange);
+					return;
+				}
+
+				const isDark = event.matches;
+				document.documentElement.classList.toggle('dark', isDark);
+			};
+
+			mediaQuery.addEventListener('change', handleChange);
+			removeMediaListener = () => mediaQuery.removeEventListener('change', handleChange);
+		}
+
 		const themePreference = getThemePreference();
 		const isDarkMode = themePreference.theme === 'dark';
 		document.documentElement.classList.toggle('dark', isDarkMode);
 
-		const obs = new MutationObserver(() => {
-			const isDark = document.documentElement.classList.contains('dark');
-			localStorage.setItem('app.theme', isDark ? 'dark' : 'light');
+		if (themePreference.source === 'system') {
+			startSystemThemeWatcher();
+		}
+
+		const classObserver = new MutationObserver(() => {
+			// If a manual theme has been set during this session, stop following the system.
+			if (localStorage.getItem('app.theme') && removeMediaListener) {
+				removeMediaListener();
+				removeMediaListener = null;
+			}
 		});
-		obs.observe(document.documentElement, {
+
+		classObserver.observe(document.documentElement, {
 			attributes: true,
 			attributeFilter: ['class'],
 		});

@@ -40,7 +40,8 @@ export const AnimatedThemeToggler = ({ className, duration = 400, showLabel, ...
 				const newTheme = !isDark;
 				setIsDark(newTheme);
 				document.documentElement.classList.toggle('dark');
-				localStorage.setItem('theme', newTheme ? 'dark' : 'light');
+				// ? Decided no store user preference. Toogle only change the theme during the session
+				// localStorage.setItem('app.theme', newTheme ? 'dark' : 'light');
 			});
 		}).ready;
 

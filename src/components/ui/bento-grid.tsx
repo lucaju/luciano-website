@@ -25,7 +25,7 @@ export const BentoGridItem = ({
 		<a
 			className={cn(
 				'group/bento shadow-input row-span-1 flex flex-col justify-between space-y-1 rounded-xl border border-neutral-200 bg-white p-4 transition duration-200 hover:shadow-xl dark:border-white/10 dark:bg-neutral-950 dark:shadow-none hover:scale-105 hover:z-10',
-				className
+				className,
 			)}
 			href={`/blog/${id}`}
 			title={title}

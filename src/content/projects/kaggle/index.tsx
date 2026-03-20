@@ -21,29 +21,26 @@ export const kaggle: ProjectSchema = {
 				<span>
 					Frizzera, L. [Manuscript in production].{' '}
 					<strong>
-						AI, Free Labour, and Virtual Medals: A Critical History of Kaggle’s Crowdsourcing Model for
-						Machine Learning Development
+						AI, Free Labour, and Virtual Medals: A Critical History of Kaggle’s Crowdsourcing Model for Machine Learning
+						Development
 					</strong>
 					. New Media & Society.
 				</span>
 			</Item>
 			<Item type="Book Chapter" pending>
 				<span>
-					Frizzera, L. [In Review]. <strong>Spurious Correlations in Artificial Intelligence</strong>. In
-					Sharp, K., & Murthy, D. (Eds.), Encoding Realities, Decoding Power. Duke University Press
+					Frizzera, L. [In Review]. <strong>Spurious Correlations in Artificial Intelligence</strong>. In Sharp, K., &
+					Murthy, D. (Eds.), Encoding Realities, Decoding Power. Duke University Press
 				</span>
 			</Item>
 			<Item type="Journal Article" url="https://journals.sfu.ca/stream/index.php/stream/issue/view/39/19">
 				Frizzera, L. (2025).{' '}
-				<strong>
-					Nurturing Ab/Normal Bodies and Speculative Futures: How AI Mistakes Somebody’s Hair for a Bomb
-				</strong>
-				. Stream: Interdisciplinary Journal of Communication. 17(1), 19-29.
+				<strong>Nurturing Ab/Normal Bodies and Speculative Futures: How AI Mistakes Somebody’s Hair for a Bomb</strong>.
+				Stream: Interdisciplinary Journal of Communication. 17(1), 19-29.
 			</Item>
 			<Item type="Proceedings" url="https://doi.org/10.5210/spir.v2024i0.13942">
-				Frizzera. L. (2025).{' '}
-				<strong>Predictions of the Self: AI and the Political Economy of Subjectivation</strong>. AoIR Selected
-				Papers of Internet Research.
+				Frizzera. L. (2025). <strong>Predictions of the Self: AI and the Political Economy of Subjectivation</strong>.
+				AoIR Selected Papers of Internet Research.
 			</Item>
 			<Item
 				type="Proceedings"
@@ -54,45 +51,38 @@ export const kaggle: ProjectSchema = {
 					Exploração cognitiva, Medalhas virtuais e IA: Um olhar crítico sobre o Kaggle, a maior plataforma de
 					competições de aprendizado de máquina
 				</strong>
-				. Anais do 47º Congresso Brasileiro de Ciências da Comunicação. 27 e 29 de agosto de 2024. Intercom
-				2024. ISSN: 2175-4683.
+				. Anais do 47º Congresso Brasileiro de Ciências da Comunicação. 27 e 29 de agosto de 2024. Intercom 2024. ISSN:
+				2175-4683.
 			</Item>
 			<Item type="Thesis" url="https://spectrum.library.concordia.ca/id/eprint/994134/">
 				Frizzera, L. (2024).{' '}
-				<strong>
-					Artificial Intelligence and Algorithmic Mediations: Affect, Power, and Subjectivation on Kaggle
-				</strong>{' '}
-				[PhD Dissertation, Concordia University]. Concordia University, Canada. Supervisor: Dr. Fenwick
-				McKelvey.
+				<strong>Artificial Intelligence and Algorithmic Mediations: Affect, Power, and Subjectivation on Kaggle</strong>{' '}
+				[PhD Dissertation, Concordia University]. Concordia University, Canada. Supervisor: Dr. Fenwick McKelvey.
 			</Item>
 		</Collection>,
 		<Collection key="conferences" label="Conferences">
 			<Item type="Conference Paper">
 				Frizzera, L. (2025).{' '}
 				<strong>Work, Play, and Un/predictive Models: The gamification of AI development on Kaggle.</strong>
-				In the panel Archives of AI: (De)Platformisation, Data Infrastructures and Endings in Software
-				Development. 4S - Society for Social Studies of Science. September 2-6, 2025. Seattle, USA.
+				In the panel Archives of AI: (De)Platformisation, Data Infrastructures and Endings in Software Development. 4S -
+				Society for Social Studies of Science. September 2-6, 2025. Seattle, USA.
 			</Item>
 			<Item type="Conference Paper">
 				Frizzera, L. (2025).{' '}
 				<strong>
 					You are what AI tells you to eat: Feature Engineering and Hyper-Nudging in Online Grocery Shopping.
 				</strong>{' '}
-				Canadian Communication Association (CCA) @ Congress 2025. George Brown College, Toronto, Canada. Jun
-				2-5, 2025.
+				Canadian Communication Association (CCA) @ Congress 2025. George Brown College, Toronto, Canada. Jun 2-5, 2025.
 			</Item>
 			<Item type="Conference Paper">
 				Frizzera, L. (2025).{' '}
-				<strong>
-					Spurious Correlations in Artificial Intelligence: Ab/Normal Bodies and Speculative Futures
-				</strong>
-				. Mini-conference Encoding Realities, Decoding Power: Exploring New Formations of Gender, Race, and
-				Sexuality within Artificial Identities. University of Texas at Austin, US. Feb 27.
+				<strong>Spurious Correlations in Artificial Intelligence: Ab/Normal Bodies and Speculative Futures</strong>.
+				Mini-conference Encoding Realities, Decoding Power: Exploring New Formations of Gender, Race, and Sexuality
+				within Artificial Identities. University of Texas at Austin, US. Feb 27.
 			</Item>
 			<Item type="Conference Paper">
-				Frizzera, L. (2024).{' '}
-				<strong>Predictions of the Self: AI and The Political Economy of Subjectivation</strong>. Association of
-				Internet Researchers (AoIR). Sheffield University. Sheffield, UK.
+				Frizzera, L. (2024). <strong>Predictions of the Self: AI and The Political Economy of Subjectivation</strong>.
+				Association of Internet Researchers (AoIR). Sheffield University. Sheffield, UK.
 			</Item>
 			<Item type="Conference Paper">
 				Frizzera, L. (2024).{' '}
@@ -104,40 +94,34 @@ export const kaggle: ProjectSchema = {
 			</Item>
 			<Item type="Conference Paper">
 				Frizzera, L. (2024).{' '}
-				<strong>
-					Nurturing Ab/Normal Bodies and Speculative Futures: How AI Mistakes Somebody’s Hair for a Bomb.
-				</strong>{' '}
+				<strong>Nurturing Ab/Normal Bodies and Speculative Futures: How AI Mistakes Somebody’s Hair for a Bomb.</strong>{' '}
 				Canadian Communication Association (CCA) @ Congress 2024. McGill University. Montreal, Canada.
 			</Item>
 			<Item type="Conference Paper">
 				Frizzera, L. (2023).{' '}
-				<strong>
-					AI, Competitions, and Virtual Medals: A Critical Look at Kaggle’s Data Science Community
-				</strong>
-				. International Communication Association (ICA), Philosophy, Theory and Critique division. Toronto,
-				Canada.
+				<strong>AI, Competitions, and Virtual Medals: A Critical Look at Kaggle’s Data Science Community</strong>.
+				International Communication Association (ICA), Philosophy, Theory and Critique division. Toronto, Canada.
 			</Item>
 			<Item type="Conference Paper">
 				Frizzera, L. (2023).{' '}
-				<strong>From deepfake to shallow truths: algorithmic subjectivation and the uncanny self</strong>.
-				Canadian Communication Association (CCA) @ Congress 2023. York University. York, Canada.
+				<strong>From deepfake to shallow truths: algorithmic subjectivation and the uncanny self</strong>. Canadian
+				Communication Association (CCA) @ Congress 2023. York University. York, Canada.
 			</Item>
 		</Collection>,
 		<Collection key="guest-speaker" label="Guest Speaker">
 			<Item type="Guest Speaker">
 				Frizzera, L. (2025).{' '}
 				<strong>Correlações Espúrias na IA: A Normalização do Corpo e seus Futuros Especulativos.</strong>
-				Ciclo de conferências. Programa de pós-graduação em Comunicação e Territorialidades. Universidade
-				Federal do Espírito Santo. Vitória, Brasil. 14 de outubro de 2025.
+				Ciclo de conferências. Programa de pós-graduação em Comunicação e Territorialidades. Universidade Federal do
+				Espírito Santo. Vitória, Brasil. 14 de outubro de 2025.
 			</Item>
 			<Item type="Guest Speaker">
-				Frizzera, L. (2025). <strong>Affect, Power, and Subjectivation in AI Technosolutionism.</strong>{' '}
-				Department of Media Culture. City University of New York (CUNY). May 30, 2025. New York. NY, US.
+				Frizzera, L. (2025). <strong>Affect, Power, and Subjectivation in AI Technosolutionism.</strong> Department of
+				Media Culture. City University of New York (CUNY). May 30, 2025. New York. NY, US.
 			</Item>
 			<Item type="Guest Speaker">
-				Frizzera, L. (2024). <strong>Affect, Power, and Subjectivation on Kaggle’s AI Competitions.</strong>{' '}
-				Center of Digital Humanities Research (CoDHR) Speaker Series. September 17. Texas A&M. College Station,
-				TX, US.
+				Frizzera, L. (2024). <strong>Affect, Power, and Subjectivation on Kaggle’s AI Competitions.</strong> Center of
+				Digital Humanities Research (CoDHR) Speaker Series. September 17. Texas A&M. College Station, TX, US.
 			</Item>
 		</Collection>,
 	],
@@ -157,35 +141,33 @@ export const kaggle: ProjectSchema = {
 				)}
 			</Lightbox>
 			<Text>
-				Over the past decade, the widespread investment in digital infrastructure and the extensive digitization
-				of individual behaviour have provided the basis for the rapid development of machinelearning techniques
-				and Artificial Intelligence (AI). AI datafy our body and our identity, producing live databases full of
-				calculated linkages between humans and nonhumans. It creates a new cartography of biopower that
-				sometimes produces technologies, but always produces subjects. This research examines the political
-				economy of subjectivation in the “making of” machine-learning algorithms and AI by closely examining the
-				relations of power, affect, and subjectivation on Kaggle, the world’s largest data science community.
-				Conceived as a gamified platform for crowdsourced machine-learning challenges, Kaggle is a networked
-				public where users are under constant pressure to produce new and improved algorithms.
+				Over the past decade, the widespread investment in digital infrastructure and the extensive digitization of
+				individual behaviour have provided the basis for the rapid development of machinelearning techniques and
+				Artificial Intelligence (AI). AI datafy our body and our identity, producing live databases full of calculated
+				linkages between humans and nonhumans. It creates a new cartography of biopower that sometimes produces
+				technologies, but always produces subjects. This research examines the political economy of subjectivation in
+				the “making of” machine-learning algorithms and AI by closely examining the relations of power, affect, and
+				subjectivation on Kaggle, the world’s largest data science community. Conceived as a gamified platform for
+				crowdsourced machine-learning challenges, Kaggle is a networked public where users are under constant pressure
+				to produce new and improved algorithms.
 			</Text>
 			<Text>
-				This research first engages with Kaggle as a company and platform, offering a narrative of its history
-				and a detailed description of how it works. Combining discourse analysis, software studies, and digital
-				methods, this research aims to understand how code, data, digital infrastructures, crowdsourced labour,
-				and political-economic interests are mobilized to create instruments of control that shape, modulate,
-				and mediate individual behaviour. This phenomenon, which I call modes of automatic subjectivation,
-				points toward the possibility of using subjective and impersonal materials to reorganize life in its
-				broadest sense according to a specific system of power and privileges involving gender, race, sexuality,
-				and social class.
+				This research first engages with Kaggle as a company and platform, offering a narrative of its history and a
+				detailed description of how it works. Combining discourse analysis, software studies, and digital methods, this
+				research aims to understand how code, data, digital infrastructures, crowdsourced labour, and political-economic
+				interests are mobilized to create instruments of control that shape, modulate, and mediate individual behaviour.
+				This phenomenon, which I call modes of automatic subjectivation, points toward the possibility of using
+				subjective and impersonal materials to reorganize life in its broadest sense according to a specific system of
+				power and privileges involving gender, race, sexuality, and social class.
 			</Text>
 			<Text>
 				This dissertation argues that these modes of subjectivation are designed to control the “production of
-				possibilities” and to reinforce specific types of socioeconomic relations, which, in turn, reproduce
-				current conditions of existence. Furthermore, this research argues that the data science community has a
-				notable compulsion toward cost reduction, indifference toward human life, an obsession with controlling
-				populations and individual bodies, and a desire to produce a predictable future for economic gain.
-				Ultimately, this research identifies algorithmic media based on AI Technology as a core asset in the
-				attention economy and as a source of power that can be used as an interface to prescribe individual
-				behaviour.
+				possibilities” and to reinforce specific types of socioeconomic relations, which, in turn, reproduce current
+				conditions of existence. Furthermore, this research argues that the data science community has a notable
+				compulsion toward cost reduction, indifference toward human life, an obsession with controlling populations and
+				individual bodies, and a desire to produce a predictable future for economic gain. Ultimately, this research
+				identifies algorithmic media based on AI Technology as a core asset in the attention economy and as a source of
+				power that can be used as an interface to prescribe individual behaviour.
 			</Text>
 			<Lightbox
 				images={[
@@ -229,8 +211,8 @@ export const kaggle: ProjectSchema = {
 				)}
 			</Lightbox>
 			<Text>
-				Dissertation submitted in partial fulfillment of the requirements for the degree of Doctor of Philosophy
-				in Communication Studies.
+				Dissertation submitted in partial fulfillment of the requirements for the degree of Doctor of Philosophy in
+				Communication Studies.
 			</Text>
 		</div>
 	),

@@ -14,21 +14,20 @@ export const citeLens: ProjectSchema = {
 	extra: [
 		<Collection key="conferences" label="Conferences">
 			<Item type="Conference Paper">
-				Ilovan, M., Frizzera, L., Windsor, J., Michura, P., Sondheim, D., Rockwell, G., Ruecker, S. & INKE
-				Research Group (2014). <strong>CiteLens: splicing text analysis with citation analysis</strong>.
-				Presented in the panel “The lifecycle of the interface.” Canadian Society for Digital Humanities (CSDH)
-				@ Congress 2014. Brock University. St. Catherine, Canada.
+				Ilovan, M., Frizzera, L., Windsor, J., Michura, P., Sondheim, D., Rockwell, G., Ruecker, S. & INKE Research
+				Group (2014). <strong>CiteLens: splicing text analysis with citation analysis</strong>. Presented in the panel
+				“The lifecycle of the interface.” Canadian Society for Digital Humanities (CSDH) @ Congress 2014. Brock
+				University. St. Catherine, Canada.
 			</Item>
 			<Item type="Conference Paper">
-				Ilovan, M., Frizzera, L., Michura, P., Rockwell, G., Sondheim, D., Ruecker, S., Windsor, J., & INKE
-				TEAM. (2012). <strong>Visualizing Citation Patterns in Humanist Monographs</strong>. Presented in the
-				panel “Designing Interactive Reading Environments for the Online Scholarly Edition.” Digital Humanities
-				2012. Hamburg, Germany.
+				Ilovan, M., Frizzera, L., Michura, P., Rockwell, G., Sondheim, D., Ruecker, S., Windsor, J., & INKE TEAM.
+				(2012). <strong>Visualizing Citation Patterns in Humanist Monographs</strong>. Presented in the panel “Designing
+				Interactive Reading Environments for the Online Scholarly Edition.” Digital Humanities 2012. Hamburg, Germany.
 			</Item>
 			<Item type="Conference Paper">
-				Ilovan, M., Frizzera, L., Michura, P., Rockwell, G., Ruecker, S., Sondheim, D., Windsor, J., & NKE TEAM.
-				(2012). <strong>Exploring humanist citation practice through visualization</strong>. Society for Digital
-				Humanities (SDH-SEMI) @ Congress 2012. University of Waterloo. Waterloo, Canada.
+				Ilovan, M., Frizzera, L., Michura, P., Rockwell, G., Ruecker, S., Sondheim, D., Windsor, J., & NKE TEAM. (2012).{' '}
+				<strong>Exploring humanist citation practice through visualization</strong>. Society for Digital Humanities
+				(SDH-SEMI) @ Congress 2012. University of Waterloo. Waterloo, Canada.
 			</Item>
 		</Collection>,
 		<Collection key="code" label="Code">
@@ -55,13 +54,12 @@ export const citeLens: ProjectSchema = {
 				)}
 			</Lightbox>
 			<Text>
-				From 2012 to 2014, I collaborated with Mihaela Ilovan and Jenniffer Windsor, under the supervision of
-				Geoffrey Rockwell and Stan Ruecker, to develop a prototype tool to visualize citations in the
-				Humanities: CiteLens. The tool is a proof-of-concept that points to the complexity of citation in the
-				Humanities. Unlike the hard sciences, where academic research most often builds on previous research in
-				small increments, in the Humanities and parts of the Social Sciences, the use of sources can vary in
-				degree, mode, and depth. CiteLens attempts to expose this complexity and provide insights into how
-				humanist scholars use citations in their work.
+				From 2012 to 2014, I collaborated with Mihaela Ilovan and Jenniffer Windsor, under the supervision of Geoffrey
+				Rockwell and Stan Ruecker, to develop a prototype tool to visualize citations in the Humanities: CiteLens. The
+				tool is a proof-of-concept that points to the complexity of citation in the Humanities. Unlike the hard
+				sciences, where academic research most often builds on previous research in small increments, in the Humanities
+				and parts of the Social Sciences, the use of sources can vary in degree, mode, and depth. CiteLens attempts to
+				expose this complexity and provide insights into how humanist scholars use citations in their work.
 			</Text>
 			<iframe
 				allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"

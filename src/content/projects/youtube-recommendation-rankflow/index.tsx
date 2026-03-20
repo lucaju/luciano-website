@@ -27,14 +27,11 @@ export const youtubeRecommendationRankflow: ProjectSchema = {
 			</Item>
 		</Collection>,
 		<Collection key="publications" label="Publications">
-			<Item
-				type="Journal Article"
-				url="https://revista.compolitica.org.br/index.php/revista/article/view/333/259"
-			>
+			<Item type="Journal Article" url="https://revista.compolitica.org.br/index.php/revista/article/view/333/259">
 				Reis, R., Zanetti, D., & Frizzera, L. (2020).{' '}
 				<strong>
-					A conveniência dos algoritmos: O papel do YouTube nas eleições brasileiras de 2018 [The convenience
-					of the algorithms: The role of YouTube in the 2018 Brazilian elections]
+					A conveniência dos algoritmos: O papel do YouTube nas eleições brasileiras de 2018 [The convenience of the
+					algorithms: The role of YouTube in the 2018 Brazilian elections]
 				</strong>
 				. Compolítica, 10(1), 35–58.
 			</Item>
@@ -56,8 +53,8 @@ export const youtubeRecommendationRankflow: ProjectSchema = {
 			</Item>
 			<Item type="Conference Paper">
 				Frizzera, L., McKelvey, F. (2019).{' '}
-				<strong>The Political Narrative of YouTube Recommendation System: 2018 Ontario election</strong>.
-				Canadian Communication Association (CCA) @ Congress 2019. UBC. Vancouver, Canada.
+				<strong>The Political Narrative of YouTube Recommendation System: 2018 Ontario election</strong>. Canadian
+				Communication Association (CCA) @ Congress 2019. UBC. Vancouver, Canada.
 			</Item>
 		</Collection>,
 		<Collection key="code" label="Code">
@@ -87,34 +84,32 @@ export const youtubeRecommendationRankflow: ProjectSchema = {
 				)}
 			</Lightbox>
 			<Text>
-				What videos does YouTube recommend when searching for party leaders during elections? This study sought
-				to investigate how the YouTube platform operates, focusing on algorithmic activity and the strategies
-				employed by both human and automated (robot) actors within federal and regional elections. The aim was
-				to understand the impact of this system of mediation on society and to demystify preconceptions about
-				ideologically neutral technologies in highly disputed political events. The research focuses on three
-				case studies: 1) the 2018 Ontario (Canada) election, 2) the 2018 Quebec (Canada) election, and 3) the
-				2018 Brazilian Federal Election. The data collection was carried out during the 2018 campaign periods in
-				Ontario (May and June), Quebec (August and September), and Brazil (August and October).
+				What videos does YouTube recommend when searching for party leaders during elections? This study sought to
+				investigate how the YouTube platform operates, focusing on algorithmic activity and the strategies employed by
+				both human and automated (robot) actors within federal and regional elections. The aim was to understand the
+				impact of this system of mediation on society and to demystify preconceptions about ideologically neutral
+				technologies in highly disputed political events. The research focuses on three case studies: 1) the 2018
+				Ontario (Canada) election, 2) the 2018 Quebec (Canada) election, and 3) the 2018 Brazilian Federal Election. The
+				data collection was carried out during the 2018 campaign periods in Ontario (May and June), Quebec (August and
+				September), and Brazil (August and October).
 			</Text>
 			<Text>
-				The data collection was carried out using a Python script thatautomates YouTube search operations based
-				on specified keywords (e.g., candidate names), allowing us to gather video-related data and the relative
-				ranking position displayed to the user. Once the keywords were defined, the tool retrieved links for the
-				top four results for each keyword and then examined the recommendation section. This process was
-				repeated four times, each time collecting recommended videos to simulate a user interacting with
-				algorithmic suggestions.
+				The data collection was carried out using a Python script thatautomates YouTube search operations based on
+				specified keywords (e.g., candidate names), allowing us to gather video-related data and the relative ranking
+				position displayed to the user. Once the keywords were defined, the tool retrieved links for the top four
+				results for each keyword and then examined the recommendation section. This process was repeated four times,
+				each time collecting recommended videos to simulate a user interacting with algorithmic suggestions.
 			</Text>
 			<Text>
-				The rankflow allows analysis of the evolution of each video in the rank, identifying trends and
-				observing what has been recommended. This might give us some insights into how the YouTube ranking
-				system works, which videos are most prominent on specific topics, and what narrative this ranking brings
-				to the political debate in Canada.
+				The rankflow allows analysis of the evolution of each video in the rank, identifying trends and observing what
+				has been recommended. This might give us some insights into how the YouTube ranking system works, which videos
+				are most prominent on specific topics, and what narrative this ranking brings to the political debate in Canada.
 			</Text>
 			<SubHeading>YouTube Recommendation Scraper</SubHeading>
 			<Text>
 				To make the data collection process easier and more efficient, we designed a web application with a
-				user-friendly UI that allows other researchers to collect data from YouTube's recommendation system. Due
-				to funding restrictions, the project was paused, but the code is available on GitHub.
+				user-friendly UI that allows other researchers to collect data from YouTube's recommendation system. Due to
+				funding restrictions, the project was paused, but the code is available on GitHub.
 			</Text>
 		</div>
 	),

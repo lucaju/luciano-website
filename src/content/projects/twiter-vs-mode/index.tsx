@@ -68,13 +68,13 @@ export const tvm: ProjectSchema = {
 				)}
 			</Lightbox>
 			<Text>
-				Twitter Versus Mode is my first attempt to connect Twitter and Flash. It is basically a tool that
-				compares two keywords. Once the user hits “go”, the script accesses Twitter’s API to search the last
-				1,000 tweets that mention at least one of the two selected keywords. A colour-coded square represents
-				each tweet. An animation that illustrates the flow of tweets reconstructs the timeline. The content of a
-				tweet can be seen by hovering over a square on Twitter, showing the text and the user’s avatar. There is
-				an option to reorder the tweets by keywords. Since Twitter closed its API and implemented strict access
-				rules, this prototype stopped working. But you can still see some screenshots.
+				Twitter Versus Mode is my first attempt to connect Twitter and Flash. It is basically a tool that compares two
+				keywords. Once the user hits “go”, the script accesses Twitter’s API to search the last 1,000 tweets that
+				mention at least one of the two selected keywords. A colour-coded square represents each tweet. An animation
+				that illustrates the flow of tweets reconstructs the timeline. The content of a tweet can be seen by hovering
+				over a square on Twitter, showing the text and the user’s avatar. There is an option to reorder the tweets by
+				keywords. Since Twitter closed its API and implemented strict access rules, this prototype stopped working. But
+				you can still see some screenshots.
 			</Text>
 		</div>
 	),

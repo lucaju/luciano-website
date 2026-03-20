@@ -39,19 +39,19 @@ export const ghostRiver: ProjectSchema = {
 				)}
 			</Lightbox>
 			<Text>
-				This research project questions how discourses and practices of modernity and development have led to
-				the physical transformations of the Saint-Pierre River, and how these relate to the different material
-				practices, representations, and symbolic nature of the river.
+				This research project questions how discourses and practices of modernity and development have led to the
+				physical transformations of the Saint-Pierre River, and how these relate to the different material practices,
+				representations, and symbolic nature of the river.
 			</Text>
 			<Text>
-				Using historical-geographical materialist methodologies, an ethnographic inquiry into human, non-human,
-				and infrastructure actors, and counter-mapping, we seek to develop a recursive (re)shaping of the water
-				infrastructure that has absorbed and exhausted the Saint-Pierre River. Such methodologies allowed us to
-				identify how infrastructure was used to colonize and lay claim to the area, as well as illustrate
-				alternatives to the incremental destruction of sustaining habitats. Through the creation of a counter
-				map and an ethnography of the river and water infrastructure, we will contest the homogenization of the
-				space as represented in zoning regulations, land-use maps, and property regimes, offering new means of
-				expressing hydro-social relationships in place.
+				Using historical-geographical materialist methodologies, an ethnographic inquiry into human, non-human, and
+				infrastructure actors, and counter-mapping, we seek to develop a recursive (re)shaping of the water
+				infrastructure that has absorbed and exhausted the Saint-Pierre River. Such methodologies allowed us to identify
+				how infrastructure was used to colonize and lay claim to the area, as well as illustrate alternatives to the
+				incremental destruction of sustaining habitats. Through the creation of a counter map and an ethnography of the
+				river and water infrastructure, we will contest the homogenization of the space as represented in zoning
+				regulations, land-use maps, and property regimes, offering new means of expressing hydro-social relationships in
+				place.
 			</Text>
 		</div>
 	),

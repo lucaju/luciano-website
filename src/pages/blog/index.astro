@@ -17,7 +17,7 @@ const postsList = pipe(
 		if (import.meta.env.PROD) return post.data.status === 'published';
 		return true;
 	}),
-	A.sort((a, b) => (new Date(b.data.publishedAt) > new Date(a.data.publishedAt) ? 1 : 0))
+	A.sort((a, b) => (new Date(b.data.publishedAt) > new Date(a.data.publishedAt) ? 1 : 0)),
 );
 ---
 

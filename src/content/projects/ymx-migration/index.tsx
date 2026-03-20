@@ -29,21 +29,18 @@ export const ymx: ProjectSchema = {
 				)}
 			</Lightbox>
 			<Text>
-				Inspired by the acquisition of two Solari split-flap information displays from Mirabel Airport by Matt
-				Soar, Associate Professor of Communication Studies at Concordia University, the Montréal Signs Project
-				put together the installation <b>YMX: Migration, Land, and Loss after Mirabel</b> by Cheryl Sim. Sim’s
-				exhibition speaks to the parallel stories of displacement and forced migration: those dispossessed of
-				their land to build the airport and the thousands of people who arrived at Mirabel escaping war,
-				disaster, or economic adversity.
+				Inspired by the acquisition of two Solari split-flap information displays from Mirabel Airport by Matt Soar,
+				Associate Professor of Communication Studies at Concordia University, the Montréal Signs Project put together
+				the installation <b>YMX: Migration, Land, and Loss after Mirabel</b> by Cheryl Sim. Sim’s exhibition speaks to
+				the parallel stories of displacement and forced migration: those dispossessed of their land to build the airport
+				and the thousands of people who arrived at Mirabel escaping war, disaster, or economic adversity.
 			</Text>
 			<Text>
-				I had the opportunity to work with Matt Soar and Cheryl Sim on this project, helping them to visualize
-				the immigration data provided by the Canadian Government. Some of the visualizations were present in the
-				exhibition.
+				I had the opportunity to work with Matt Soar and Cheryl Sim on this project, helping them to visualize the
+				immigration data provided by the Canadian Government. Some of the visualizations were present in the exhibition.
 			</Text>
 			<Text>
-				The exhibition took place at the Galerie POPOP (Belgo Building) in Montreal from March 29 to April 13,
-				2017.
+				The exhibition took place at the Galerie POPOP (Belgo Building) in Montreal from March 29 to April 13, 2017.
 			</Text>
 		</div>
 	),

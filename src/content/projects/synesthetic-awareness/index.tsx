@@ -16,10 +16,7 @@ export const synestheticAwareness: ProjectSchema = {
 	tags: ['Internet of Things', 'Sonification', 'design', 'climate change'],
 	extra: [
 		<Collection key="blog" label="Blog Posts">
-			<Item
-				type="Blog Post"
-				url="notes/synesthetic-awareness-perceiving-air-quality-through-visual-and-audio-inputs"
-			>
+			<Item type="Blog Post" url="notes/synesthetic-awareness-perceiving-air-quality-through-visual-and-audio-inputs">
 				Synesthetic Awareness
 			</Item>
 		</Collection>,
@@ -47,9 +44,9 @@ export const synestheticAwareness: ProjectSchema = {
 				)}
 			</Lightbox>
 			<Text>
-				This project proposes a synesthetic experiment in which data collected by the city will be translated
-				into human sensory input. It uses a mobile application to retrieve air-quality data in Montreal and
-				produce data-driven audio and visual feedback.
+				This project proposes a synesthetic experiment in which data collected by the city will be translated into human
+				sensory input. It uses a mobile application to retrieve air-quality data in Montreal and produce data-driven
+				audio and visual feedback.
 			</Text>
 		</div>
 	),

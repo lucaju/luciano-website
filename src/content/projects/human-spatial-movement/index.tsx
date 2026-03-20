@@ -52,27 +52,26 @@ export const humanSpatialMovement: ProjectSchema = {
 				)}
 			</Lightbox>
 			<Text>
-				As an inherent human condition, mobility brings together communicative, technological, geographical,
-				economic, cultural, and social forces that transform the surrounding space. In fact, space becomes
-				socially meaningful only through human agency and activities, such as walking and the desire to move in
-				one direction or another. As we walk, we always leave traces behind, which can be both immaterial, such
-				as nostalgia or desire, and concrete, such as the built environment and marks on the sand.
+				As an inherent human condition, mobility brings together communicative, technological, geographical, economic,
+				cultural, and social forces that transform the surrounding space. In fact, space becomes socially meaningful
+				only through human agency and activities, such as walking and the desire to move in one direction or another. As
+				we walk, we always leave traces behind, which can be both immaterial, such as nostalgia or desire, and concrete,
+				such as the built environment and marks on the sand.
 			</Text>
 			<Text>
-				All these moments and traces are transitory (space) and temporary (time), which makes it difficult to
-				understand and analyze their nature and rules. Yet, if we follow our trails, we can understand our
-				interactions with the surrounding environment and with other people; we can even grasp the patterns and
-				rules that govern our movements.
+				All these moments and traces are transitory (space) and temporary (time), which makes it difficult to understand
+				and analyze their nature and rules. Yet, if we follow our trails, we can understand our interactions with the
+				surrounding environment and with other people; we can even grasp the patterns and rules that govern our
+				movements.
 			</Text>
 			<Text>
-				Human Spatial Movement is an interactive visualization that enables you to discover your mobility
-				pattern through time and space. It shows all your Moves data on a map, allowing you to filter by date
-				and transportation type, and encode information by transportation type and duration. You can uncover
-				your digital traces to learn about your mobility preferences in everyday life.
+				Human Spatial Movement is an interactive visualization that enables you to discover your mobility pattern
+				through time and space. It shows all your Moves data on a map, allowing you to filter by date and transportation
+				type, and encode information by transportation type and duration. You can uncover your digital traces to learn
+				about your mobility preferences in everyday life.
 			</Text>
 			<Text>
-				This project was developed for my course in Knowledge Visualization and Communication in the SIAT Ph.D.
-				program.
+				This project was developed for my course in Knowledge Visualization and Communication in the SIAT Ph.D. program.
 			</Text>
 		</div>
 	),

@@ -18,8 +18,8 @@ export const shapingTheCity: ProjectSchema = {
 	extra: [
 		<Collection key="conferences" label="Conferences">
 			<Item type="Exhibition">
-				Pedraça, S., & Frizzera, L. (2013). <strong>Edmonton’s Dynamic Shapes</strong>. Digital Poster HASTAC
-				2013. York University. York, Canada.
+				Pedraça, S., & Frizzera, L. (2013). <strong>Edmonton’s Dynamic Shapes</strong>. Digital Poster HASTAC 2013. York
+				University. York, Canada.
 			</Item>
 		</Collection>,
 		<Collection key="code" label="Code">
@@ -31,11 +31,11 @@ export const shapingTheCity: ProjectSchema = {
 	content: (
 		<div className="space-y-1.5">
 			<Text>
-				This project visualize and interpret the shape of the city’s map from a different perspective. Shaping
-				the City deconstructs the city map, detaching the blocks from their original geo-location and
-				reorganizing them according to whatever other information they carry: size, community, period,
-				population density, income, number of trees, venues, terrain type, tweets, and so on. It is a form of
-				counter-mapping in which other relevant data takes priority over geographical locations.
+				This project visualize and interpret the shape of the city’s map from a different perspective. Shaping the City
+				deconstructs the city map, detaching the blocks from their original geo-location and reorganizing them according
+				to whatever other information they carry: size, community, period, population density, income, number of trees,
+				venues, terrain type, tweets, and so on. It is a form of counter-mapping in which other relevant data takes
+				priority over geographical locations.
 			</Text>
 			<Lightbox
 				images={[
@@ -79,11 +79,10 @@ export const shapingTheCity: ProjectSchema = {
 				)}
 			</Lightbox>
 			<Text>
-				Shaping the City is a prototype tool for researchers interested in history, geography, and urban
-				planning, designed to enable comparison across different datasets using the shapes of the city as the
-				main structure. It is also a playful, curiosity-driven interactive visualization in which the user is
-				invited to explore, discover, and learn more about how the city was planned and how it has been
-				evolving.
+				Shaping the City is a prototype tool for researchers interested in history, geography, and urban planning,
+				designed to enable comparison across different datasets using the shapes of the city as the main structure. It
+				is also a playful, curiosity-driven interactive visualization in which the user is invited to explore, discover,
+				and learn more about how the city was planned and how it has been evolving.
 			</Text>
 		</div>
 	),

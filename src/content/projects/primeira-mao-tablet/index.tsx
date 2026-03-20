@@ -33,18 +33,18 @@ export const primeiraMaoTablet: ProjectSchema = {
 				)}
 			</Lightbox>
 			<Text>
-				I taught a course on graphic design for newspapers and magazines between 2010 and 2011 as a volunteer
-				professor in the Department of Social Communication at Universidade Federal do Espírito Santo. In the
-				first term, Daniela Martins, professor of the Print Newspaper course at that time, and I led an
-				initiative to create the first Primeira Mão digital edition for tablets. Primeira Mão is the course’s
-				newspaper lab, printed since 1990. During 3 months, the students worked on the print and digital
-				editions simultaneously. Their job was to write the stories and design the entire edition.
+				I taught a course on graphic design for newspapers and magazines between 2010 and 2011 as a volunteer professor
+				in the Department of Social Communication at Universidade Federal do Espírito Santo. In the first term, Daniela
+				Martins, professor of the Print Newspaper course at that time, and I led an initiative to create the first
+				Primeira Mão digital edition for tablets. Primeira Mão is the course’s newspaper lab, printed since 1990. During
+				3 months, the students worked on the print and digital editions simultaneously. Their job was to write the
+				stories and design the entire edition.
 			</Text>
 			<Text>
-				For the digital edition layout, we had to create two different versions to take advantage of the
-				rotation features on tablets: portrait and landscape views. We used Adobe InDesign and the Digital
-				Edition plug-in to design the pages for both print and digital editions. At that time, the digital
-				edition was available only for iPad in beta.
+				For the digital edition layout, we had to create two different versions to take advantage of the rotation
+				features on tablets: portrait and landscape views. We used Adobe InDesign and the Digital Edition plug-in to
+				design the pages for both print and digital editions. At that time, the digital edition was available only for
+				iPad in beta.
 			</Text>
 			<Lightbox
 				images={[
@@ -116,15 +116,15 @@ export const primeiraMaoTablet: ProjectSchema = {
 				)}
 			</Lightbox>
 			<Text>
-				The students had a chance to experiment with different ways of storytelling using features available in
-				Adobe’s tools: video, sound, scrolling, slideshows, and Internet connectivity. We also collaborated with
-				Daniela Zanetti, Assistant Professor for New Media at the time, to include her students' work in this
-				edition. They created five ads using the same tool.
+				The students had a chance to experiment with different ways of storytelling using features available in Adobe’s
+				tools: video, sound, scrolling, slideshows, and Internet connectivity. We also collaborated with Daniela
+				Zanetti, Assistant Professor for New Media at the time, to include her students' work in this edition. They
+				created five ads using the same tool.
 			</Text>
 			<Text>
-				Unfortunately, by the end of the term, when the edition was almost finished, Adobe closed the beta tool,
-				and we were not allowed to publicize Primeira Mão’s first digital edition. However, the students had the
-				opportunity to work with this new tool and experiment with different forms of storytelling on tablets.
+				Unfortunately, by the end of the term, when the edition was almost finished, Adobe closed the beta tool, and we
+				were not allowed to publicize Primeira Mão’s first digital edition. However, the students had the opportunity to
+				work with this new tool and experiment with different forms of storytelling on tablets.
 			</Text>
 			<iframe
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

@@ -13,7 +13,7 @@ export const Meta = ({ publishedAt, keywords, className }: MetaProps) => {
 		<div
 			className={cn(
 				'flex flex-col gap-6 text-sm font-medium text-muted-foreground max-w-full md:max-w-64 mb-8',
-				className
+				className,
 			)}
 		>
 			<div className="flex flex-col items-start">

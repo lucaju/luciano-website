@@ -22,8 +22,7 @@ export const tweetosphereNetworkExplorer: ProjectSchema = {
 		<Collection key="conferences" label="Conferences">
 			<Item type="Conference Paper">
 				Frizzera, L., & Bartram, L. (2015).{' '}
-				<strong>Interactive Social Media Cartography: #TransitReferendum in Vancouver</strong>. I-Society.
-				London, UK.
+				<strong>Interactive Social Media Cartography: #TransitReferendum in Vancouver</strong>. I-Society. London, UK.
 			</Item>
 		</Collection>,
 		<Collection key="blog-posts" label="Blog Posts">
@@ -54,27 +53,26 @@ export const tweetosphereNetworkExplorer: ProjectSchema = {
 			</Lightbox>
 			<Text>
 				Conventionally, civic engagement takes the form of deliberative and decision-making processes, such as
-				elections, referendums, and public consultations. Yet, it should not be reduced to the single act of
-				voting, recognized as the “democratic duty.” Instead, debates about collective issues and public affairs
-				occur daily on the streets, in the workplace, at home, and, more recently, through digital social media.
+				elections, referendums, and public consultations. Yet, it should not be reduced to the single act of voting,
+				recognized as the “democratic duty.” Instead, debates about collective issues and public affairs occur daily on
+				the streets, in the workplace, at home, and, more recently, through digital social media.
 			</Text>
 			<Text>
-				Drawing on computational methods used in large-scale controversy analysis, this project explored the
-				dynamics of social media networks and their impacts on society, which becomes crucial to understanding
-				civic engagement in contemporary social and political movements. Through a visual network and semantic
-				analysis, we propose mapping and investigating how digital social media platforms, particularly Twitter,
-				have been utilized not only to disseminate information about the Vancouver Transit Referendum but also
-				to encourage civic engagement on mobility and public transportation in a highly contentious and
-				controversial environment.
+				Drawing on computational methods used in large-scale controversy analysis, this project explored the dynamics of
+				social media networks and their impacts on society, which becomes crucial to understanding civic engagement in
+				contemporary social and political movements. Through a visual network and semantic analysis, we propose mapping
+				and investigating how digital social media platforms, particularly Twitter, have been utilized not only to
+				disseminate information about the Vancouver Transit Referendum but also to encourage civic engagement on
+				mobility and public transportation in a highly contentious and controversial environment.
 			</Text>
 			<Text>
-				Between January and May 2015, the Metro Vancouver area was immersed in a debate about public investments
-				in transit for the next 30 years. The topic became controversial when the Mayor’s Council proposed
-				increasing sales taxes to fund the project, and a referendum was called to decide whether to adopt these
-				new revenue sources for Metro Vancouver transportation. From Feb 11 to March 11, we captured this
-				conversation on Twitter to investigate how digital social media platforms have been used to broadcast
-				information of public interest and promote civic engagement. This project maps, visualizes, and explores
-				public opinion and social media interactions among people.
+				Between January and May 2015, the Metro Vancouver area was immersed in a debate about public investments in
+				transit for the next 30 years. The topic became controversial when the Mayor’s Council proposed increasing sales
+				taxes to fund the project, and a referendum was called to decide whether to adopt these new revenue sources for
+				Metro Vancouver transportation. From Feb 11 to March 11, we captured this conversation on Twitter to investigate
+				how digital social media platforms have been used to broadcast information of public interest and promote civic
+				engagement. This project maps, visualizes, and explores public opinion and social media interactions among
+				people.
 			</Text>
 		</div>
 	),

@@ -54,7 +54,7 @@ export const Timeline = ({ data }: { data: ProjectSchema[] }) => {
 					.toSorted((a, b) => {
 						const resultEndDate = compareAsc(
 							b.date.end ?? new Date('2999-12-31'),
-							a.date.end ?? new Date('2999-12-31')
+							a.date.end ?? new Date('2999-12-31'),
 						);
 						if (resultEndDate !== 0) return resultEndDate;
 						const resultStartDate = compareAsc(b.date.start, a.date.start);
@@ -106,9 +106,7 @@ const Entry = ({ item }: { item: ProjectSchema }) => {
 				</div>
 
 				<div className="hidden md:flex flex-col md:pl-16 -mt-0.5 gap-2">
-					<h2 className="text-xl md:text-4xl font-bold text-neutral-700 dark:text-neutral-300 ">
-						{item.title}
-					</h2>
+					<h2 className="text-xl md:text-4xl font-bold text-neutral-700 dark:text-neutral-300 ">{item.title}</h2>
 					<ItemMetadata key={item.title} item={item} />
 				</div>
 			</div>
@@ -149,7 +147,7 @@ const CopyClipboard = ({ hover, title }: { hover: boolean; title: string }) => {
 			<Button
 				className={cn(
 					'size-4.5 rounded-full border border-neutral-300 dark:border-neutral-700 ',
-					(hover || copied) && 'size-7 rounded-md'
+					(hover || copied) && 'size-7 rounded-md',
 				)}
 				onClick={() => {
 					navigator.clipboard.writeText(`${window.location.origin}/projects#${slug(title)}`);
@@ -166,7 +164,7 @@ const CopyClipboard = ({ hover, title }: { hover: boolean; title: string }) => {
 					className={cn(
 						'opacity-0 transition duration-200',
 						(hover || copied) && 'opacity-100',
-						copied && 'opacity-50 -rotate-5'
+						copied && 'opacity-50 -rotate-5',
 					)}
 				/>
 			</Button>
@@ -226,9 +224,7 @@ const ItemMetadata = ({ item }: { item: ProjectSchema }) => {
 	return (
 		<>
 			{item.subTitle && (
-				<h3 className="text-xl font-bold text-neutral-500 dark:text-neutral-500 text-balance">
-					{item.subTitle}
-				</h3>
+				<h3 className="text-xl font-bold text-neutral-500 dark:text-neutral-500 text-balance">{item.subTitle}</h3>
 			)}
 
 			<p className="text-sm md:text-md text-neutral-500 dark:text-neutral-500 ">

@@ -31,14 +31,14 @@ export const leafWriter: ProjectSchema = {
 		<Collection key="conferences" label="Conferences">
 			<Item type="Conference Paper" pending>
 				Cummings, J., Jakacki, D., Brown, S., Ilovan, M., & _Frizzera, L._ (Accepted).{' '}
-				<strong>LEAF-Writer Commons: An introduction to a lightweight web-based tags-off TEI+RDF</strong>.
-				Digital Humanities 2026. Daejeon, South Korea. Jul 27-31, 2026.
+				<strong>LEAF-Writer Commons: An introduction to a lightweight web-based tags-off TEI+RDF</strong>. Digital
+				Humanities 2026. Daejeon, South Korea. Jul 27-31, 2026.
 			</Item>
 			<Item type="Exhibition" pending>
 				Cummings, J., Jakacki, D., Brown, S., Ilovan, M., Frizzera, L., & Rubin-Detlev, K. (Accepted).{' '}
 				<strong>
-					Implementing TEI Authority File Lookups in LEAF-Writer: Researcher-centric software development in
-					precarious funding contexts
+					Implementing TEI Authority File Lookups in LEAF-Writer: Researcher-centric software development in precarious
+					funding contexts
 				</strong>
 				. Digital Humanities. Daejeon, South Korea. Jul 27-31, 2026.
 			</Item>
@@ -56,17 +56,15 @@ export const leafWriter: ProjectSchema = {
 			</Item>
 			<Item type="Conference Paper">
 				Jakacki, D., Brown, S., Cummings. J., Ilovan, M., & Frizzera, L. (2024).{' '}
-				<strong>TEI Semantic Encoding with LEAF-Writer</strong>. Canadian Society for Digital Humanities (CSDH)
-				@ Congress 2024. McGill University. Montreal, Canada.
+				<strong>TEI Semantic Encoding with LEAF-Writer</strong>. Canadian Society for Digital Humanities (CSDH) @
+				Congress 2024. McGill University. Montreal, Canada.
 			</Item>
 		</Collection>,
 		<Collection key="symposia" label="Symposia">
 			<Item type="Conference Paper">
 				Frizzera, L. (2023).{' '}
-				<strong>
-					LEAF-Writer & NERVE and things in between. Making Links: Connections, Cultures, Contexts
-				</strong>
-				. May 5 - 7. University of Guelph. Guelph, ON, Canada.
+				<strong>LEAF-Writer & NERVE and things in between. Making Links: Connections, Cultures, Contexts</strong>. May 5
+				- 7. University of Guelph. Guelph, ON, Canada.
 			</Item>
 		</Collection>,
 		<Collection key="code" label="Code">
@@ -93,8 +91,8 @@ export const leafWriter: ProjectSchema = {
 				)}
 			</Lightbox>
 			<Text>
-				LEAF-Writer is an in-browser text markup editor and Web Annotation tool provided as part of the Linked
-				Editing Academic Framework (
+				LEAF-Writer is an in-browser text markup editor and Web Annotation tool provided as part of the Linked Editing
+				Academic Framework (
 				<a
 					className="hover:underline"
 					href="https://www.leaf-vre.org/"
@@ -105,13 +103,13 @@ export const leafWriter: ProjectSchema = {
 					LEAF
 					<SquareArrowOutUpRight className="inline size-3 ml-1 mb-0.5" />
 				</a>
-				) tool suite. LEAF-Writer has been designed to provide an accessible and easy-to-use on-ramp to text
-				encoding for pedagogical and research purposes. It furthers the dissemination, adoption, and engaged use
-				of the TEI Guidelines, especially for those who lack local infrastructure or technical support.
+				) tool suite. LEAF-Writer has been designed to provide an accessible and easy-to-use on-ramp to text encoding
+				for pedagogical and research purposes. It furthers the dissemination, adoption, and engaged use of the TEI
+				Guidelines, especially for those who lack local infrastructure or technical support.
 			</Text>
 			<Text>
-				LEAF-Writer is developed through a partnership among research institutions in Canada, the US, and the
-				UK, funded by the Social Sciences and Humanities Research Council (
+				LEAF-Writer is developed through a partnership among research institutions in Canada, the US, and the UK, funded
+				by the Social Sciences and Humanities Research Council (
 				<a
 					className="hover:underline"
 					href="https://sshrc-crsh.canada.ca/"
@@ -126,8 +124,8 @@ export const leafWriter: ProjectSchema = {
 			</Text>
 			<SubHeading>CWRC-Writer</SubHeading>
 			<Text>
-				LEAF-Writer was built upon a previous iteration of CWRC-Writer, the XML & RDF online editor of the
-				Canadian Women Research Collaboratory (
+				LEAF-Writer was built upon a previous iteration of CWRC-Writer, the XML & RDF online editor of the Canadian
+				Women Research Collaboratory (
 				<a
 					className="hover:underline"
 					href="https://cwrc.ca/"

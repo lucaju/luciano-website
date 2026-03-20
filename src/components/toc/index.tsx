@@ -20,8 +20,8 @@ export function Toc({ children, ...props }: TocProps) {
 		pipe(
 			props.headings,
 			A.map((h) => h.slug),
-			F.toMutable
-		)
+			F.toMutable,
+		),
 	);
 
 	const headings = useMemo(() => {
@@ -38,7 +38,7 @@ export function Toc({ children, ...props }: TocProps) {
 				}
 
 				return acc;
-			})
+			}),
 		);
 	}, [props.headings]);
 

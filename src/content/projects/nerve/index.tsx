@@ -26,14 +26,12 @@ export const nerve: ProjectSchema = {
 			</Item>
 			<Item type="Conference Paper">
 				Frizzera, L. (2023).{' '}
-				<strong>
-					LEAF-Writer & NERVE and things in between. Making Links: Connections, Cultures, Contexts
-				</strong>
-				. May 5 - 7. University of Guelph. Guelph, ON, Canada.
+				<strong>LEAF-Writer & NERVE and things in between. Making Links: Connections, Cultures, Contexts</strong>. May 5
+				- 7. University of Guelph. Guelph, ON, Canada.
 			</Item>
 			<Item type="Conference Paper">
-				Frizzera, L., Ilovan, M., Zafar, H. (2021). <strong>Nerve Interface. Interactive Demo</strong>. LINCS
-				Conference 2021, April 29 - May 6, Via Zoom, Canada.
+				Frizzera, L., Ilovan, M., Zafar, H. (2021). <strong>Nerve Interface. Interactive Demo</strong>. LINCS Conference
+				2021, April 29 - May 6, Via Zoom, Canada.
 			</Item>
 		</Collection>,
 		<Collection key="code" label="Code">
@@ -66,10 +64,9 @@ export const nerve: ProjectSchema = {
 				)}
 			</Lightbox>
 			<Text>
-				NERVE is an application that performs Named Entity Recognition (NER), allowing users new to Linked Open
-				Data (LOD) to find and match entities in a document. NERVE suggests relevant Uniform Resource
-				Identifiers (URIs) for entities, so users can match entities to an authority in order to turn it into
-				LOD.
+				NERVE is an application that performs Named Entity Recognition (NER), allowing users new to Linked Open Data
+				(LOD) to find and match entities in a document. NERVE suggests relevant Uniform Resource Identifiers (URIs) for
+				entities, so users can match entities to an authority in order to turn it into LOD.
 			</Text>
 			<Text>
 				NERVE is part of the Linked Infrastructure for Networked Cultural Scholarship (

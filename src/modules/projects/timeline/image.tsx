@@ -17,7 +17,7 @@ export function Image({ containerClassName, ...props }: ImageProps) {
 				className={cn(
 					'bg-muted text-muted-foreground grid place-items-center h-32 rounded-xl',
 					props.className,
-					containerClassName
+					containerClassName,
 				)}
 			>
 				<ImageIcon className="size-5" />
@@ -41,7 +41,7 @@ export function Image({ containerClassName, ...props }: ImageProps) {
 					className={cn(
 						'bg-muted text-muted-foreground grid place-items-center h-32 rounded-xl',
 						props.className,
-						containerClassName
+						containerClassName,
 					)}
 				>
 					<ImageIcon className="size-5" />

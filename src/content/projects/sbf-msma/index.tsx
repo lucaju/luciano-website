@@ -23,8 +23,7 @@ export const sbfMsma: ProjectSchema = {
 			<Item type="Journal Article" pending>
 				Frizzera, L. & Brown, S. [In review].{' '}
 				<strong>
-					Beyond Platform Capitalism: Designing a Community-Driven Archive for Post-secondary Theatre
-					Education
+					Beyond Platform Capitalism: Designing a Community-Driven Archive for Post-secondary Theatre Education
 				</strong>
 				. Special Staging Better Futures / Mettre en scène de meilleurs avenirs ,Theatre Research in Canada.
 			</Item>
@@ -33,12 +32,10 @@ export const sbfMsma: ProjectSchema = {
 			<Item type="Conference Paper">
 				Frizzera, L. (2025).{' '}
 				<strong>
-					Archiving Better Futures: Platform Governance and Data Sovereignty in Community-Driven Archive
-					Collections
+					Archiving Better Futures: Platform Governance and Data Sovereignty in Community-Driven Archive Collections
 				</strong>
-				. In the panel “Inside Looking Out: Mobilizing Community-Driven Research Methods across Staging Better
-				Futures, Governance, Ethics, Platforms.” Canadian Association for Theatre (CATR). Online. May 26-27,
-				2025.
+				. In the panel “Inside Looking Out: Mobilizing Community-Driven Research Methods across Staging Better Futures,
+				Governance, Ethics, Platforms.” Canadian Association for Theatre (CATR). Online. May 26-27, 2025.
 			</Item>
 		</Collection>,
 	],
@@ -58,14 +55,13 @@ export const sbfMsma: ProjectSchema = {
 				)}
 			</Lightbox>
 			<Text>
-				This research acknowledges that significant knowledge about equitable theatre education already exists
-				within marginalized communities but has been systematically undervalued and under-resourced. As a DH
-				Postdoctoral Fellow at Staging Better Futures/Mettre en scène de meilleurs avenirs (SBF/MSMA), I worked
-				on the design and implementation of a multilingual, accessible digital archive platform that
-				incorporates decolonization, anti-racism, equity, diversity, inclusion, and accessibility (EDIA) values
-				into its technical governance. This platform prioritizes data sovereignty, enabling communities to
-				organize their cultural materials using their own taxonomies and knowledge frameworks, rather than
-				relying on Western-centric archival practices.
+				This research acknowledges that significant knowledge about equitable theatre education already exists within
+				marginalized communities but has been systematically undervalued and under-resourced. As a DH Postdoctoral
+				Fellow at Staging Better Futures/Mettre en scène de meilleurs avenirs (SBF/MSMA), I worked on the design and
+				implementation of a multilingual, accessible digital archive platform that incorporates decolonization,
+				anti-racism, equity, diversity, inclusion, and accessibility (EDIA) values into its technical governance. This
+				platform prioritizes data sovereignty, enabling communities to organize their cultural materials using their own
+				taxonomies and knowledge frameworks, rather than relying on Western-centric archival practices.
 			</Text>
 			<Text>
 				Working in partnership with the Canadian Writing Research Collaboratory (

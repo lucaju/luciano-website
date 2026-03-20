@@ -18,13 +18,13 @@ export const guiaVix: ProjectSchema = {
 	content: (
 		<div className="space-y-1.5">
 			<Text>
-				A digital mobile city guide can help explore urban environments. Guia Vix is an iPhone app for Vitória
-				(Brazil). The idea was to bridge the gap between the old print version and the new tourist behaviour.
-				The app has information about the city, types of transportation, and a geolocation database of more than
-				200 venues (bars, restaurants, nightclubs) and points of interest (beaches, arts, museums). A detail
-				page provides the main information for each venue, including phone numbers, addresses, map location, and
-				website URL. The user can explore the surroundings using the “Nearby” feature, which geo-locates the
-				user and shows points of interest within 1 km.
+				A digital mobile city guide can help explore urban environments. Guia Vix is an iPhone app for Vitória (Brazil).
+				The idea was to bridge the gap between the old print version and the new tourist behaviour. The app has
+				information about the city, types of transportation, and a geolocation database of more than 200 venues (bars,
+				restaurants, nightclubs) and points of interest (beaches, arts, museums). A detail page provides the main
+				information for each venue, including phone numbers, addresses, map location, and website URL. The user can
+				explore the surroundings using the “Nearby” feature, which geo-locates the user and shows points of interest
+				within 1 km.
 			</Text>
 			<Lightbox
 				images={[
@@ -79,10 +79,9 @@ export const guiaVix: ProjectSchema = {
 			</Lightbox>
 
 			<Text>
-				This project was built with the help of Samia Pedraça, Marina Machado, and Daigo Matsuoka. The app was
-				available for one year as an experimental project. However, my choice to pursue a Master's degree abroad
-				made it difficult to keep a very locally driven project up and running. We shut down the app at the end
-				of 2012.
+				This project was built with the help of Samia Pedraça, Marina Machado, and Daigo Matsuoka. The app was available
+				for one year as an experimental project. However, my choice to pursue a Master's degree abroad made it difficult
+				to keep a very locally driven project up and running. We shut down the app at the end of 2012.
 			</Text>
 		</div>
 	),

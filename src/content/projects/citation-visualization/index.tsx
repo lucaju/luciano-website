@@ -42,8 +42,8 @@ export const citationVisualization: ProjectSchema = {
 			</Lightbox>
 			<Text>
 				Visualization of a collection of readings used in the undergraduate program between 2014 and 2016. The
-				department is updating the undergraduate curriculum; understanding what the faculty is using for
-				lectures is one of the guidelines for the future of this program at Concordia.
+				department is updating the undergraduate curriculum; understanding what the faculty is using for lectures is one
+				of the guidelines for the future of this program at Concordia.
 			</Text>
 		</div>
 	),

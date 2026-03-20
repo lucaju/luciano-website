@@ -28,12 +28,11 @@ export const fluxoArt: ProjectSchema = {
 				)}
 			</Lightbox>
 			<Text>
-				I founded a communication agency named Fluxo Art with some friends. I primarily worked as a graphic
-				designer and web developer. Still, I was also involved in many aspects of a start-up company, from
-				managerial decisions to the conceptualization of the material we produced. I have made several visual
-				communication pieces for different media types, from logos and brand identity to editorial design, from
-				flyers and banners to billboards, from websites to mobile apps, and from advertising material for print
-				and web to entire election campaigns.
+				I founded a communication agency named Fluxo Art with some friends. I primarily worked as a graphic designer and
+				web developer. Still, I was also involved in many aspects of a start-up company, from managerial decisions to
+				the conceptualization of the material we produced. I have made several visual communication pieces for different
+				media types, from logos and brand identity to editorial design, from flyers and banners to billboards, from
+				websites to mobile apps, and from advertising material for print and web to entire election campaigns.
 			</Text>
 		</div>
 	),

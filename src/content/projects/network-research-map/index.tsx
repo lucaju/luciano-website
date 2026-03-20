@@ -49,15 +49,14 @@ export const networkResearchMap: ProjectSchema = {
 				)}
 			</Lightbox>
 			<Text>
-				The University of Alberta's Office of the Vice President (Research) and the Kule Institute for Advanced
-				Study are collaborating to develop a picture of the richness and variety of social sciences, humanities
-				and fine arts (SSHA) research at the University of Alberta. To that end, we developed a digital Research
-				Map (in beta) based on the websites of all SSHA departments and their full-time faculty members. The
-				tool maps faculty members and their research keywords, as well as the connections between them, and
-				includes a web-based search interface with network data visualization. We hope this will help us
-				identify new interdisciplinary connections to support the building of research capacity and help
-				research administrators appreciate the heterogeneous network of research undertaken at the University of
-				Alberta.
+				The University of Alberta's Office of the Vice President (Research) and the Kule Institute for Advanced Study
+				are collaborating to develop a picture of the richness and variety of social sciences, humanities and fine arts
+				(SSHA) research at the University of Alberta. To that end, we developed a digital Research Map (in beta) based
+				on the websites of all SSHA departments and their full-time faculty members. The tool maps faculty members and
+				their research keywords, as well as the connections between them, and includes a web-based search interface with
+				network data visualization. We hope this will help us identify new interdisciplinary connections to support the
+				building of research capacity and help research administrators appreciate the heterogeneous network of research
+				undertaken at the University of Alberta.
 			</Text>
 		</div>
 	),

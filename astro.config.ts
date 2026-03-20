@@ -17,6 +17,8 @@ export default defineConfig({
 		},
 	},
 	vite: {
+		// Reduce dev-server noise from Vite/Vite-plugin warnings.
+		// logLevel: 'error',
 		plugins: [tailwindcss()],
 	},
 	markdown: {

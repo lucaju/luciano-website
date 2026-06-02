@@ -28,8 +28,8 @@ export const comparative_ai_policy_and_regulation: ProjectSchema = {
 			</Item>
 		</Collection>,
 		<Collection key="conferences" label="Conferences">
-			<Item type="Conference Paper" pending>
-				Frizzera, L., Pedraça, S., Salles, J., Therrien, C. (Accepted).{' '}
+			<Item type="Conference Paper">
+				Frizzera, L., Pedraça, S., Salles, J., Therrien, C. (2026).{' '}
 				<strong>Mapping Stakeholder Discourse in Brazil’s AI Regulatory Framework</strong>. Canadian
 				Communication Association (CCA). Windsor, ON, Canada. Jun 2-4, 2026.
 			</Item>

@@ -1,3 +1,4 @@
+import { unified } from '@astrojs/markdown-remark';
 import mdx from '@astrojs/mdx';
 import partytown from '@astrojs/partytown';
 import react from '@astrojs/react';
@@ -10,22 +11,10 @@ import { remarkModifiedTime } from './src/lib/remark-modified-time.mjs';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://lucianofrizzera.com',
 	env: {
 		schema: {
 			PUBLIC_GA_MEASUREMENT_ID: envField.string({ context: 'client', access: 'public' }),
 		},
-	},
-	vite: {
-		// Reduce dev-server noise from Vite/Vite-plugin warnings.
-		// logLevel: 'error',
-		plugins: [tailwindcss()],
-	},
-	markdown: {
-		syntaxHighlight: 'shiki',
-		shikiConfig: { theme: 'vitesse-dark', wrap: true },
-		remarkPlugins: [remarkModifiedTime],
-		rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
 	},
 	integrations: [
 		mdx(),
@@ -33,4 +22,18 @@ export default defineConfig({
 		react(),
 		partytown({ config: { forward: ['dataLayer.push'] } }),
 	],
+	markdown: {
+		processor: unified({
+			remarkPlugins: [remarkModifiedTime],
+			rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
+		}),
+		syntaxHighlight: 'shiki',
+		shikiConfig: { theme: 'vitesse-dark', wrap: true },
+	},
+	site: 'https://lucianofrizzera.com',
+	vite: {
+		// Reduce dev-server noise from Vite/Vite-plugin warnings.
+		// logLevel: 'error',
+		plugins: [tailwindcss()],
+	},
 });

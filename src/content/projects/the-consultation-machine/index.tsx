@@ -12,7 +12,7 @@ const imageAlt = 'The Consultation Machine';
 export const theConsultationMachine: ProjectSchema = {
 	title: 'The Consultation Machine',
 	place: 'Machine Agencies',
-	date: { start: '2024-03-01', end: '2025-04-30' },
+	date: { start: '2023-12-01', end: '2026-01-30' },
 	tags: ['Critical AI', 'AI', 'Policy', 'HCI'],
 	extra: [
 		<Collection key="links" label="Links">
@@ -21,16 +21,21 @@ export const theConsultationMachine: ProjectSchema = {
 			</Item>
 		</Collection>,
 		<Collection key="publications" label="Publications">
-			<Item type="Journal Article">
-				McKelvey, F., Jones, M., Marinov, R., Frizzera, L., & Wester, M. [In Press].{' '}
-				<strong>The Consultation Machine: Experiments in AI Futures, Literacies and Public Participation</strong>.
-				Imaginations: Journal of Cross-Cultural Image Studies.
+			<Item
+				type="Journal Article"
+				url="https://imaginationsjournal.ca/index.php/imaginations/en/article/view/29760"
+			>
+				McKelvey, F., Jones, M., Marinov, R., Frizzera, L., & Wester, M. (2026).{' '}
+				<strong>
+					The Consultation Machine: Experiments in AI Futures, Literacies and Public Participation
+				</strong>
+				. _Imaginations: Journal of Cross-Cultural Image Studies_, 17 (1). https://doi.org/10.17742/IMAGE29760.
 			</Item>
 		</Collection>,
 		<Collection key="conferences" label="Conferences">
 			<Item type="Conference Paper">
-				McKelvey, F., Jones, M., Marinov, R., & Frizzera, L. (2024). <strong>The Consultation Machine</strong>. Canadian
-				Communication Association (CCA) @ Congress 2024. McGill University. Montreal, Canada.
+				McKelvey, F., Jones, M., Marinov, R., & Frizzera, L. (2024). <strong>The Consultation Machine</strong>.
+				Canadian Communication Association (CCA) @ Congress 2024. McGill University. Montreal, Canada.
 			</Item>
 		</Collection>,
 		<Collection key="exhibitions" label="Exhibitions">
@@ -39,8 +44,8 @@ export const theConsultationMachine: ProjectSchema = {
 				(intervention). Shipwreck Montreal. Montreal, April 11-12, 2025.
 			</Item>
 			<Item type="Exhibition">
-				Frizzera, L. (2024). <strong>The Consultation Machine</strong>. Interactive Installation. LAB | Wilding AI,
-				MUTEK Forum, Montreal, August 23, 2024.
+				Frizzera, L. (2024). <strong>The Consultation Machine</strong>. Interactive Installation. LAB | Wilding
+				AI, MUTEK Forum, Montreal, August 23, 2024.
 			</Item>
 		</Collection>,
 		<Collection key="code" label="Code">
@@ -67,25 +72,25 @@ export const theConsultationMachine: ProjectSchema = {
 				)}
 			</Lightbox>
 			<Text>
-				Drawing on Digital Methods, the Consultation Machine is a “prototype” for a public workshop to engage in and
-				debate AI futures. Our efforts devolved from sincere attempts to use strategic foresight to shape AI policy, to
-				AI-assisted future-making, and finally to the consultation machine. Our contribution documents these three
-				different prototypes to explain the evolution of their design, shaped by participatory methods, and to reflect
-				on the results.
+				Drawing on Digital Methods, the Consultation Machine is a “prototype” for a public workshop to engage in
+				and debate AI futures. Our efforts devolved from sincere attempts to use strategic foresight to shape AI
+				policy, to AI-assisted future-making, and finally to the consultation machine. Our contribution
+				documents these three different prototypes to explain the evolution of their design, shaped by
+				participatory methods, and to reflect on the results.
 			</Text>
 			<Text>
 				We contribute to a growing body of literature examining how AI influences democratic policy-making in
-				technoscientific capitalist systems, where democracy may yet become just another ‘problem’ to be streamlined and
-				automated by algorithmic solutions. We offer both critical reflections on the challenges of designing workshops
-				to democratize AI futures and a template for a novel workshop format, the Consultation Machine, which we hope
-				will inspire imitators and new collective imaginations.
+				technoscientific capitalist systems, where democracy may yet become just another ‘problem’ to be
+				streamlined and automated by algorithmic solutions. We offer both critical reflections on the challenges
+				of designing workshops to democratize AI futures and a template for a novel workshop format, the
+				Consultation Machine, which we hope will inspire imitators and new collective imaginations.
 			</Text>
 			<SubHeading>MUTEK</SubHeading>
 			<Text>This project was exhibited as an interactive installation at the 2024 MUTEK Forum in Montréal.</Text>
 			<SubHeading>Shipwreck Montreal</SubHeading>
 			<Text>
-				A sci-fi version of this project was exhibited as an intervention and interactive installation at the 2025
-				Shipwreck exhibition in Montréal.
+				A sci-fi version of this project was exhibited as an intervention and interactive installation at the
+				2025 Shipwreck exhibition in Montréal.
 			</Text>
 		</div>
 	),

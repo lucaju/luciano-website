@@ -31,8 +31,7 @@
 				"noInferrableTypes": "error",
 				"noUselessElse": "error",
 				"noEnum": "error"
-			},
-			"recommended": true
+			}
 		}
 	},
 	"javascript": {

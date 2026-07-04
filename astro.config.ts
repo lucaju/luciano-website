@@ -1,13 +1,11 @@
-import { unified } from '@astrojs/markdown-remark';
+import { satteri } from '@astrojs/markdown-satteri';
 import mdx from '@astrojs/mdx';
 import partytown from '@astrojs/partytown';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 import { defineConfig, envField } from 'astro/config';
-import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-import rehypeSlug from 'rehype-slug';
-import { remarkModifiedTime } from './src/lib/remark-modified-time.mjs';
+import { satteriModifiedTime } from './src/lib/satteri-modified-time';
 
 // https://astro.build/config
 export default defineConfig({
@@ -23,9 +21,13 @@ export default defineConfig({
 		partytown({ config: { forward: ['dataLayer.push'] } }),
 	],
 	markdown: {
-		processor: unified({
-			remarkPlugins: [remarkModifiedTime],
-			rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
+		processor: satteri({
+			mdastPlugins: [satteriModifiedTime()],
+			features: {
+				directive: true,
+				math: true,
+				headingAttributes: true,
+			},
 		}),
 		syntaxHighlight: 'shiki',
 		shikiConfig: { theme: 'vitesse-dark', wrap: true },

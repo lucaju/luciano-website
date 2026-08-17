@@ -29,8 +29,8 @@ export const leafWriter: ProjectSchema = {
 			</Item>
 		</Collection>,
 		<Collection key="conferences" label="Conferences">
-			<Item type="Conference Paper" pending>
-				Cummings, J., Brown, S., Jakacki, D., Ilovan, M., & Frizzera, L. (Accepted).{' '}
+			<Item type="Conference Paper">
+				Cummings, J., Brown, S., Jakacki, D., Ilovan, M., & Frizzera, L. (2026).{' '}
 				<strong>The LEAF Commons Tool Suite</strong>. TEI 2026. Vancouver, Canada. Aug 10-14, 2026.
 			</Item>
 			<Item type="Conference Paper">

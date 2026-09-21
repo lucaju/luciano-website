@@ -16,12 +16,11 @@ export const comparative_ai_policy_and_regulation: ProjectSchema = {
 	tags: ['Critical AI', 'AI', 'Policy', 'Regulation'],
 	extra: [
 		<Collection key="publications" label="Publications">
-			<Item type="Journal Article" pending>
-				Frizzera, L., & McKelvey, F. (In Press).{' '}
-				<strong>AI Lobbying and the Future of Canadian Copyright</strong>. Canadian Journal of Communication.
-				Special TechLobby edition.
+			<Item type="Journal Article" url="https://doi.org/10.3138/cjc-2026-003">
+				Frizzera, L., & McKelvey, F. (2026). <strong>AI Lobbying and the Future of Canadian Copyright</strong>.
+				_Canadian Journal of Communication_, 51(3), 354–371.
 			</Item>
-			<Item url="https://doi.org/10.1080/1369118X.2025.2565328" type="Journal Article">
+			<Item type="Journal Article" url="https://doi.org/10.1080/1369118X.2025.2565328">
 				McKelvey, F., Simon, B., & Frizzera, L. (2025).{' '}
 				<strong>Generative AI and the Information Commons: Controversy, Copyright, and Closure</strong>.
 				Information, Communication & Society, 1-22.

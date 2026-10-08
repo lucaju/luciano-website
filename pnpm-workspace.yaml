@@ -2,5 +2,7 @@ packages:
   - "*"
 allowBuilds:
   esbuild: true
+minimumReleaseAgeExclude:
+  - astro@7.3.7
 onlyBuiltDependencies:
   - esbuild

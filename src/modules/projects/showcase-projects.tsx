@@ -14,6 +14,7 @@ import { leafWriter } from '@/content/projects/leaf-writer';
 import { mappingCampusAntiracismProtest } from '@/content/projects/mapping-campus-antiracism-protest';
 import { memoriaEmRede } from '@/content/projects/memoria-em-rede';
 import { mobileMediaUrbanSpace } from '@/content/projects/mobile-media-urban-space';
+import { moltbook } from '@/content/projects/moltbook';
 import { multiTouchVariorum } from '@/content/projects/multi-touch-variorum';
 import { nagasakiKitty } from '@/content/projects/nagasaki-kitty';
 import { nerve } from '@/content/projects/nerve';
@@ -48,6 +49,7 @@ const SHOWCASE_PROJECTS = [
 	mappingCampusAntiracismProtest,
 	memoriaEmRede,
 	mobileMediaUrbanSpace,
+	moltbook,
 	multiTouchVariorum,
 	nagasakiKitty,
 	nerve,

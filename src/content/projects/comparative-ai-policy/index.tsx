@@ -12,7 +12,7 @@ const imageAlt = 'Comparative AI Policy and Regulation';
 export const comparative_ai_policy_and_regulation: ProjectSchema = {
 	title: 'Comparative AI Policy and Regulation',
 	place: 'Machine Agencies / The Tech Lobby',
-	date: { start: '2023-12-01' },
+	date: { start: '2023-12-01', end: '2026-12-01' },
 	tags: ['Critical AI', 'AI', 'Policy', 'Regulation'],
 	extra: [
 		<Collection key="publications" label="Publications">

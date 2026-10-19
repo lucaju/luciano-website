@@ -49,19 +49,19 @@ export const Item = ({
 	const isExternalLink = url?.startsWith('http');
 	return (
 		<div className={cn('text-xs', pending && 'text-muted-foreground')}>
-			{type === 'Book' && <Book className="inline-block mr-1 h-3 w-3 align-middle mb-0.25" />}
-			{type === 'Book Chapter' && <BookOpenText className="inline-block mr-1 h-3 w-3 align-middle mb-0.25" />}
-			{type === 'Thesis' && <GraduationCapIcon className="inline-block mr-1 h-3 w-3 align-middle mb-0.25" />}
-			{type === 'Journal Article' && <FileText className="inline-block mr-1 h-3 w-3 align-middle mb-0.25" />}
-			{type === 'Proceedings' && <NotebookText className="inline-block mr-1 h-3 w-3 align-middle mb-0.25" />}
-			{type === 'Conference Panel' && <Component className="inline-block mr-1 h-3 w-3 align-middle mb-0.25" />}
-			{type === 'Conference Paper' && <Lectern className="inline-block mr-1 h-3 w-3 align-middle mb-0.75" />}
-			{type === 'Exhibition' && <Presentation className="inline-block mr-1 h-3 w-3 align-middle mb-0.25" />}
+			{type === 'Book' && <Book className="inline-block mr-1 h-3 w-3 align-middle mb-px" />}
+			{type === 'Book Chapter' && <BookOpenText className="inline-block mr-1 h-3 w-3 align-middle mb-px" />}
+			{type === 'Thesis' && <GraduationCapIcon className="inline-block mr-1 h-3 w-3 align-middle mb-px" />}
+			{type === 'Journal Article' && <FileText className="inline-block mr-1 h-3 w-3 align-middle mb-px" />}
+			{type === 'Proceedings' && <NotebookText className="inline-block mr-1 h-3 w-3 align-middle mb-px" />}
+			{type === 'Conference Panel' && <Component className="inline-block mr-1 h-3 w-3 align-middle mb-px" />}
+			{type === 'Conference Paper' && <Lectern className="inline-block mr-1 h-3 w-3 align-middle mb-px" />}
+			{type === 'Exhibition' && <Presentation className="inline-block mr-1 h-3 w-3 align-middle mb-px" />}
 			{type === 'Award' && <Trophy className="inline-block mr-1 h-3 w-3 align-middle mb-0.5" />}
-			{type === 'Guest Speaker' && <Podcast className="inline-block mr-1 h-3 w-3 align-middle mb-0.5" />}
+			{type === 'Guest Speaker' && <Podcast className="inline-block mr-1 h-3 w-3 align-middle mb-px" />}
 			{type === 'Blog Post' && <Rss className="inline-block mr-1 h-3 w-3 align-middle" />}
-			{type === 'Code' && <Code className="inline-block mr-1 h-3 w-3 align-middle mb-0.25" />}
-			{type === 'Link' && <Link2 className="inline-block mr-1 h-3 w-3 align-middle mb-0.25" />}
+			{type === 'Code' && <Code className="inline-block mr-1 h-3 w-3 align-middle mb-px" />}
+			{type === 'Link' && <Link2 className="inline-block mr-1 h-3 w-3 align-middle mb-px" />}
 			{url ? (
 				<a
 					className="hover:underline"
@@ -70,7 +70,7 @@ export const Item = ({
 					target={isExternalLink ? '_blank' : '_self'}
 				>
 					{children}
-					{isExternalLink && <SquareArrowOutUpRight className="inline size-3 mx-1 mb-0.25" />}
+					{isExternalLink && <SquareArrowOutUpRight className="inline size-3 mx-1 mb-px" />}
 				</a>
 			) : (
 				<span>{children}</span>

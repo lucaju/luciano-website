@@ -9,7 +9,7 @@ import image from './guaiamum-moltbook-profile.png';
 const imageAlt = 'Moltbook profile of guaiamum, our AI agent';
 
 export const moltbook: ProjectSchema = {
-	title: 'Who’s Afraid of Moltbook? Empathy, Moral Reasoning, and the Social Life of AI Agents',
+	title: 'Machine Sociality: AI Agents and Public Ontologies on Moltbook',
 	place: 'University of Guelph / Toronto Metropolitan University',
 	date: { start: '2026-01-01' },
 	tags: ['Critical AI', 'AI', 'AI Agents', 'Social Media', 'Research-Creation'],

@@ -16,7 +16,7 @@ export const comparative_ai_policy_and_regulation: ProjectSchema = {
 	tags: ['Critical AI', 'AI', 'Policy', 'Regulation'],
 	extra: [
 		<Collection key="publications" label="Publications">
-			<Item type="Journal Article" url="https://doi.org/10.3138/cjc-2026-003">
+			<Item type="Journal Article" url="https://doi.org/10.3138/cjc-2025-0055">
 				Frizzera, L., & McKelvey, F. (2026). <strong>AI Lobbying and the Future of Canadian Copyright</strong>.
 				Canadian Journal of Communication, 51(3), 354–371.
 			</Item>

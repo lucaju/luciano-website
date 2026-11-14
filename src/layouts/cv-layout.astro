@@ -3,6 +3,7 @@ import { format } from 'date-fns';
 import { FlickeringGrid } from '@/components/pattern/flickering-grid';
 import Seo from '@/components/seo.astro';
 import { Toc } from '@/components/toc';
+import { buttonVariants } from '@/components/ui/button';
 import RootLayout from '@/layouts/root-layout.astro';
 
 const { headings, frontmatter } = Astro.props;
@@ -15,11 +16,15 @@ const lastUpdated = format(frontmatter.lastModified, 'MMMM yyyy');
 
 	<div class="relative">
 		<header class="container-fluid pt-32 md:pt-22 lg:pt-24 pb-6 lg:pb-12">
-			<h1
-				class="text-4xl leading-none sm:text-5xl lg:text-7xl tracking-tight font-bold text-balance pb-8 lg:pb-16"
+			<h1 class="text-4xl leading-none sm:text-5xl lg:text-7xl tracking-tight font-bold text-balance">CV</h1>
+			<button
+				class:list={[buttonVariants({ variant: 'outline' }), 'mt-8']}
+				data-print-hide
+				id="save-cv-pdf"
+				type="button"
 			>
-				CV
-			</h1>
+				Save as PDF
+			</button>
 
 			<FlickeringGrid
 				client:load
@@ -34,7 +39,7 @@ const lastUpdated = format(frontmatter.lastModified, 'MMMM yyyy');
 	</div>
 
 	<section class="container-fluid sm:flex sm:flex-row-reverse sm:justify-between py-10">
-		<Toc client:load headings={headings} />
+		<Toc client:load data-print-hide headings={headings} />
 
 		<article
 			class="prose dark:prose-invert [&_:is(h2,h3,h4,h5,h6)]:scroll-mt-10 flex-1 prose-stone max-w-[80ch] prose-sm"
@@ -43,4 +48,9 @@ const lastUpdated = format(frontmatter.lastModified, 'MMMM yyyy');
 			<slot />
 		</article>
 	</section>
+	<script>
+		document.getElementById('save-cv-pdf')?.addEventListener('click', () => {
+			window.print();
+		});
+	</script>
 </RootLayout>

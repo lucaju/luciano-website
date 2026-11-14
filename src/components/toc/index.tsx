@@ -2,6 +2,7 @@ import { A, F, pipe } from '@mobily/ts-belt';
 import type { MarkdownHeading } from 'astro';
 import { useMemo } from 'react';
 import { useToc } from '@/hooks/use-toc';
+import { cn } from '@/lib/utils';
 import { Item } from './item';
 import { Progress } from './progress';
 
@@ -15,10 +16,10 @@ interface TocProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const parentHeadings = new Map<number, MarkdownHeading & { subheadings: Array<MarkdownHeading> }>();
 
-export function Toc({ children, ...props }: TocProps) {
+export function Toc({ children, className, headings: pageHeadings, ...props }: TocProps) {
 	const inView = useToc(
 		pipe(
-			props.headings,
+			pageHeadings,
 			A.map((h) => h.slug),
 			F.toMutable,
 		),
@@ -26,7 +27,7 @@ export function Toc({ children, ...props }: TocProps) {
 
 	const headings = useMemo(() => {
 		return pipe(
-			props.headings,
+			pageHeadings,
 			A.reduce([] as Array<NestedHeading>, (acc, h) => {
 				const heading = { ...h, subheadings: [] };
 
@@ -40,10 +41,10 @@ export function Toc({ children, ...props }: TocProps) {
 				return acc;
 			}),
 		);
-	}, [props.headings]);
+	}, [pageHeadings]);
 
 	return (
-		<aside className="max-sm:hidden pl-14 max-w-max">
+		<aside className={cn('max-sm:hidden pl-14 max-w-max', className)} {...props}>
 			{children}
 			{headings.length > 0 && (
 				<div className="sticky top-20 right-0">

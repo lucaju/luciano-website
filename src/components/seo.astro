@@ -7,7 +7,7 @@ interface Props {
 	title?: string;
 	description: string;
 	article?: Partial<NonNullable<SEOProps['openGraph']>['article']>;
-	image?: Required<NonNullable<SEOProps['openGraph']>['image']>;
+	image?: NonNullable<SEOProps['openGraph']>['image'];
 	keywords?: string[];
 }
 
@@ -23,16 +23,16 @@ const title = match(_title)
 	.with(P.string, S.append(' | Luciano Frizzera, PhD'))
 	.otherwise(() => 'Luciano Frizzera, PhD');
 
+const site = Astro.site ?? new URL('https://lucianofrizzera.com');
+const defaultImageUrl = new URL('/profile_pictures.jpg', site);
 const image = match(props.image)
 	.with(P.not(P.nullish), F.identity)
 	.otherwise(
 		() =>
 			({
-				height: 700,
-				width: 1280,
-				type: 'image/png',
-				url: '/profile_pictures.png',
-				secureUrl: '/profile_pictures.png',
+				type: 'image/jpeg',
+				url: defaultImageUrl,
+				secureUrl: defaultImageUrl,
 				alt: 'Luciano Frizzera, PhD',
 			}) satisfies Props['image'],
 	);
@@ -74,7 +74,6 @@ const image = match(props.image)
 			{ name: 'keywords', content: keywords },
 			{ name: 'author', content: 'Luciano Frizzera' },
 			{ name: 'generator', content: Astro.generator },
-			{ name: 'keywords', content: keywords },
 			{ name: 'robots', content: 'index, follow' },
 			{
 				name: 'viewport',

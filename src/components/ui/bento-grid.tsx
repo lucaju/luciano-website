@@ -13,11 +13,13 @@ export const BentoGridItem = ({
 	children,
 	className,
 	title,
+	description,
 	publishedAt,
 	id,
 }: {
 	className?: string;
 	title?: string | React.ReactNode;
+	description?: string;
 	publishedAt?: React.ReactNode;
 	id: string;
 } & React.HTMLAttributes<HTMLDivElement>) => {
@@ -41,6 +43,7 @@ export const BentoGridItem = ({
 					</time>
 				)}
 				<div className="mt-2 mb-2 font-sans font-bold text-neutral-600 dark:text-neutral-200">{title}</div>
+				{description && <p className="mb-2 line-clamp-3 text-sm font-normal text-muted-foreground">{description}</p>}
 			</div>
 		</a>
 	);

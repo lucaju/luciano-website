@@ -30,7 +30,8 @@ import { tvm } from '@/content/projects/twiter-vs-mode';
 import { WorkflowInterfacesForEditorialProcesses } from '@/content/projects/workflow-interfaces';
 import { ymx } from '@/content/projects/ymx-migration';
 import { youtubeRecommendationRankflow } from '@/content/projects/youtube-recommendation-rankflow';
-import { type ProjectSchema, Timeline } from '@/modules/projects/timeline';
+import { assignProjectSlugs, sortProjects } from '@/modules/projects/project-model';
+import type { ProjectSchema } from '@/modules/projects/timeline';
 
 const SHOWCASE_PROJECTS = [
 	comparative_ai_policy_and_regulation,
@@ -66,6 +67,6 @@ const SHOWCASE_PROJECTS = [
 	ymx,
 	youtubeRecommendationRankflow,
 ] satisfies Array<ProjectSchema>;
-export function ShowcaseProjects() {
-	return <Timeline data={SHOWCASE_PROJECTS} />;
-}
+
+export const showcaseProjects = assignProjectSlugs(SHOWCASE_PROJECTS);
+export const currentProjects = sortProjects(showcaseProjects).slice(0, 3);

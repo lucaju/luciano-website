@@ -14,12 +14,7 @@ export default defineConfig({
 			PUBLIC_GA_MEASUREMENT_ID: envField.string({ context: 'client', access: 'public' }),
 		},
 	},
-	integrations: [
-		mdx(),
-		sitemap({ priority: 1, changefreq: 'daily', lastmod: new Date() }),
-		react(),
-		partytown({ config: { forward: ['dataLayer.push'] } }),
-	],
+	integrations: [mdx(), sitemap(), react(), partytown({ config: { forward: ['dataLayer.push'] } })],
 	markdown: {
 		processor: satteri({
 			mdastPlugins: [satteriModifiedTime()],

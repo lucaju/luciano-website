@@ -58,6 +58,7 @@ export function RetroGrid({
 			)}
 			style={gridStyles}
 			{...props}
+			data-background-pattern=""
 		>
 			<div className="absolute inset-0 transform-[rotateX(var(--grid-angle))]">
 				<div className="animate-grid will-change-transform bg-[linear-gradient(to_right,var(--light-line)_1px,transparent_0),linear-gradient(to_bottom,var(--light-line)_1px,transparent_0)] bg-repeat bg-size-[var(--cell-size)_var(--cell-size)] h-[300vh] inset-[0%_0px] ml-[-200%] origin-[100%_0_0] w-[600vw] dark:bg-[linear-gradient(to_right,var(--dark-line)_1px,transparent_0),linear-gradient(to_bottom,var(--dark-line)_1px,transparent_0)]" />

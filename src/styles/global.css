@@ -174,3 +174,12 @@
 	animation: none;
 	mix-blend-mode: normal;
 }
+
+@media print {
+	[data-site-chrome],
+	[data-background-pattern],
+	[data-print-hide],
+	footer {
+		display: none;
+	}
+}

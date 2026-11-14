@@ -24,6 +24,7 @@ export function StripedPattern({
 			className={cn('pointer-events-none absolute inset-0 h-full w-full stroke-[0.5]', className)}
 			xmlns="http://www.w3.org/2000/svg"
 			{...props}
+			data-background-pattern=""
 		>
 			<defs>
 				<pattern id={id} width={w} height={h} patternUnits="userSpaceOnUse">

@@ -27,12 +27,9 @@ const { posts } = Astro.props;
 				<BentoGridItem
 					id={post.id}
 					className={cn(
-						index % 47 === 0
-							? 'md:col-span-3'
-							: index % 7 === 0 || index % 10 === 0
-								? 'md:col-span-2'
-								: 'md:col-span-1'
+						index === 0 ? 'md:col-span-3' : index === 1 || index === 2 ? 'md:col-span-2' : 'md:col-span-1',
 					)}
+					description={post.data.description}
 					publishedAt={formatDate(post.data.publishedAt)}
 					title={post.data.title}
 				>

@@ -1,16 +1,15 @@
 'use client';
 
-import { compareAsc, format, isSameYear, parseISO } from 'date-fns';
 import { Link2 } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'motion/react';
 import type React from 'react';
 import { useEffect, useRef, useState } from 'react';
-import slug from 'slug';
 import { z } from 'zod';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Highlighter } from '@/components/ui/highlighter';
 import { cn } from '@/lib/utils';
+import { formatProjectYears, sortProjects } from '@/modules/projects/project-model';
 
 const projectSchema = z.object({
 	title: z.string(),
@@ -23,21 +22,25 @@ const projectSchema = z.object({
 	tags: z.array(z.string()).optional(),
 });
 export type ProjectSchema = z.infer<typeof projectSchema> & { extra?: React.ReactNode[]; content?: React.ReactNode };
+export type ProjectEntry = ProjectSchema & { slug: string };
 
 const CopyClipboardMessageDelay = 2500;
 
-export const Timeline = ({ data }: { data: ProjectSchema[] }) => {
+export const Timeline = ({ data, linkTitles = true }: { data: ProjectEntry[]; linkTitles?: boolean }) => {
 	const ref = useRef<HTMLDivElement>(null);
 	const containerRef = useRef<HTMLDivElement>(null);
 	const [height, setHeight] = useState(0);
+	const itemKey = data.map((item) => item.slug).join('\0');
 
-	// biome-ignore lint/correctness/useExhaustiveDependencies: only needs to run once on mount or when ref changes
 	useEffect(() => {
-		if (ref.current) {
-			const rect = ref.current.getBoundingClientRect();
-			setHeight(rect.height);
-		}
-	}, [ref]);
+		const element = ref.current;
+		if (!element) return;
+		const measure = () => setHeight(element.getBoundingClientRect().height);
+		measure();
+		const observer = new ResizeObserver(measure);
+		observer.observe(element);
+		return () => observer.disconnect();
+	}, [itemKey]);
 
 	const { scrollYProgress } = useScroll({
 		target: containerRef,
@@ -50,19 +53,9 @@ export const Timeline = ({ data }: { data: ProjectSchema[] }) => {
 	return (
 		<div className="w-full" ref={containerRef}>
 			<div ref={ref} className="relative pb-20">
-				{data
-					.toSorted((a, b) => {
-						const resultEndDate = compareAsc(
-							b.date.end ?? new Date('2999-12-31'),
-							a.date.end ?? new Date('2999-12-31'),
-						);
-						if (resultEndDate !== 0) return resultEndDate;
-						const resultStartDate = compareAsc(b.date.start, a.date.start);
-						return resultStartDate;
-					})
-					.map((item) => (
-						<Entry key={item.title} item={item} />
-					))}
+				{sortProjects(data).map((item) => (
+					<Entry key={item.slug} item={item} linkTitles={linkTitles} />
+				))}
 				<div
 					style={{ height: `${height}px` }}
 					className="hidden md:block absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-0% via-neutral-200 dark:via-neutral-700 to-transparent to-99%  mask-[linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]"
@@ -80,7 +73,7 @@ export const Timeline = ({ data }: { data: ProjectSchema[] }) => {
 	);
 };
 
-const Entry = ({ item }: { item: ProjectSchema }) => {
+const Entry = ({ item, linkTitles }: { item: ProjectEntry; linkTitles: boolean }) => {
 	const [hover, setHover] = useState(false);
 	const [supportsClipboard, setSupportsClipboard] = useState(false);
 
@@ -91,7 +84,7 @@ const Entry = ({ item }: { item: ProjectSchema }) => {
 	return (
 		// biome-ignore lint/a11y/noStaticElementInteractions: false positive
 		<div
-			id={slug(item.title)}
+			id={item.slug}
 			className="flex justify-start pt-10 md:pb-40 md:gap-10"
 			onMouseEnter={() => setHover(true)}
 			onMouseLeave={() => setHover(false)}
@@ -99,22 +92,22 @@ const Entry = ({ item }: { item: ProjectSchema }) => {
 			<div className="sticky flex flex-col md:flex-row z-40 top-40 self-start md:w-full">
 				<div className="hidden md:flex h-10 absolute left-3 md:left-3 w-10 rounded-full bg-background items-center justify-center">
 					{supportsClipboard ? (
-						<CopyClipboard hover={hover} title={item.title} />
+						<CopyClipboard hover={hover} slug={item.slug} />
 					) : (
 						<div className="aize-4 rounded-full bg-neutral-300 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
 					)}
 				</div>
 
 				<div className="hidden md:flex flex-col md:pl-16 -mt-0.5 gap-2">
-					<h2 className="text-xl md:text-4xl font-bold text-neutral-700 dark:text-neutral-300 ">{item.title}</h2>
-					<ItemMetadata key={item.title} item={item} />
+					<ProjectTitle item={item} linkTitles={linkTitles} className="text-xl md:text-4xl" />
+					<ItemMetadata key={item.slug} item={item} />
 				</div>
 			</div>
 
 			<div className="relative pl-4 pr-4 md:pl-4 w-full">
-				<MobileComponent title={item.title}>
+				<MobileComponent item={item} linkTitles={linkTitles}>
 					<div className="md:hidden block mb-4 space-y-3">
-						<ItemMetadata key={item.title} item={item} />
+						<ItemMetadata key={item.slug} item={item} />
 					</div>
 				</MobileComponent>
 				{item.content}
@@ -123,7 +116,31 @@ const Entry = ({ item }: { item: ProjectSchema }) => {
 	);
 };
 
-const MobileComponent = ({ children, title }: React.PropsWithChildren & { title: string }) => {
+const ProjectTitle = ({
+	item,
+	linkTitles,
+	className,
+}: {
+	item: ProjectEntry;
+	linkTitles: boolean;
+	className: string;
+}) => {
+	const titleClassName = cn(className, 'font-bold text-neutral-700 dark:text-neutral-300');
+	if (!linkTitles) return <h1 className={titleClassName}>{item.title}</h1>;
+	return (
+		<h2 className={titleClassName}>
+			<a className="hover:underline" href={`/projects/${item.slug}`}>
+				{item.title}
+			</a>
+		</h2>
+	);
+};
+
+const MobileComponent = ({
+	children,
+	item,
+	linkTitles,
+}: React.PropsWithChildren & { item: ProjectEntry; linkTitles: boolean }) => {
 	const [supportsClipboard, setSupportsClipboard] = useState(false);
 	useEffect(() => {
 		setSupportsClipboard(!!navigator.clipboard?.writeText);
@@ -132,15 +149,15 @@ const MobileComponent = ({ children, title }: React.PropsWithChildren & { title:
 	return (
 		<div className="md:hidden block mb-4">
 			<div className="flex items-start justify-start">
-				<h2 className="text-2xl text-left font-bold text-neutral-700 dark:text-neutral-300">{title}</h2>
-				{supportsClipboard && <CopyClipboardMobile title={title} />}
+				<ProjectTitle item={item} linkTitles={linkTitles} className="text-2xl text-left" />
+				{supportsClipboard && <CopyClipboardMobile slug={item.slug} />}
 			</div>
 			{children}
 		</div>
 	);
 };
 
-const CopyClipboard = ({ hover, title }: { hover: boolean; title: string }) => {
+const CopyClipboard = ({ hover, slug }: { hover: boolean; slug: string }) => {
 	const [copied, setCopied] = useState(false);
 	return (
 		<>
@@ -150,7 +167,7 @@ const CopyClipboard = ({ hover, title }: { hover: boolean; title: string }) => {
 					(hover || copied) && 'size-7 rounded-md',
 				)}
 				onClick={() => {
-					navigator.clipboard.writeText(`${window.location.origin}/projects#${slug(title)}`);
+					navigator.clipboard.writeText(`${window.location.origin}/projects/${slug}`);
 					setCopied(true);
 					setTimeout(() => {
 						setCopied(false);
@@ -182,13 +199,13 @@ const CopyClipboard = ({ hover, title }: { hover: boolean; title: string }) => {
 	);
 };
 
-const CopyClipboardMobile = ({ title }: { title: string }) => {
+const CopyClipboardMobile = ({ slug }: { slug: string }) => {
 	const [copied, setCopied] = useState(false);
 	return (
 		<Button
 			className="size-8 mt-0.25 ml-1"
 			onClick={async () => {
-				await navigator.clipboard.writeText(`${window.location.origin}/projects#${slug(title)}`);
+				await navigator.clipboard.writeText(`${window.location.origin}/projects/${slug}`);
 				setCopied(true);
 				setTimeout(() => {
 					setCopied(false);
@@ -211,16 +228,7 @@ const CopyClipboardMobile = ({ title }: { title: string }) => {
 	);
 };
 
-const ItemMetadata = ({ item }: { item: ProjectSchema }) => {
-	const startDate = parseISO(item.date.start);
-
-	const dateInfo = () => {
-		if (!item.date.end) return `${format(startDate, 'yyyy')} +`;
-		const endDate = parseISO(item.date.end);
-		if (isSameYear(startDate, endDate)) return format(startDate, 'yyyy');
-		return `${format(startDate, 'yyyy')} - ${format(endDate, 'yyyy')}`;
-	};
-
+const ItemMetadata = ({ item }: { item: ProjectEntry }) => {
 	return (
 		<>
 			{item.subTitle && (
@@ -229,7 +237,7 @@ const ItemMetadata = ({ item }: { item: ProjectSchema }) => {
 
 			<p className="text-sm md:text-md text-neutral-500 dark:text-neutral-500 ">
 				{item.place && <span>{item.place} | </span>}
-				<span>{dateInfo()}</span>
+				<span>{formatProjectYears(item.date)}</span>
 			</p>
 
 			{item.tags && (
@@ -251,7 +259,6 @@ const ItemMetadata = ({ item }: { item: ProjectSchema }) => {
 			{item.extra && (
 				<div className="flex flex-col gap-2 mt-2">
 					{item.extra.map((Extra, index) => (
-						// biome-ignore lint/suspicious/noArrayIndexKey: no need to control the key for dynamic content
 						<div key={index}>{Extra}</div>
 					))}
 				</div>

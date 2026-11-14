@@ -7,7 +7,7 @@ import RootLayout from '@/layouts/root-layout.astro';
 import PostsCards from '@/modules/blog/posts.astro';
 
 const title = 'Blog';
-const description = '';
+const description = 'Notes and essays on critical AI, platforms, digital methods, and design by Luciano Frizzera.';
 
 const posts = await getCollection('blogCollection');
 
@@ -17,7 +17,7 @@ const postsList = pipe(
 		if (import.meta.env.PROD) return post.data.status === 'published';
 		return true;
 	}),
-	A.sort((a, b) => (new Date(b.data.publishedAt) > new Date(a.data.publishedAt) ? 1 : 0)),
+	A.sort((a, b) => b.data.publishedAt.getTime() - a.data.publishedAt.getTime()),
 );
 ---
 

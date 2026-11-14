@@ -2,10 +2,10 @@
 import { StripedPattern } from '@/components/pattern/striped-pattern';
 import Seo from '@/components/seo.astro';
 import RootLayout from '@/layouts/root-layout.astro';
-import { ShowcaseProjects } from '@/modules/projects/showcase-projects';
+import { ProjectBrowser } from '@/modules/projects/project-browser';
 
 const title = 'Projects';
-const description = '';
+const description = 'Selected research, design, and software projects by Luciano Frizzera.';
 ---
 
 <RootLayout scrollSmooth>
@@ -24,6 +24,6 @@ const description = '';
 		</header>
 	</div>
 	<section class="container-fluid">
-		<ShowcaseProjects client:visible />
+		<ProjectBrowser client:visible />
 	</section>
 </RootLayout>
